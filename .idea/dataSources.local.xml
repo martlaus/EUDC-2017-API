@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - EudcApi@localhost" uuid="4b3e096b-b023-40d5-8606-4481c4f787c2">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>EudcApi.*</schema-pattern>
+      <default-schemas>EudcApi.*</default-schemas>
+    </data-source>
+  </component>
+</project>
