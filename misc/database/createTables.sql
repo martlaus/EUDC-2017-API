@@ -1,4 +1,4 @@
-USE EudcApi;
+USE eudcApi;
 
 -- Drop tables
 

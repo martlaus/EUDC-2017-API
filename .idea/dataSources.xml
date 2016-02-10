@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2232616910">
-    <data-source source="LOCAL" name="MySQL - EudcApi@localhost" uuid="4b3e096b-b023-40d5-8606-4481c4f787c2">
+  <component name="DataSourceManagerImpl" format="xml" hash="2644225286">
+    <data-source source="LOCAL" name="MySQL - eudcApi@localhost" uuid="7dd3bd8e-7a73-487c-8cc8-187f350fb6ab">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/EudcApi</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/eudcApi</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />

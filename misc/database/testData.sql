@@ -1,4 +1,4 @@
-USE EudcApi;
+USE eudcApi;
 
 -- Add Users
 INSERT INTO User (id, email, password, role, created)
