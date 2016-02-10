@@ -7,5 +7,23 @@
     </database-info>
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
     <schema name="" catalog="EudcApi"/>
+    <table name="AuthenticatedUser" schema="" catalog="EudcApi" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="token" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="AuthenticatedUser_ibfk_1" columns="user_id" ref-table="User" ref-schema="" ref-catalog="EudcApi" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="token" unique="true" columns="token"/>
+    </table>
+    <table name="User" schema="" catalog="EudcApi" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="role" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="AuthenticatedUser_ibfk_1" table="AuthenticatedUser" schema="" catalog="EudcApi" columns="user_id"/>
+      <index name="email" unique="true" columns="email"/>
+    </table>
   </data-source>
 </component>
