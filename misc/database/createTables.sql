@@ -6,6 +6,8 @@ SET foreign_key_checks = 0;
 
 DROP TABLE IF EXISTS User;
 DROP TABLE IF EXISTS AuthenticatedUser;
+DROP TABLE IF EXISTS Card;
+
 
 
 
@@ -31,6 +33,15 @@ CREATE TABLE AuthenticatedUser (
   FOREIGN KEY (user_id)
   REFERENCES User (id)
     ON DELETE RESTRICT
+);
+
+
+
+CREATE TABLE Card (
+  id       BIGINT    AUTO_INCREMENT PRIMARY KEY,
+  title    TEXT(255) NOT NULL,
+  description TEXT(65535)        NOT NULL,
+  created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 
