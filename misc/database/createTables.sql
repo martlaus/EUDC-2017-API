@@ -38,9 +38,9 @@ CREATE TABLE AuthenticatedUser (
 
 
 CREATE TABLE Card (
-  id       BIGINT    AUTO_INCREMENT PRIMARY KEY,
-  title    TEXT(255) NOT NULL,
-  description TEXT(3000)        NOT NULL,
+  id       BIGINT AUTO_INCREMENT PRIMARY KEY,
+  title    VARCHAR(255) NOT NULL,
+  description VARCHAR(1000) NOT NULL,
   created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
