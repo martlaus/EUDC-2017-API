@@ -27,7 +27,6 @@ public class Card {
     @Column(nullable = true, unique = false)
     private String title;
 
-    @JsonIgnore
     @Column(nullable = true)
     private String description;
 
