@@ -29,7 +29,7 @@ public class CardDAO {
             entityManager.persist(merged);
         } catch (PersistenceException e) {
             e.printStackTrace();
-            throw new RuntimeException("Exception when persisting user.");
+            throw new RuntimeException("Exception when persisting card.");
         }
 
         return merged;
