@@ -1,574 +1,684 @@
-2016-02-08 22:01:05.790 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:05.790 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:05.791 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:06.193 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+2016-02-17 10:27:09.819 [qtp333040629-19] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 10:27:09.839 [qtp333040629-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 10:31:50.324 [qtp333040629-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 10:31:50.330 [qtp333040629-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 10:34:37.906 [qtp333040629-21] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 10:34:37.910 [qtp333040629-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 10:36:25.052 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 10:36:25.053 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 10:36:25.053 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 10:36:25.507 [qtp2030411960-18] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: EudcApi
 	...]
-2016-02-08 22:01:06.665 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
-2016-02-08 22:01:06.668 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
-2016-02-08 22:01:06.679 [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
-2016-02-08 22:01:07.145 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2016-02-08 22:01:07.223 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:07.234 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:07.242 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:07.243 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:07.245 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:07.569 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:07.799 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:07.799 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:07.799 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:07.813 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+2016-02-17 10:36:25.911 [qtp2030411960-18] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-17 10:36:25.914 [qtp2030411960-18] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-02-17 10:36:25.917 [qtp2030411960-18] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-02-17 10:36:26.399 [qtp2030411960-18] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-17 10:36:26.571 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-02-17 10:36:26.571 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-02-17 10:36:26.572 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-02-17 10:36:28.750 [qtp2030411960-18] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-17 10:36:28.799 [qtp2030411960-18] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-02-17 10:36:29.697 [qtp2030411960-18] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-02-17 10:36:31.192 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-02-17 10:36:31.193 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-02-17 10:36:31.232 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.AuthenticatedUser
+2016-02-17 10:36:31.232 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-02-17 10:36:31.240 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card
+2016-02-17 10:36:31.241 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-02-17 10:36:31.273 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.User
+2016-02-17 10:36:31.273 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-02-17 10:38:07.110 [qtp2030411960-19] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 10:38:07.142 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 10:41:07.309 [qtp2030411960-22] DEBUG org.hibernate.SQL  - insert into User (created, email, password, role) values (?, ?, ?, ?)
+2016-02-17 10:41:07.312 [qtp2030411960-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-02-17 10:41:07.293]
+2016-02-17 10:41:07.313 [qtp2030411960-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [mart@mart.ee]
+2016-02-17 10:41:07.313 [qtp2030411960-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UFpxO]
+2016-02-17 10:41:07.313 [qtp2030411960-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [USER]
+2016-02-17 10:46:35.987 [qtp2030411960-20] DEBUG org.hibernate.SQL  - insert into User (created, email, password, role) values (?, ?, ?, ?)
+2016-02-17 10:46:35.989 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-02-17 10:46:35.986]
+2016-02-17 10:46:35.990 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 10:46:35.990 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [$2a$10$S6L6E9vjjC0ju0bG5X.wl.UTXI.rfk6lloSq/B5qH.DG40mxuP1WK]
+2016-02-17 10:46:35.990 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [USER]
+2016-02-17 10:46:35.998 [qtp2030411960-20] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-02-17 10:46:35.999 [qtp2030411960-20] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'admin@admin.kz' for key 'email'
+2016-02-17 10:46:36.004 [qtp2030411960-20] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1062, SQLState: 23000
+2016-02-17 10:46:36.004 [qtp2030411960-20] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'admin@admin.kz' for key 'email'
+2016-02-17 10:47:17.821 [qtp2030411960-19] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 10:47:17.823 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 10:47:31.224 [qtp2030411960-19] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 10:47:31.227 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [kcdpk9m0r9g5ugfurr5281ud7p]
+2016-02-17 10:47:31.233 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 10:53:51.585 [qtp2030411960-21] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 10:53:51.586 [qtp2030411960-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 10:53:51.790 [qtp2030411960-21] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 10:53:51.791 [qtp2030411960-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [80avdhh5d9l7gai391dabkc6h0]
+2016-02-17 10:53:51.791 [qtp2030411960-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 10:57:24.335 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 10:57:24.336 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 10:57:24.336 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 10:57:24.799 [qtp2030411960-18] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: EudcApi
 	...]
-2016-02-08 22:01:07.838 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:07.838 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:07.838 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:07.838 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:07.838 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:07.848 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:07.904 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:07.904 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:07.904 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:07.922 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+2016-02-17 10:57:25.319 [qtp2030411960-18] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-17 10:57:25.322 [qtp2030411960-18] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-02-17 10:57:25.326 [qtp2030411960-18] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-02-17 10:57:25.779 [qtp2030411960-18] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-17 10:57:25.921 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-02-17 10:57:25.922 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-02-17 10:57:25.922 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-02-17 10:57:28.220 [qtp2030411960-18] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-17 10:57:28.241 [qtp2030411960-18] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-02-17 10:57:28.988 [qtp2030411960-18] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-02-17 10:57:31.135 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-02-17 10:57:31.136 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-02-17 10:57:31.177 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.AuthenticatedUser
+2016-02-17 10:57:31.177 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-02-17 10:57:31.185 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card
+2016-02-17 10:57:31.186 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-02-17 10:57:31.193 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.User
+2016-02-17 10:57:31.194 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-02-17 10:57:32.779 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 10:57:32.876 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 10:57:33.296 [qtp2030411960-18] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 10:57:33.297 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [b638ec5ok9qepc1vu832kd23g8]
+2016-02-17 10:57:33.298 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 10:58:43.031 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 10:58:43.032 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 10:58:43.032 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 10:58:43.440 [qtp2030411960-18] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: EudcApi
 	...]
-2016-02-08 22:01:07.947 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:07.948 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:07.948 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:07.948 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:07.948 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:07.958 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:07.972 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:07.973 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:07.973 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:07.989 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+2016-02-17 10:58:43.860 [qtp2030411960-18] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-17 10:58:43.863 [qtp2030411960-18] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-02-17 10:58:43.866 [qtp2030411960-18] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-02-17 10:58:44.429 [qtp2030411960-18] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-17 10:58:44.492 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-02-17 10:58:44.493 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-02-17 10:58:44.493 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-02-17 10:58:46.849 [qtp2030411960-18] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-17 10:58:46.924 [qtp2030411960-18] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-02-17 10:58:47.560 [qtp2030411960-18] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-02-17 10:58:48.952 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-02-17 10:58:48.953 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-02-17 10:58:49.008 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.AuthenticatedUser
+2016-02-17 10:58:49.033 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-02-17 10:58:49.041 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card
+2016-02-17 10:58:49.041 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-02-17 10:58:49.049 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.User
+2016-02-17 10:58:49.049 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-02-17 10:58:50.475 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 10:58:50.505 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 10:58:50.891 [qtp2030411960-18] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 10:58:50.898 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [f0bnp525lfh929131kugbi11q2]
+2016-02-17 10:58:50.899 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 11:02:04.983 [qtp2030411960-20] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 11:02:04.984 [qtp2030411960-20] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 11:02:04.984 [qtp2030411960-20] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 11:02:05.497 [qtp2030411960-20] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: EudcApi
 	...]
-2016-02-08 22:01:08.011 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:08.012 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:08.012 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:08.012 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:08.013 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:08.017 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:08.045 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.045 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.046 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.062 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+2016-02-17 11:02:05.892 [qtp2030411960-20] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-17 11:02:05.895 [qtp2030411960-20] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-02-17 11:02:05.898 [qtp2030411960-20] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-02-17 11:02:06.429 [qtp2030411960-20] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-17 11:02:06.571 [qtp2030411960-20] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-02-17 11:02:06.572 [qtp2030411960-20] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-02-17 11:02:06.572 [qtp2030411960-20] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-02-17 11:02:08.594 [qtp2030411960-20] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-17 11:02:08.681 [qtp2030411960-20] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-02-17 11:02:09.365 [qtp2030411960-20] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-02-17 11:02:10.814 [qtp2030411960-20] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-02-17 11:02:10.814 [qtp2030411960-20] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-02-17 11:02:10.852 [qtp2030411960-20] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.AuthenticatedUser
+2016-02-17 11:02:10.852 [qtp2030411960-20] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-02-17 11:02:10.888 [qtp2030411960-20] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card
+2016-02-17 11:02:10.889 [qtp2030411960-20] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-02-17 11:02:10.896 [qtp2030411960-20] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.User
+2016-02-17 11:02:10.927 [qtp2030411960-20] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-02-17 11:02:12.340 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 11:02:12.411 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 11:02:12.769 [qtp2030411960-20] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 11:02:12.770 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [1qctve1i74gmkhhevn0a1lcnpp]
+2016-02-17 11:02:12.771 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 11:06:55.183 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 11:06:55.184 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 11:06:55.184 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 11:06:55.600 [qtp2030411960-18] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: EudcApi
 	...]
-2016-02-08 22:01:08.080 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:08.080 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:08.081 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:08.081 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:08.081 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:08.099 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:08.128 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.128 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.128 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.160 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+2016-02-17 11:06:56.024 [qtp2030411960-18] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-17 11:06:56.027 [qtp2030411960-18] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-02-17 11:06:56.030 [qtp2030411960-18] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-02-17 11:06:56.583 [qtp2030411960-18] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-17 11:06:56.716 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-02-17 11:06:56.717 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-02-17 11:06:56.717 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-02-17 11:06:58.491 [qtp2030411960-18] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-17 11:06:58.514 [qtp2030411960-18] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-02-17 11:06:59.031 [qtp2030411960-18] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-02-17 11:07:00.419 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-02-17 11:07:00.420 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-02-17 11:07:00.473 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.AuthenticatedUser
+2016-02-17 11:07:00.473 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-02-17 11:07:00.506 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card
+2016-02-17 11:07:00.506 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-02-17 11:07:00.514 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.User
+2016-02-17 11:07:00.514 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-02-17 11:07:01.763 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 11:07:01.815 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [1qctve1i74gmkhhevn0a1lcnpp]
+2016-02-17 11:07:01.847 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 11:07:01.849 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 11:07:02.299 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 11:07:02.300 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 11:10:53.397 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 11:10:53.397 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 11:10:53.397 [qtp2030411960-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 11:10:53.832 [qtp2030411960-18] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: EudcApi
 	...]
-2016-02-08 22:01:08.185 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:08.185 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:08.185 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:08.186 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:08.186 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:08.192 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:08.229 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.230 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.230 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.245 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+2016-02-17 11:10:54.270 [qtp2030411960-18] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-17 11:10:54.275 [qtp2030411960-18] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-02-17 11:10:54.278 [qtp2030411960-18] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-02-17 11:10:54.684 [qtp2030411960-18] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-17 11:10:54.842 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-02-17 11:10:54.843 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-02-17 11:10:54.843 [qtp2030411960-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-02-17 11:10:56.927 [qtp2030411960-18] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-17 11:10:57.003 [qtp2030411960-18] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-02-17 11:10:57.807 [qtp2030411960-18] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-02-17 11:10:59.120 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-02-17 11:10:59.120 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-02-17 11:10:59.181 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.AuthenticatedUser
+2016-02-17 11:10:59.182 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-02-17 11:10:59.218 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card
+2016-02-17 11:10:59.218 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-02-17 11:10:59.227 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.User
+2016-02-17 11:10:59.227 [qtp2030411960-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-02-17 11:11:00.379 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 11:11:00.467 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [1qctve1i74gmkhhevn0a1lcnpp]
+2016-02-17 11:11:00.499 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 11:11:00.501 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 11:11:00.987 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 11:11:00.988 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 11:11:01.274 [qtp2030411960-18] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 11:11:01.276 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [i070s7jo8dchi6754jqb6hfrpr]
+2016-02-17 11:11:01.276 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 13:44:39.873 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 13:44:39.874 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [i070s7jo8dchi6754jqb6hfrpr]
+2016-02-17 13:44:39.876 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 13:44:39.877 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 13:44:39.884 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 13:44:39.885 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 13:44:40.072 [qtp2030411960-20] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 13:44:40.074 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [k75e9cgvu3drodn0od1pcn99ru]
+2016-02-17 13:44:40.074 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 14:10:13.127 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 14:10:13.129 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [k75e9cgvu3drodn0od1pcn99ru]
+2016-02-17 14:10:13.131 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 14:10:13.131 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 14:10:13.137 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 14:10:13.137 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kt]
+2016-02-17 14:11:16.150 [qtp2030411960-22] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 14:11:16.151 [qtp2030411960-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [k75e9cgvu3drodn0od1pcn99ru]
+2016-02-17 14:11:16.153 [qtp2030411960-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 14:11:16.153 [qtp2030411960-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 14:11:16.160 [qtp2030411960-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 14:11:16.160 [qtp2030411960-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 14:12:04.372 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 14:12:04.373 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [k75e9cgvu3drodn0od1pcn99ru]
+2016-02-17 14:12:04.374 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 14:12:04.375 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 14:12:04.379 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 14:12:04.380 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 14:12:50.328 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 14:12:50.328 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [k75e9cgvu3drodn0od1pcn99ru]
+2016-02-17 14:12:50.330 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 14:12:50.331 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 14:12:50.336 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 14:12:50.337 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 14:12:59.396 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 14:12:59.397 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [k75e9cgvu3drodn0od1pcn99ru]
+2016-02-17 14:12:59.398 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 14:12:59.398 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 14:12:59.402 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 14:12:59.402 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 14:12:59.634 [qtp2030411960-18] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 14:12:59.635 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [ltb92og75j8o17h99slmgvcq0v]
+2016-02-17 14:12:59.635 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 14:34:21.531 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 14:34:21.533 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [ltb92og75j8o17h99slmgvcq0v]
+2016-02-17 14:34:21.535 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 14:34:21.536 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 14:34:21.540 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 14:34:21.541 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 14:34:21.816 [qtp2030411960-18] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 14:34:21.820 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [4rpbaest387upe7ch72sibeh9e]
+2016-02-17 14:34:21.820 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 14:37:54.361 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 14:37:54.362 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [4rpbaest387upe7ch72sibeh9e]
+2016-02-17 14:37:54.364 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 14:37:54.364 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 14:37:54.369 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 14:37:54.372 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 14:37:54.601 [qtp2030411960-18] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 14:37:54.603 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [7kp2a4sr32hhoe3ahbdmr4mmdq]
+2016-02-17 14:37:54.603 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 14:42:57.309 [qtp2030411960-19] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 14:42:57.310 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [7kp2a4sr32hhoe3ahbdmr4mmdq]
+2016-02-17 14:42:57.312 [qtp2030411960-19] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 14:42:57.312 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 14:42:57.317 [qtp2030411960-19] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 14:42:57.320 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 14:42:57.488 [qtp2030411960-19] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 14:42:57.489 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [fpa1h4p4cgujskpbm8tkblar6a]
+2016-02-17 14:42:57.489 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 15:00:34.827 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 15:00:34.837 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [fpa1h4p4cgujskpbm8tkblar6a]
+2016-02-17 15:00:34.877 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 15:00:34.878 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-02-17 15:00:34.969 [qtp2030411960-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 15:00:34.970 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 15:00:35.206 [qtp2030411960-20] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 15:00:35.208 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [n39r6gh00teirmljpfvpv5qrn6]
+2016-02-17 15:00:35.208 [qtp2030411960-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 23:10:52.121 [qtp2030411960-19] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:10:52.122 [qtp2030411960-19] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:10:52.122 [qtp2030411960-19] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:10:52.409 [qtp2030411960-19] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: EudcApi
 	...]
-2016-02-08 22:01:08.265 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:08.265 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:08.265 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:08.266 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:08.266 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:08.270 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:08.283 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.283 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.283 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.297 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+2016-02-17 23:10:52.656 [qtp2030411960-19] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-17 23:10:52.658 [qtp2030411960-19] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-02-17 23:10:52.661 [qtp2030411960-19] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-02-17 23:10:52.932 [qtp2030411960-19] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-17 23:10:53.008 [qtp2030411960-19] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-02-17 23:10:53.008 [qtp2030411960-19] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-02-17 23:10:53.008 [qtp2030411960-19] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-02-17 23:10:54.215 [qtp2030411960-19] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-17 23:10:54.242 [qtp2030411960-19] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-02-17 23:10:54.596 [qtp2030411960-19] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-02-17 23:10:55.298 [qtp2030411960-19] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-02-17 23:10:55.298 [qtp2030411960-19] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-02-17 23:10:55.327 [qtp2030411960-19] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.AuthenticatedUser
+2016-02-17 23:10:55.327 [qtp2030411960-19] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-02-17 23:10:55.335 [qtp2030411960-19] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card
+2016-02-17 23:10:55.336 [qtp2030411960-19] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-02-17 23:10:55.349 [qtp2030411960-19] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.User
+2016-02-17 23:10:55.349 [qtp2030411960-19] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-02-17 23:10:56.453 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:10:56.453 [qtp2030411960-16] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:10:56.480 [qtp2030411960-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 23:10:56.480 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 23:10:56.735 [qtp2030411960-18] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 23:10:56.735 [qtp2030411960-16] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 23:10:56.739 [qtp2030411960-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [c5hggola7h0jnr96215vjvds39]
+2016-02-17 23:10:56.739 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [fsonupmfft3hd463kabdj1ooke]
+2016-02-17 23:10:56.740 [qtp2030411960-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 23:10:56.741 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 23:13:43.628 [qtp2030411960-19] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:13:43.629 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 23:13:43.743 [qtp2030411960-19] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 23:13:43.743 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [s2vgvb7vugb1dg3b258ffih73a]
+2016-02-17 23:13:43.743 [qtp2030411960-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 23:14:08.016 [qtp2030411960-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:14:08.017 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 23:14:08.130 [qtp2030411960-16] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:14:08.131 [qtp2030411960-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 23:14:08.132 [qtp2030411960-18] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 23:14:08.133 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [2mg4nl4urgt1l211iud5kg2d0s]
+2016-02-17 23:14:08.133 [qtp2030411960-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 23:14:08.253 [qtp2030411960-16] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 23:14:08.254 [qtp2030411960-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [5mmki5ssb1encakjm50odmstoa]
+2016-02-17 23:14:08.254 [qtp2030411960-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 23:14:58.925 [qtp2030411960-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:14:58.925 [qtp2030411960-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 23:14:59.038 [qtp2030411960-22] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
+2016-02-17 23:14:59.039 [qtp2030411960-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [22u0inllvnqps1cqstn8f8dk25]
+2016-02-17 23:14:59.039 [qtp2030411960-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-02-17 23:17:02.358 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:17:02.358 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:17:02.360 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:17:02.790 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: EudcApi
 	...]
-2016-02-08 22:01:08.315 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:08.316 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:08.316 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:08.316 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:08.316 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:08.325 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:08.346 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.346 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.346 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.360 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:08.374 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:08.374 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:08.375 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:08.375 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:08.375 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:08.390 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:08.404 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.404 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.404 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.417 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:08.440 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:08.441 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:08.441 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:08.441 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:08.441 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:08.444 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:08.465 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.465 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.465 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.476 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:08.500 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:08.501 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:08.501 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:08.501 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:08.501 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:08.521 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:08.549 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.549 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.550 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.561 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:08.587 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:08.588 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:08.588 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:08.588 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:08.588 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:08.591 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:08.609 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.611 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.611 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:08.623 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:08.641 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:08.641 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:08.642 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:08.642 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:08.642 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:08.645 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:14.484 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:14.484 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:14.484 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:14.496 [qtp995631377-32] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:14.513 [qtp995631377-32] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:14.514 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:14.514 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:14.514 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:14.514 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:14.518 [qtp995631377-32] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:14.536 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:14.536 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:14.536 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:14.548 [qtp995631377-32] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:14.561 [qtp995631377-32] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:14.562 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:14.563 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:14.563 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:14.563 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:14.569 [qtp995631377-32] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:15.079 [qtp995631377-31] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.080 [qtp995631377-31] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.080 [qtp995631377-31] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.094 [qtp995631377-31] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:15.120 [qtp995631377-31] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:15.120 [qtp995631377-31] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:15.120 [qtp995631377-31] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:15.120 [qtp995631377-31] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:15.120 [qtp995631377-31] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:15.125 [qtp995631377-31] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:15.183 [qtp995631377-31] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.183 [qtp995631377-31] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.183 [qtp995631377-31] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.193 [qtp995631377-31] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:15.209 [qtp995631377-31] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:15.209 [qtp995631377-31] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:15.209 [qtp995631377-31] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:15.209 [qtp995631377-31] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:15.210 [qtp995631377-31] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:15.212 [qtp995631377-31] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:15.590 [qtp995631377-33] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.590 [qtp995631377-33] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.590 [qtp995631377-33] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.632 [qtp995631377-33] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:15.700 [qtp995631377-33] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:15.700 [qtp995631377-33] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:15.700 [qtp995631377-33] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:15.705 [qtp995631377-33] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:15.710 [qtp995631377-33] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:15.731 [qtp995631377-33] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:15.765 [qtp995631377-33] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.765 [qtp995631377-33] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.765 [qtp995631377-33] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:15.791 [qtp995631377-33] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:15.808 [qtp995631377-33] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:15.808 [qtp995631377-33] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:15.809 [qtp995631377-33] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:15.809 [qtp995631377-33] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:15.809 [qtp995631377-33] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:15.812 [qtp995631377-33] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:16.333 [qtp995631377-34] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:16.333 [qtp995631377-34] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:16.333 [qtp995631377-34] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:16.344 [qtp995631377-34] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:16.375 [qtp995631377-34] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:16.375 [qtp995631377-34] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:16.375 [qtp995631377-34] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:16.375 [qtp995631377-34] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:16.375 [qtp995631377-34] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:16.388 [qtp995631377-34] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:16.485 [qtp995631377-34] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:16.485 [qtp995631377-34] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:16.486 [qtp995631377-34] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:16.514 [qtp995631377-34] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:16.529 [qtp995631377-34] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:16.538 [qtp995631377-34] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:16.539 [qtp995631377-34] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:16.539 [qtp995631377-34] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:16.539 [qtp995631377-34] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:16.548 [qtp995631377-34] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:16.956 [qtp995631377-35] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:16.956 [qtp995631377-35] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:16.956 [qtp995631377-35] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:16.965 [qtp995631377-35] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:16.982 [qtp995631377-35] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:16.983 [qtp995631377-35] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:16.983 [qtp995631377-35] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:16.983 [qtp995631377-35] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:16.983 [qtp995631377-35] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:16.994 [qtp995631377-35] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:17.005 [qtp995631377-35] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:17.005 [qtp995631377-35] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:17.005 [qtp995631377-35] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:17.013 [qtp995631377-35] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:17.027 [qtp995631377-35] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:17.028 [qtp995631377-35] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:17.028 [qtp995631377-35] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:17.028 [qtp995631377-35] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:17.028 [qtp995631377-35] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:17.031 [qtp995631377-35] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:17.403 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:17.403 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:17.403 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:17.413 [qtp995631377-32] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:17.437 [qtp995631377-32] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:17.437 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:17.438 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:17.438 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:17.438 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:17.452 [qtp995631377-32] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:01:17.461 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:17.461 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:17.461 [qtp995631377-32] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:01:17.474 [qtp995631377-32] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:01:17.492 [qtp995631377-32] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:01:17.492 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:01:17.492 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:01:17.492 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:01:17.492 [qtp995631377-32] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:01:17.509 [qtp995631377-32] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:41:58.443 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:41:58.444 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:41:58.444 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:41:58.639 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
-	name: EudcApi
-	...]
-2016-02-08 22:41:58.847 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
-2016-02-08 22:41:58.851 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
-2016-02-08 22:41:58.854 [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
-2016-02-08 22:41:59.096 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2016-02-08 22:41:59.134 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:41:59.144 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:41:59.145 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:41:59.145 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:41:59.146 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:41:59.567 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:41:59.910 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2016-02-08 22:42:00.320 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000227: Running hbm2ddl schema export
-2016-02-08 22:42:00.324 [main] DEBUG org.hibernate.SQL  - drop table AuthenticatedUser if exists
-2016-02-08 22:42:00.326 [main] DEBUG org.hibernate.SQL  - drop table User if exists
-2016-02-08 22:42:00.326 [main] DEBUG org.hibernate.SQL  - create table AuthenticatedUser (id bigint generated by default as identity, token varchar(255) not null, user_id bigint not null, primary key (id))
-2016-02-08 22:42:00.340 [main] DEBUG org.hibernate.SQL  - create table User (id bigint generated by default as identity, created timestamp, email varchar(255) not null, password varchar(255) not null, role varchar(255), primary key (id))
-2016-02-08 22:42:00.344 [main] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint UK_6hhrtitdoxlsbd7rtxdkkidb1  unique (token)
-2016-02-08 22:42:00.349 [main] DEBUG org.hibernate.SQL  - alter table User add constraint UK_e6gkqunxajvyxl5uctpl2vl2p  unique (email)
-2016-02-08 22:42:00.351 [main] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint FK_p8go15iph52lx15qoh2aypu20 foreign key (user_id) references User
-2016-02-08 22:42:00.379 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000230: Schema export complete
-2016-02-08 22:42:00.657 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:00.664 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:00.666 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
-2016-02-08 22:42:00.666 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
-2016-02-08 22:42:00.666 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:00.695 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:00.696 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token1]
-2016-02-08 22:42:00.697 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [4]
-2016-02-08 22:42:00.699 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:00.699 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token2]
-2016-02-08 22:42:00.699 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [4]
-2016-02-08 22:42:00.889 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-02-08 22:42:00.890 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token1]
-2016-02-08 22:42:00.897 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-02-08 22:42:00.897 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token2]
-2016-02-08 22:42:00.925 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:00.927 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
-2016-02-08 22:42:00.932 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:00.933 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
-2016-02-08 22:42:00.934 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
-2016-02-08 22:42:00.935 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
-2016-02-08 22:42:00.943 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:00.944 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:00.944 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
-2016-02-08 22:42:00.944 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
-2016-02-08 22:42:00.945 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:00.946 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:00.947 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:00.947 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [5]
-2016-02-08 22:42:00.949 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:00.950 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
-2016-02-08 22:42:00.951 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
-2016-02-08 22:42:00.951 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
-2016-02-08 22:42:00.955 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:00.955 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:00.955 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
-2016-02-08 22:42:00.956 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
-2016-02-08 22:42:00.956 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:00.958 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:00.958 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:00.958 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [6]
-2016-02-08 22:42:00.961 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:00.961 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
-2016-02-08 22:42:00.962 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-02-08 22:42:00.963 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:00.965 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
-2016-02-08 22:42:00.965 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
-2016-02-08 22:42:00.968 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:00.969 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:00.969 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
-2016-02-08 22:42:00.969 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
-2016-02-08 22:42:00.969 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:00.971 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:00.971 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:00.972 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [7]
-2016-02-08 22:42:00.974 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-02-08 22:42:00.975 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:00.977 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:00.977 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
-2016-02-08 22:42:00.979 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
-2016-02-08 22:42:00.979 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [7]
-2016-02-08 22:42:00.983 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:00.983 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:00.984 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
-2016-02-08 22:42:00.984 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
-2016-02-08 22:42:00.984 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:00.985 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:00.986 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:00.986 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [8]
-2016-02-08 22:42:00.988 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:00.988 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:00.988 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [8]
-2016-02-08 22:42:00.992 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 23505, SQLState: 23505
-2016-02-08 22:42:00.993 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unique index or primary key violation: "UK_6HHRTITDOXLSBD7RTXDKKIDB1_INDEX_8 ON PUBLIC.AUTHENTICATEDUSER(TOKEN) VALUES ('123123', 7)"; SQL statement:
+2016-02-17 23:17:03.070 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-17 23:17:03.074 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-02-17 23:17:03.076 [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-02-17 23:17:03.672 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-17 23:17:03.768 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-02-17 23:17:03.791 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
+2016-02-17 23:17:03.792 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
+2016-02-17 23:17:03.792 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-02-17 23:17:03.794 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-02-17 23:17:04.169 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-02-17 23:17:04.423 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-02-17 23:17:04.910 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000227: Running hbm2ddl schema export
+2016-02-17 23:17:04.915 [main] DEBUG org.hibernate.SQL  - drop table AuthenticatedUser if exists
+2016-02-17 23:17:04.916 [main] DEBUG org.hibernate.SQL  - drop table Card if exists
+2016-02-17 23:17:04.917 [main] DEBUG org.hibernate.SQL  - drop table User if exists
+2016-02-17 23:17:04.917 [main] DEBUG org.hibernate.SQL  - create table AuthenticatedUser (id bigint generated by default as identity, token varchar(255) not null, user_id bigint not null, primary key (id))
+2016-02-17 23:17:04.945 [main] DEBUG org.hibernate.SQL  - create table Card (id bigint generated by default as identity, created timestamp, description varchar(255), title varchar(255), primary key (id))
+2016-02-17 23:17:04.953 [main] DEBUG org.hibernate.SQL  - create table User (id bigint generated by default as identity, created timestamp, email varchar(255) not null, password varchar(255) not null, role varchar(255), primary key (id))
+2016-02-17 23:17:04.961 [main] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint UK_6hhrtitdoxlsbd7rtxdkkidb1  unique (token)
+2016-02-17 23:17:04.978 [main] DEBUG org.hibernate.SQL  - alter table User add constraint UK_e6gkqunxajvyxl5uctpl2vl2p  unique (email)
+2016-02-17 23:17:04.981 [main] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint FK_p8go15iph52lx15qoh2aypu20 foreign key (user_id) references User
+2016-02-17 23:17:05.045 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000230: Schema export complete
+2016-02-17 23:17:05.538 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:17:05.545 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:17:05.547 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-02-17 23:17:05.548 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-02-17 23:17:05.548 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:17:05.576 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:17:05.577 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token1]
+2016-02-17 23:17:05.579 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [4]
+2016-02-17 23:17:05.586 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:17:05.587 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token2]
+2016-02-17 23:17:05.587 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [4]
+2016-02-17 23:17:05.911 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 23:17:05.913 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token1]
+2016-02-17 23:17:05.928 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 23:17:05.929 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token2]
+2016-02-17 23:17:05.948 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-02-17 23:17:05.950 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
+2016-02-17 23:17:05.953 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-02-17 23:17:05.954 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-02-17 23:17:05.955 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-02-17 23:17:05.955 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-02-17 23:17:05.965 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:17:05.965 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:17:05.965 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-02-17 23:17:05.966 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-02-17 23:17:05.966 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:17:05.967 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:17:05.968 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:17:05.968 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [5]
+2016-02-17 23:17:05.970 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-02-17 23:17:05.970 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-02-17 23:17:05.971 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-02-17 23:17:05.972 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
+2016-02-17 23:17:05.976 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:17:05.977 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:17:05.977 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-02-17 23:17:05.977 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-02-17 23:17:05.977 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:17:05.978 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:17:05.979 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:17:05.979 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [6]
+2016-02-17 23:17:05.994 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-02-17 23:17:05.996 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
+2016-02-17 23:17:05.997 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 23:17:05.998 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:17:06.004 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-02-17 23:17:06.004 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
+2016-02-17 23:17:06.015 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:17:06.016 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:17:06.016 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-02-17 23:17:06.016 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-02-17 23:17:06.016 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:17:06.018 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:17:06.021 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:17:06.022 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [7]
+2016-02-17 23:17:06.026 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 23:17:06.027 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:17:06.039 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-02-17 23:17:06.040 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
+2016-02-17 23:17:06.044 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-02-17 23:17:06.046 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [7]
+2016-02-17 23:17:06.056 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:17:06.057 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:17:06.057 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-02-17 23:17:06.057 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-02-17 23:17:06.057 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:17:06.065 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:17:06.066 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:17:06.069 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [8]
+2016-02-17 23:17:06.071 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:17:06.072 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:17:06.072 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [8]
+2016-02-17 23:17:06.082 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 23505, SQLState: 23505
+2016-02-17 23:17:06.085 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unique index or primary key violation: "UK_6HHRTITDOXLSBD7RTXDKKIDB1_INDEX_8 ON PUBLIC.AUTHENTICATEDUSER(TOKEN) VALUES ('123123', 7)"; SQL statement:
 insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?) [23505-187]
-2016-02-08 22:42:01.012 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_
-2016-02-08 22:42:01.022 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:01.023 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:01.023 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [kazaa@lankara.ru]
-2016-02-08 22:42:01.024 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [parool]
-2016-02-08 22:42:01.024 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:01.026 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_
-2016-02-08 22:42:01.030 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_
-2016-02-08 22:42:01.042 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_ where user0_.email=?
-2016-02-08 22:42:01.043 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
-2016-02-08 22:42:04.536 [qtp1488298739-40] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_
-2016-02-08 22:42:05.043 [qtp1488298739-39] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:05.045 [qtp1488298739-39] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-02-08 22:42:05.043]
-2016-02-08 22:42:05.045 [qtp1488298739-39] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [test@test.ee]
-2016-02-08 22:42:05.045 [qtp1488298739-39] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [$2a$10$8k/7xJRf/ZwKOqJ.n198huwioZup2Xr7ttUa/n5SJgVLkv9powxWW]
-2016-02-08 22:42:05.045 [qtp1488298739-39] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [USER]
-2016-02-08 22:42:05.118 [qtp1488298739-41] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_ where user0_.email=?
-2016-02-08 22:42:05.118 [qtp1488298739-41] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
-2016-02-08 22:42:05.222 [qtp1488298739-41] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:05.222 [qtp1488298739-41] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [rnh2b3no6t55iqen250jh5r22a]
-2016-02-08 22:42:05.223 [qtp1488298739-41] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
-2016-02-08 22:42:05.279 [qtp1488298739-42] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-02-08 22:42:05.280 [qtp1488298739-42] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [rnh2b3no6t55iqen250jh5r22a]
-2016-02-08 22:42:05.281 [qtp1488298739-42] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_0_, user0_.created as created2_1_0_, user0_.email as email3_1_0_, user0_.password as password4_1_0_, user0_.role as role5_1_0_ from User user0_ where user0_.id=?
-2016-02-08 22:42:05.282 [qtp1488298739-42] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
-2016-02-08 22:42:05.292 [qtp1488298739-42] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:05.293 [qtp1488298739-42] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [9]
-2016-02-08 22:42:05.346 [qtp1488298739-43] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_ where user0_.email=?
-2016-02-08 22:42:05.347 [qtp1488298739-43] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
-2016-02-08 22:42:05.449 [qtp1488298739-43] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:05.450 [qtp1488298739-43] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [51m93ttd43gabu5mqflkd9qfah]
-2016-02-08 22:42:05.450 [qtp1488298739-43] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
-2016-02-08 22:42:05.579 [qtp1488298739-39] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_ where user0_.email=?
-2016-02-08 22:42:05.579 [qtp1488298739-39] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [null]
-2016-02-08 22:42:38.989 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:42:38.990 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:42:38.996 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-02-08 22:42:39.416 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+2016-02-17 23:17:06.109 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.title as title4_1_ from Card card0_
+2016-02-17 23:17:06.253 [main] DEBUG org.hibernate.SQL  - insert into Card (id, created, description, title) values (null, ?, ?, ?)
+2016-02-17 23:17:06.256 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:17:06.256 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [Sed omnium volumus voluptua te.]
+2016-02-17 23:17:06.257 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [Lorem Ipsum]
+2016-02-17 23:17:06.260 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.title as title4_1_ from Card card0_
+2016-02-17 23:17:06.268 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.title as title4_1_ from Card card0_
+2016-02-17 23:17:06.299 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_
+2016-02-17 23:17:06.303 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:17:06.303 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:17:06.303 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [kazaa@lankara.ru]
+2016-02-17 23:17:06.305 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [parool]
+2016-02-17 23:17:06.305 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:17:06.313 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_
+2016-02-17 23:17:06.322 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_
+2016-02-17 23:17:06.357 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:17:06.373 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 23:17:12.004 [qtp1940737740-20] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.title as title4_1_ from Card card0_
+2016-02-17 23:17:12.575 [qtp1940737740-21] DEBUG org.hibernate.SQL  - insert into Card (id, created, description, title) values (null, ?, ?, ?)
+2016-02-17 23:17:12.583 [qtp1940737740-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-02-17 23:17:12.574]
+2016-02-17 23:17:12.585 [qtp1940737740-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [null]
+2016-02-17 23:17:12.586 [qtp1940737740-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [Lorem Ipsum]
+2016-02-17 23:17:12.659 [qtp1940737740-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:17:12.660 [qtp1940737740-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
+2016-02-17 23:17:13.093 [qtp1940737740-24] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:17:13.094 [qtp1940737740-24] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [null]
+2016-02-17 23:17:13.208 [qtp1940737740-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:17:13.209 [qtp1940737740-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
+2016-02-17 23:17:13.380 [qtp1940737740-21] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_
+2016-02-17 23:17:13.565 [qtp1940737740-22] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:17:13.566 [qtp1940737740-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-02-17 23:17:13.565]
+2016-02-17 23:17:13.566 [qtp1940737740-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [test@test.ee]
+2016-02-17 23:17:13.566 [qtp1940737740-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [$2a$10$KmNRsnvDPxE1E6fYE1do1eECVfSZKtDtq6nRl1VUylVnCG3Bwtp6u]
+2016-02-17 23:17:13.566 [qtp1940737740-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [USER]
+2016-02-17 23:19:50.068 [qtp943870983-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:19:50.069 [qtp943870983-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:19:50.070 [qtp943870983-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:19:50.235 [qtp943870983-16] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: EudcApi
 	...]
-2016-02-08 22:42:39.804 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
-2016-02-08 22:42:39.811 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
-2016-02-08 22:42:39.816 [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
-2016-02-08 22:42:40.277 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2016-02-08 22:42:40.323 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
-2016-02-08 22:42:40.333 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
-2016-02-08 22:42:40.334 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
-2016-02-08 22:42:40.334 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
-2016-02-08 22:42:40.346 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2016-02-08 22:42:40.669 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-02-08 22:42:40.933 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2016-02-08 22:42:41.363 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000227: Running hbm2ddl schema export
-2016-02-08 22:42:41.369 [main] DEBUG org.hibernate.SQL  - drop table AuthenticatedUser if exists
-2016-02-08 22:42:41.371 [main] DEBUG org.hibernate.SQL  - drop table User if exists
-2016-02-08 22:42:41.371 [main] DEBUG org.hibernate.SQL  - create table AuthenticatedUser (id bigint generated by default as identity, token varchar(255) not null, user_id bigint not null, primary key (id))
-2016-02-08 22:42:41.390 [main] DEBUG org.hibernate.SQL  - create table User (id bigint generated by default as identity, created timestamp, email varchar(255) not null, password varchar(255) not null, role varchar(255), primary key (id))
-2016-02-08 22:42:41.394 [main] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint UK_6hhrtitdoxlsbd7rtxdkkidb1  unique (token)
-2016-02-08 22:42:41.402 [main] DEBUG org.hibernate.SQL  - alter table User add constraint UK_e6gkqunxajvyxl5uctpl2vl2p  unique (email)
-2016-02-08 22:42:41.403 [main] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint FK_p8go15iph52lx15qoh2aypu20 foreign key (user_id) references User
-2016-02-08 22:42:41.428 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000230: Schema export complete
-2016-02-08 22:42:41.637 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:41.643 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:41.644 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
-2016-02-08 22:42:41.644 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
-2016-02-08 22:42:41.644 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:41.667 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:41.668 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token1]
-2016-02-08 22:42:41.669 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [4]
-2016-02-08 22:42:41.671 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:41.672 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token2]
-2016-02-08 22:42:41.672 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [4]
-2016-02-08 22:42:41.903 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-02-08 22:42:41.904 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token1]
-2016-02-08 22:42:41.915 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-02-08 22:42:41.916 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token2]
-2016-02-08 22:42:41.940 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:41.941 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
-2016-02-08 22:42:41.945 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:41.945 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
-2016-02-08 22:42:41.946 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
-2016-02-08 22:42:41.947 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
-2016-02-08 22:42:41.957 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:41.957 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:41.958 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
-2016-02-08 22:42:41.958 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
-2016-02-08 22:42:41.958 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:41.959 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:41.960 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:41.960 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [5]
-2016-02-08 22:42:41.963 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:41.963 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
-2016-02-08 22:42:41.964 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
-2016-02-08 22:42:41.964 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
-2016-02-08 22:42:41.978 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:41.979 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:41.979 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
-2016-02-08 22:42:41.979 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
-2016-02-08 22:42:41.979 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:41.991 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:41.992 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:41.992 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [6]
-2016-02-08 22:42:41.994 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:41.994 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
-2016-02-08 22:42:41.998 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-02-08 22:42:41.998 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:42.000 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
-2016-02-08 22:42:42.000 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
-2016-02-08 22:42:42.003 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:42.004 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:42.004 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
-2016-02-08 22:42:42.004 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
-2016-02-08 22:42:42.004 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:42.005 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:42.006 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:42.006 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [7]
-2016-02-08 22:42:42.008 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-02-08 22:42:42.009 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:42.011 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:42.012 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
-2016-02-08 22:42:42.013 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
-2016-02-08 22:42:42.013 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [7]
-2016-02-08 22:42:42.018 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:42.019 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:42.019 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
-2016-02-08 22:42:42.019 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
-2016-02-08 22:42:42.019 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:42.021 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:42.021 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:42.022 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [8]
-2016-02-08 22:42:42.023 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:42.023 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
-2016-02-08 22:42:42.024 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [8]
-2016-02-08 22:42:42.027 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 23505, SQLState: 23505
-2016-02-08 22:42:42.027 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unique index or primary key violation: "UK_6HHRTITDOXLSBD7RTXDKKIDB1_INDEX_8 ON PUBLIC.AUTHENTICATEDUSER(TOKEN) VALUES ('123123', 7)"; SQL statement:
+2016-02-17 23:19:50.631 [qtp943870983-16] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-17 23:19:50.635 [qtp943870983-16] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-02-17 23:19:50.639 [qtp943870983-16] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-02-17 23:19:51.466 [qtp943870983-16] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-17 23:19:51.730 [qtp943870983-16] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-02-17 23:19:51.797 [qtp943870983-16] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
+2016-02-17 23:19:51.798 [qtp943870983-16] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
+2016-02-17 23:19:51.799 [qtp943870983-16] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-02-17 23:19:51.803 [qtp943870983-16] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-02-17 23:19:53.017 [qtp943870983-16] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-02-17 23:19:53.700 [qtp943870983-16] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-02-17 23:19:55.204 [qtp943870983-16] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000227: Running hbm2ddl schema export
+2016-02-17 23:19:55.217 [qtp943870983-16] DEBUG org.hibernate.SQL  - drop table AuthenticatedUser if exists
+2016-02-17 23:19:55.219 [qtp943870983-16] DEBUG org.hibernate.SQL  - drop table Card if exists
+2016-02-17 23:19:55.222 [qtp943870983-16] DEBUG org.hibernate.SQL  - drop table User if exists
+2016-02-17 23:19:55.222 [qtp943870983-16] DEBUG org.hibernate.SQL  - create table AuthenticatedUser (id bigint generated by default as identity, token varchar(255) not null, user_id bigint not null, primary key (id))
+2016-02-17 23:19:55.286 [qtp943870983-16] DEBUG org.hibernate.SQL  - create table Card (id bigint generated by default as identity, created timestamp, description varchar(255), title varchar(255), primary key (id))
+2016-02-17 23:19:55.290 [qtp943870983-16] DEBUG org.hibernate.SQL  - create table User (id bigint generated by default as identity, created timestamp, email varchar(255) not null, password varchar(255) not null, role varchar(255), primary key (id))
+2016-02-17 23:19:55.297 [qtp943870983-16] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint UK_6hhrtitdoxlsbd7rtxdkkidb1  unique (token)
+2016-02-17 23:19:55.321 [qtp943870983-16] DEBUG org.hibernate.SQL  - alter table User add constraint UK_e6gkqunxajvyxl5uctpl2vl2p  unique (email)
+2016-02-17 23:19:55.323 [qtp943870983-16] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint FK_p8go15iph52lx15qoh2aypu20 foreign key (user_id) references User
+2016-02-17 23:19:55.440 [qtp943870983-16] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000230: Schema export complete
+2016-02-17 23:19:56.188 [qtp943870983-16] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:19:56.197 [qtp943870983-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
+2016-02-17 23:20:26.138 [qtp1611370719-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:20:26.139 [qtp1611370719-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:20:26.139 [qtp1611370719-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:20:26.271 [qtp1611370719-18] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-02-17 23:20:26.528 [qtp1611370719-18] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-17 23:20:26.532 [qtp1611370719-18] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-02-17 23:20:26.535 [qtp1611370719-18] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-02-17 23:20:26.930 [qtp1611370719-18] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-17 23:20:26.997 [qtp1611370719-18] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-02-17 23:20:27.009 [qtp1611370719-18] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
+2016-02-17 23:20:27.010 [qtp1611370719-18] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
+2016-02-17 23:20:27.010 [qtp1611370719-18] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-02-17 23:20:27.012 [qtp1611370719-18] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-02-17 23:20:27.375 [qtp1611370719-18] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-02-17 23:20:27.771 [qtp1611370719-18] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-02-17 23:20:28.634 [qtp1611370719-18] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000227: Running hbm2ddl schema export
+2016-02-17 23:20:28.641 [qtp1611370719-18] DEBUG org.hibernate.SQL  - drop table AuthenticatedUser if exists
+2016-02-17 23:20:28.642 [qtp1611370719-18] DEBUG org.hibernate.SQL  - drop table Card if exists
+2016-02-17 23:20:28.642 [qtp1611370719-18] DEBUG org.hibernate.SQL  - drop table User if exists
+2016-02-17 23:20:28.643 [qtp1611370719-18] DEBUG org.hibernate.SQL  - create table AuthenticatedUser (id bigint generated by default as identity, token varchar(255) not null, user_id bigint not null, primary key (id))
+2016-02-17 23:20:28.668 [qtp1611370719-18] DEBUG org.hibernate.SQL  - create table Card (id bigint generated by default as identity, created timestamp, description varchar(255), title varchar(255), primary key (id))
+2016-02-17 23:20:28.672 [qtp1611370719-18] DEBUG org.hibernate.SQL  - create table User (id bigint generated by default as identity, created timestamp, email varchar(255) not null, password varchar(255) not null, role varchar(255), primary key (id))
+2016-02-17 23:20:28.675 [qtp1611370719-18] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint UK_6hhrtitdoxlsbd7rtxdkkidb1  unique (token)
+2016-02-17 23:20:28.684 [qtp1611370719-18] DEBUG org.hibernate.SQL  - alter table User add constraint UK_e6gkqunxajvyxl5uctpl2vl2p  unique (email)
+2016-02-17 23:20:28.686 [qtp1611370719-18] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint FK_p8go15iph52lx15qoh2aypu20 foreign key (user_id) references User
+2016-02-17 23:20:28.722 [qtp1611370719-18] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000230: Schema export complete
+2016-02-17 23:20:52.719 [qtp1611370719-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:20:52.740 [qtp1611370719-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
+2016-02-17 23:23:22.601 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:23:22.602 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:23:22.602 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-17 23:23:22.763 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-02-17 23:23:23.045 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-17 23:23:23.049 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-02-17 23:23:23.061 [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-02-17 23:23:23.300 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-17 23:23:23.365 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-02-17 23:23:23.378 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
+2016-02-17 23:23:23.379 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
+2016-02-17 23:23:23.379 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-02-17 23:23:23.381 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-02-17 23:23:23.655 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-02-17 23:23:23.875 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-02-17 23:23:24.268 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000227: Running hbm2ddl schema export
+2016-02-17 23:23:24.271 [main] DEBUG org.hibernate.SQL  - drop table AuthenticatedUser if exists
+2016-02-17 23:23:24.272 [main] DEBUG org.hibernate.SQL  - drop table Card if exists
+2016-02-17 23:23:24.273 [main] DEBUG org.hibernate.SQL  - drop table User if exists
+2016-02-17 23:23:24.273 [main] DEBUG org.hibernate.SQL  - create table AuthenticatedUser (id bigint generated by default as identity, token varchar(255) not null, user_id bigint not null, primary key (id))
+2016-02-17 23:23:24.293 [main] DEBUG org.hibernate.SQL  - create table Card (id bigint generated by default as identity, created timestamp, description varchar(255), title varchar(255), primary key (id))
+2016-02-17 23:23:24.296 [main] DEBUG org.hibernate.SQL  - create table User (id bigint generated by default as identity, created timestamp, email varchar(255) not null, password varchar(255) not null, role varchar(255), primary key (id))
+2016-02-17 23:23:24.298 [main] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint UK_6hhrtitdoxlsbd7rtxdkkidb1  unique (token)
+2016-02-17 23:23:24.323 [main] DEBUG org.hibernate.SQL  - alter table User add constraint UK_e6gkqunxajvyxl5uctpl2vl2p  unique (email)
+2016-02-17 23:23:24.325 [main] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint FK_p8go15iph52lx15qoh2aypu20 foreign key (user_id) references User
+2016-02-17 23:23:24.388 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000230: Schema export complete
+2016-02-17 23:23:24.897 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:23:24.908 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:23:24.911 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-02-17 23:23:24.911 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-02-17 23:23:24.911 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:23:24.958 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:23:24.964 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token1]
+2016-02-17 23:23:24.968 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [4]
+2016-02-17 23:23:24.989 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:23:24.990 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token2]
+2016-02-17 23:23:24.990 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [4]
+2016-02-17 23:23:25.290 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 23:23:25.293 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token1]
+2016-02-17 23:23:25.304 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 23:23:25.305 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token2]
+2016-02-17 23:23:25.325 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-02-17 23:23:25.326 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
+2016-02-17 23:23:25.335 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-02-17 23:23:25.335 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-02-17 23:23:25.336 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-02-17 23:23:25.337 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-02-17 23:23:25.350 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:23:25.351 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:23:25.351 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-02-17 23:23:25.351 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-02-17 23:23:25.352 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:23:25.360 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:23:25.366 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:23:25.366 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [5]
+2016-02-17 23:23:25.373 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-02-17 23:23:25.374 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-02-17 23:23:25.375 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-02-17 23:23:25.375 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
+2016-02-17 23:23:25.382 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:23:25.382 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:23:25.383 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-02-17 23:23:25.383 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-02-17 23:23:25.383 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:23:25.385 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:23:25.387 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:23:25.389 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [6]
+2016-02-17 23:23:25.397 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-02-17 23:23:25.397 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
+2016-02-17 23:23:25.398 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 23:23:25.399 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:23:25.400 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-02-17 23:23:25.402 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
+2016-02-17 23:23:25.405 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:23:25.406 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:23:25.406 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-02-17 23:23:25.406 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-02-17 23:23:25.406 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:23:25.413 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:23:25.415 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:23:25.415 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [7]
+2016-02-17 23:23:25.420 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 23:23:25.420 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:23:25.424 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-02-17 23:23:25.424 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
+2016-02-17 23:23:25.425 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-02-17 23:23:25.425 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [7]
+2016-02-17 23:23:25.430 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:23:25.430 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:23:25.430 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-02-17 23:23:25.431 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-02-17 23:23:25.431 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:23:25.432 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:23:25.433 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:23:25.433 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [8]
+2016-02-17 23:23:25.435 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:23:25.436 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-02-17 23:23:25.436 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [8]
+2016-02-17 23:23:25.441 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 23505, SQLState: 23505
+2016-02-17 23:23:25.441 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unique index or primary key violation: "UK_6HHRTITDOXLSBD7RTXDKKIDB1_INDEX_8 ON PUBLIC.AUTHENTICATEDUSER(TOKEN) VALUES ('123123', 7)"; SQL statement:
 insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?) [23505-187]
-2016-02-08 22:42:42.041 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_
-2016-02-08 22:42:42.117 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:42.118 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
-2016-02-08 22:42:42.118 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [kazaa@lankara.ru]
-2016-02-08 22:42:42.118 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [parool]
-2016-02-08 22:42:42.119 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
-2016-02-08 22:42:42.120 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_
-2016-02-08 22:42:42.124 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_
-2016-02-08 22:42:42.133 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_ where user0_.email=?
-2016-02-08 22:42:42.134 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
-2016-02-08 22:42:47.429 [qtp523794808-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_ where user0_.email=?
-2016-02-08 22:42:47.431 [qtp523794808-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
-2016-02-08 22:42:47.557 [qtp523794808-20] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:47.558 [qtp523794808-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [bvn4idh9qgcjecml0ojqndij1k]
-2016-02-08 22:42:47.558 [qtp523794808-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
-2016-02-08 22:42:47.789 [qtp523794808-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_ where user0_.email=?
-2016-02-08 22:42:47.790 [qtp523794808-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [null]
-2016-02-08 22:42:47.857 [qtp523794808-23] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_ where user0_.email=?
-2016-02-08 22:42:47.858 [qtp523794808-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
-2016-02-08 22:42:47.965 [qtp523794808-23] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
-2016-02-08 22:42:47.966 [qtp523794808-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [n6ucqqstrghnmq999fnbrclonv]
-2016-02-08 22:42:47.966 [qtp523794808-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
-2016-02-08 22:42:48.014 [qtp523794808-24] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-02-08 22:42:48.015 [qtp523794808-24] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [n6ucqqstrghnmq999fnbrclonv]
-2016-02-08 22:42:48.016 [qtp523794808-24] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_0_, user0_.created as created2_1_0_, user0_.email as email3_1_0_, user0_.password as password4_1_0_, user0_.role as role5_1_0_ from User user0_ where user0_.id=?
-2016-02-08 22:42:48.017 [qtp523794808-24] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
-2016-02-08 22:42:48.036 [qtp523794808-24] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
-2016-02-08 22:42:48.037 [qtp523794808-24] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [10]
-2016-02-08 22:42:48.117 [qtp523794808-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_1_, user0_.created as created2_1_, user0_.email as email3_1_, user0_.password as password4_1_, user0_.role as role5_1_ from User user0_
-2016-02-08 22:42:48.319 [qtp523794808-21] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
-2016-02-08 22:42:48.319 [qtp523794808-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-02-08 22:42:48.318]
-2016-02-08 22:42:48.319 [qtp523794808-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [test@test.ee]
-2016-02-08 22:42:48.320 [qtp523794808-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [$2a$10$dg5zTgmDo8PeUHw2X/ML..u4vAqryDDg3GhmeGfiEmhXL/eFhJB4S]
-2016-02-08 22:42:48.320 [qtp523794808-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [USER]
+2016-02-17 23:23:25.460 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.title as title4_1_ from Card card0_
+2016-02-17 23:23:25.564 [main] DEBUG org.hibernate.SQL  - insert into Card (id, created, description, title) values (null, ?, ?, ?)
+2016-02-17 23:23:25.567 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:23:25.569 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [Sed omnium volumus voluptua te.]
+2016-02-17 23:23:25.570 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [Lorem Ipsum]
+2016-02-17 23:23:25.575 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.title as title4_1_ from Card card0_
+2016-02-17 23:23:25.581 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.title as title4_1_ from Card card0_
+2016-02-17 23:23:25.604 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_
+2016-02-17 23:23:25.608 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:23:25.608 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-02-17 23:23:25.608 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [kazaa@lankara.ru]
+2016-02-17 23:23:25.609 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [parool]
+2016-02-17 23:23:25.610 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-02-17 23:23:25.611 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_
+2016-02-17 23:23:25.615 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_
+2016-02-17 23:23:25.643 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:23:25.658 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-02-17 23:23:31.171 [qtp1940737740-20] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.title as title4_1_ from Card card0_
+2016-02-17 23:23:31.628 [qtp1940737740-21] DEBUG org.hibernate.SQL  - insert into Card (id, created, description, title) values (null, ?, ?, ?)
+2016-02-17 23:23:31.630 [qtp1940737740-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-02-17 23:23:31.627]
+2016-02-17 23:23:31.631 [qtp1940737740-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [null]
+2016-02-17 23:23:31.631 [qtp1940737740-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [Lorem Ipsum]
+2016-02-17 23:23:31.716 [qtp1940737740-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:23:31.717 [qtp1940737740-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
+2016-02-17 23:23:31.851 [qtp1940737740-22] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:23:31.852 [qtp1940737740-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [rouulp8o7ns7m9dhrcb9bomjue]
+2016-02-17 23:23:31.852 [qtp1940737740-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
+2016-02-17 23:23:32.013 [qtp1940737740-24] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:23:32.014 [qtp1940737740-24] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [null]
+2016-02-17 23:23:32.149 [qtp1940737740-20] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_ where user0_.email=?
+2016-02-17 23:23:32.150 [qtp1940737740-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
+2016-02-17 23:23:32.271 [qtp1940737740-20] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-02-17 23:23:32.272 [qtp1940737740-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [i8m89bk7ci0mr1kj9sp9vva2su]
+2016-02-17 23:23:32.272 [qtp1940737740-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
+2016-02-17 23:23:32.344 [qtp1940737740-21] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-02-17 23:23:32.345 [qtp1940737740-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [i8m89bk7ci0mr1kj9sp9vva2su]
+2016-02-17 23:23:32.347 [qtp1940737740-21] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_0_, user0_.created as created2_2_0_, user0_.email as email3_2_0_, user0_.password as password4_2_0_, user0_.role as role5_2_0_ from User user0_ where user0_.id=?
+2016-02-17 23:23:32.348 [qtp1940737740-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-02-17 23:23:32.366 [qtp1940737740-21] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-02-17 23:23:32.367 [qtp1940737740-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [10]
+2016-02-17 23:23:32.447 [qtp1940737740-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_2_, user0_.created as created2_2_, user0_.email as email3_2_, user0_.password as password4_2_, user0_.role as role5_2_ from User user0_
+2016-02-17 23:23:32.646 [qtp1940737740-23] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-02-17 23:23:32.647 [qtp1940737740-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-02-17 23:23:32.646]
+2016-02-17 23:23:32.647 [qtp1940737740-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [test@test.ee]
+2016-02-17 23:23:32.648 [qtp1940737740-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [$2a$10$3a7kpLPp6J0LVT86sEXJQOriBHfVr32LeMG1LPiE52vuihOueUL7O]
+2016-02-17 23:23:32.648 [qtp1940737740-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [USER]

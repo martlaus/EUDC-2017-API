@@ -1,6 +1,7 @@
 package eudcApi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 
@@ -15,7 +16,6 @@ public class AuthenticatedUser {
     private Long id;
 
     @ManyToOne(optional = false)
-    @JsonIgnore
     private User user;
 
     @Column(nullable = false, unique = true)
@@ -29,10 +29,12 @@ public class AuthenticatedUser {
         this.id = id;
     }
 
+    @JsonProperty
     public User getUser() {
         return user;
     }
 
+    @JsonIgnore
     public void setUser(User user) {
         this.user = user;
     }
