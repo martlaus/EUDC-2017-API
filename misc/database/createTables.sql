@@ -4,12 +4,10 @@ USE eudcApi;
 
 SET foreign_key_checks = 0;
 
-DROP TABLE IF EXISTS User;
 DROP TABLE IF EXISTS AuthenticatedUser;
+DROP TABLE IF EXISTS User;
 DROP TABLE IF EXISTS Card;
-
-
-
+DROP TABLE IF EXISTS CardStatus;
 
 SET foreign_key_checks = 1;
 
@@ -36,14 +34,27 @@ CREATE TABLE AuthenticatedUser (
 );
 
 
-
 CREATE TABLE Card (
-  id       BIGINT AUTO_INCREMENT PRIMARY KEY,
-  title    VARCHAR(255) NOT NULL,
-  description VARCHAR(1000) NOT NULL,
-  created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+id       BIGINT AUTO_INCREMENT PRIMARY KEY,
+title    VARCHAR(255) NOT NULL,
+description VARCHAR(1000) NOT NULL,
+created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+is_card_swiped BOOLEAN DEFAULT FALSE
 );
 
+CREATE TABLE CardStatus (
+  id      BIGINT AUTO_INCREMENT PRIMARY KEY,
+  is_card_swiped BOOLEAN DEFAULT FALSE,
+  authenticated_user_id BIGINT NOT NULL,
+  card_id BIGINT NOT NULL,
+
+  FOREIGN KEY (authenticated_user_id)
+  REFERENCES AuthenticatedUser (id)
+    ON DELETE RESTRICT,
+  FOREIGN KEY (card_id)
+  REFERENCES Card (id)
+    ON DELETE RESTRICT
+);
 
 
 
