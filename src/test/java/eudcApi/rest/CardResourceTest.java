@@ -38,7 +38,7 @@ public class CardResourceTest extends ResourceIntegrationTestBase {
 
         List<Card> cards = response.readEntity(new GenericType<List<Card>>() {
         });
-
+        
         assertNotNull(cards.get(0));
         assertNotNull(cards.get(1));
     }

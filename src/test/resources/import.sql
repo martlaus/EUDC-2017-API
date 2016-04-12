@@ -9,3 +9,6 @@ INSERT INTO AuthenticatedUser (id, user_id, token) VALUES (1, 1, 'superUniqueTok
 INSERT INTO Card (id, title, description, created) VALUES (1, 'Lorem Ipsum', 'Sed omnium volumus voluptua te', '1999-02-02 06:00:01');
 INSERT INTO Card (id, title, description, created) VALUES (2, 'Ipsum Lorem', 'At vis quis dolor inermis', '1999-02-02 06:00:01'); 
 INSERT INTO Card (id, title, description, created) VALUES (3, 'Delirium Tremens', 'His no sensibus moderatius', '1999-02-02 06:00:01');
+
+-- TimerCard data
+INSERT INTO TimerCard (id,title, description, created, enddate) VALUES (1, 'Round start notice', 'Your round will start in: ', '1999-02-02 06:00:01', '2016-05-12 19:45:00');
