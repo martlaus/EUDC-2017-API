@@ -7,7 +7,7 @@ SET foreign_key_checks = 0;
 DROP TABLE IF EXISTS User;
 DROP TABLE IF EXISTS AuthenticatedUser;
 DROP TABLE IF EXISTS Card;
-
+DROP TABLE IF EXISTS TimerCard;
 
 
 
@@ -45,5 +45,12 @@ CREATE TABLE Card (
 );
 
 
+CREATE TABLE TimerCard (
+id       BIGINT AUTO_INCREMENT PRIMARY KEY,
+title    VARCHAR(255) NOT NULL,
+description VARCHAR(1000) NOT NULL,
+created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+enddate TIMESTAMP NOT NULL
+);
 
 
