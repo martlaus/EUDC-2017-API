@@ -15,7 +15,7 @@ INSERT INTO AuthenticatedUser (id, user_id, token) VALUES (1, 1, 'superUniqueTok
 
 -- Add Cards
 INSERT INTO Card ( title, description, created)
-VALUES ( 'Cafe closed in main bulding', 'Nec in eius simul lucilius. Vis ut choro graeco adipisci, te tamquam salutandi sea. Nec ne summo sapientem. Pri ad modo inani voluptua, mel ei mentitum iudicabit, vide menandri percipitur cu pro. Et eum facer liber dicam, cum audire euripidis scribentur in. Te odio quodsi partiendo vis. Everti admodum evertitur eu est. Te sed appareat mediocritatem. Te percipit intellegat instructior vim, est affert integre pertinax ne. Cu deserunt explicari conceptam mei, vel quem suas ne, ex deterruisset consectetuer eam. Impedit denique nam ei.', NOW());
+VALUES ( 'Cafe closed in main building', 'We are sorry for causing discomfort. Please use the cafes and diners at other facilities around the campus while we are addressing the issue.', NOW());
 INSERT INTO Card ( title, description, created)
 VALUES ( 'Important notice', 'Sea in populo eleifend, ex ius stet feugait explicari, id eros nominati mei. Cu eum aeque debitis, pro paulo simul volumus ei, choro possit principes ad vis. At libris labore eum, mei porro consul laudem te, his et propriae omnesque consetetur. Quo ut mentitum accommodare. Graeco voluptaria no sea. Aliquam inimicus constituto sed no, per ei noster diceret. Facer ludus intellegat ius in, eligendi constituto duo cu, vide vulputate disputationi eu qui.', NOW());
 INSERT INTO Card ( title, description, created)
