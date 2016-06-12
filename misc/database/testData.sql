@@ -21,6 +21,12 @@ VALUES ( 'Important notice', 'Sea in populo eleifend, ex ius stet feugait explic
 INSERT INTO Card ( title, description, created)
 VALUES ( 'Recent Winners', 'Below we have brief headlines to all the top debating competitions at the Stanford Payton Jordan Invite on Sunday night with links to the results and quick commentary from the live LetsRun.com thread. Also at the bottom are results from all the “A” qualifications on Sunday. Full results here. The biggest news of the night was 41 year old Bernard Lagat securing the win in phenomenal time', NOW());
 
+-- Add Locations
+INSERT INTO Location (id, name, lat, lng, created)
+VALUES (1, 'Tallinn Harbour', '59.443634', '24.767353', NOW());
+INSERT INTO Location (id, name, lat, lng, created)
+VALUES (2, 'Tallinn University of Technology', '59.395916', '24.671871', NOW());
+
 -- Add TimerCards
 INSERT INTO TimerCard ( title, description, created, enddate)
 VALUES ('Round start notice', 'Your round will start at ICT-634 in: ', NOW(), '2016-05-23 23:59:00');

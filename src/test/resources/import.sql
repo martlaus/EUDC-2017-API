@@ -12,3 +12,7 @@ INSERT INTO Card (id, title, description, created) VALUES (3, 'Delirium Tremens'
 
 -- TimerCard data
 INSERT INTO TimerCard (id,title, description, created, enddate) VALUES (1, 'Round start notice', 'Your round will start in: ', '1999-02-02 06:00:01', '2016-05-12 19:45:00');
+
+-- Location data
+INSERT INTO Location (id, name, lat, lng, created) VALUES (1, 'Tallinn Harbour', '59.443634', '24.767353', '1999-02-02 06:00:01');
+INSERT INTO Location (id, name, lat, lng, created) VALUES (2, 'Tallinn University of Technology', '59.395916', '24.671871', '1999-02-02 06:00:01');
