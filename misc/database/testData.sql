@@ -26,6 +26,20 @@ INSERT INTO Location (id, name, lat, lng, created)
 VALUES (1, 'Tallinn Harbour', '59.443634', '24.767353', NOW());
 INSERT INTO Location (id, name, lat, lng, created)
 VALUES (2, 'Tallinn University of Technology', '59.395916', '24.671871', NOW());
+INSERT INTO Location (id, name, lat, lng, created)
+VALUES (3, 'Tallinn Bus Station', '59.427567', '24.773679', NOW());
+INSERT INTO Location (id, name, lat, lng, created)
+VALUES (4, 'Tallinn Airport', '59.416500', '24.799281', NOW());
+INSERT INTO Location (id, name, lat, lng, created)
+VALUES (5, 'Tallinn Song Festival Grounds', '59.444686', '24.807330', NOW());
+INSERT INTO Location (id, name, lat, lng, created)
+VALUES (6, 'Pirita SPA Hotel', '59.464808', '24.823108', NOW());
+INSERT INTO Location (id, name, lat, lng, created)
+VALUES (7, 'Telliskivi Creative City', '59.440103', '24.729530', NOW());
+INSERT INTO Location (id, name, lat, lng, created)
+VALUES (8, 'Nordea Concert Hall', '59.433227', '24.751926', NOW());
+INSERT INTO Location (id, name, lat, lng, created)
+VALUES (9, 'Kultuurikatel', '59.444416', '24.750546', NOW());
 
 -- Add TimerCards
 INSERT INTO TimerCard ( title, description, created, enddate)
