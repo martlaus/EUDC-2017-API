@@ -16,3 +16,12 @@ INSERT INTO TimerCard (id,title, description, created, enddate) VALUES (1, 'Roun
 -- Location data
 INSERT INTO Location (id, name, lat, lng, created) VALUES (1, 'Tallinn Harbour', '59.443634', '24.767353', '1999-02-02 06:00:01');
 INSERT INTO Location (id, name, lat, lng, created) VALUES (2, 'Tallinn University of Technology', '59.395916', '24.671871', '1999-02-02 06:00:01');
+
+INSERT INTO Card_User(card, user) VALUES (1,1);
+INSERT INTO Card_User(card, user) VALUES (2,1);
+INSERT INTO Card_User(card, user) VALUES (3,1);
+INSERT INTO Card_User(card, user) VALUES (1,2);
+INSERT INTO Card_User(card, user) VALUES (1,3);
+INSERT INTO Card_User(card, user) VALUES (2,2);
+INSERT INTO Card_User(card, user) VALUES (3,2);
+INSERT INTO Card_User(card, user) VALUES (3,3);

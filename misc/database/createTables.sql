@@ -62,4 +62,19 @@ CREATE TABLE Location (
   created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE Card_User (
+  card             BIGINT NOT NULL,
+  user BIGINT NOT NULL,
+
+  PRIMARY KEY (card, user),
+
+  FOREIGN KEY (card)
+  REFERENCES Card (id)
+    ON DELETE RESTRICT,
+
+  FOREIGN KEY (user)
+  REFERENCES User (id)
+    ON DELETE RESTRICT
+);
+
 

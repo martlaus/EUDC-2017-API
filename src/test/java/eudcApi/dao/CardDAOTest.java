@@ -2,6 +2,7 @@ package eudcApi.dao;
 
 import eudcApi.common.test.DatabaseTestBase;
 import eudcApi.model.Card;
+import eudcApi.model.User;
 import org.junit.Test;
 
 import javax.inject.Inject;
@@ -11,9 +12,12 @@ import static org.junit.Assert.*;
 
 //Created by karl on 16.02.16
 public class CardDAOTest extends DatabaseTestBase {
-	
-	@Inject
+
+    @Inject
     private CardDAO cardDAO;
+
+    @Inject
+    private UserDAO userDAO;
 
     @Test
     public void findAll() {
@@ -34,6 +38,27 @@ public class CardDAOTest extends DatabaseTestBase {
         cardDAO.saveCard(Card);
 
         assertEquals(initialSize + 1, cardDAO.findAll().size());
+    }
+
+
+    @Test
+    public void getUsersCard() {
+        User user = userDAO.getUserByEmail("admin@admin.kz");
+
+        List<Card> cards = cardDAO.findUsersCards(user);
+
+        assertNotNull(cards);
+    }
+
+    @Test
+    public void deleteUsersCard() {
+        User user = userDAO.getUserByEmail("admin@admin.kz");
+        List<Card> cards1 = cardDAO.findUsersCards(user);
+
+        cardDAO.deleteUsersCard(user, 1);
+        List<Card> cards2 = cardDAO.findUsersCards(user);
+        assertTrue(cards1.size() > cards2.size());
+
     }
 
     private void assertValidCard(Card Card) {

@@ -19,7 +19,7 @@ VALUES ( 'Cafe closed in main building', 'We are sorry for causing discomfort. P
 INSERT INTO Card ( title, description, created)
 VALUES ( 'Important notice', 'Sea in populo eleifend, ex ius stet feugait explicari, id eros nominati mei. Cu eum aeque debitis, pro paulo simul volumus ei, choro possit principes ad vis. At libris labore eum, mei porro consul laudem te, his et propriae omnesque consetetur. Quo ut mentitum accommodare. Graeco voluptaria no sea. Aliquam inimicus constituto sed no, per ei noster diceret. Facer ludus intellegat ius in, eligendi constituto duo cu, vide vulputate disputationi eu qui.', NOW());
 INSERT INTO Card ( title, description, created)
-VALUES ( 'Recent Winners', 'Below we have brief headlines to all the top debating competitions at the Stanford Payton Jordan Invite on Sunday night with links to the results and quick commentary from the live LetsRun.com thread. Also at the bottom are results from all the “A” qualifications on Sunday. Full results here. The biggest news of the night was 41 year old Bernard Lagat securing the win in phenomenal time', NOW());
+VALUES ( 'Recent Winners', 'Below we have brief headlines to all the top debating competitions at the Stanford Payton Jordan Invite on Sunday night with links to the results and quick commentary from the live LetsRun.com thread. Also at the bottom are results from all the ï¿½Aï¿½ qualifications on Sunday. Full results here. The biggest news of the night was 41 year old Bernard Lagat securing the win in phenomenal time', NOW());
 
 -- Add Locations
 INSERT INTO Location (id, name, lat, lng, created)
@@ -44,3 +44,16 @@ VALUES (9, 'Kultuurikatel', '59.444416', '24.750546', NOW());
 -- Add TimerCards
 INSERT INTO TimerCard ( title, description, created, enddate)
 VALUES ('Round start notice', 'Your round will start at ICT-634 in: ', NOW(), '2016-05-23 23:59:00');
+
+-- Add Cards to Users (All users basically have a list of cards that they have)
+
+INSERT INTO Card_User(card, user) VALUES (1,1);
+INSERT INTO Card_User(card, user) VALUES (2,1);
+INSERT INTO Card_User(card, user) VALUES (3,1);
+INSERT INTO Card_User(card, user) VALUES (1,2);
+INSERT INTO Card_User(card, user) VALUES (1,3);
+INSERT INTO Card_User(card, user) VALUES (2,2);
+INSERT INTO Card_User(card, user) VALUES (3,2);
+INSERT INTO Card_User(card, user) VALUES (3,3);
+
+
