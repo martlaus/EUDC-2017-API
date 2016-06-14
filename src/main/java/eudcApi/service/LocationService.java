@@ -3,6 +3,7 @@ package eudcApi.service;
 import eudcApi.dao.LocationDAO;
 import eudcApi.model.Location;
 
+import eudcApi.model.User;
 import org.joda.time.DateTime;
 
 import javax.inject.Inject;
@@ -25,5 +26,9 @@ public class LocationService {
 
     public List<Location> getAllLocations() {
         return locationDAO.findAll();
+    }
+
+    public void deleteLocation(long locationId) {
+        locationDAO.deleteLocation(locationId);
     }
 }

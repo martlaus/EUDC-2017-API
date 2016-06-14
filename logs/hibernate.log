@@ -2508,3 +2508,257 @@ insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?) [23505-18
 2016-06-13 21:13:01.315 [qtp1202813399-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [test@test.ee]
 2016-06-13 21:13:01.316 [qtp1202813399-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [$2a$10$4AA3hEquJBNqXOiM9WTAV.f/PnKr83cr13bp/0.grlWbger0qyVeG]
 2016-06-13 21:13:01.316 [qtp1202813399-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [USER]
+2016-06-14 12:47:23.737 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:47:23.739 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:47:23.739 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:47:24.193 [qtp1541857308-16] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-06-14 12:47:24.545 [qtp1541857308-16] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-06-14 12:47:24.550 [qtp1541857308-16] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-06-14 12:47:24.553 [qtp1541857308-16] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-06-14 12:47:25.015 [qtp1541857308-16] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-06-14 12:47:25.113 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-06-14 12:47:25.113 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-06-14 12:47:25.114 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-06-14 12:47:26.517 [qtp1541857308-16] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-06-14 12:47:26.538 [qtp1541857308-16] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-06-14 12:47:26.864 [qtp1541857308-16] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-14 12:47:27.584 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-06-14 12:47:27.584 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-06-14 12:47:27.685 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2016-06-14 12:47:27.685 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-06-14 12:47:27.702 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2016-06-14 12:47:27.702 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-06-14 12:48:18.906 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:48:18.909 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:48:18.909 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:48:18.923 [qtp1541857308-16] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-06-14 12:48:18.948 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-06-14 12:48:18.948 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-06-14 12:48:18.948 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-06-14 12:48:19.023 [qtp1541857308-16] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-06-14 12:48:19.024 [qtp1541857308-16] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-06-14 12:48:19.042 [qtp1541857308-16] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-14 12:48:19.061 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-06-14 12:48:19.061 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-06-14 12:48:19.067 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2016-06-14 12:48:19.067 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-06-14 12:48:19.071 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2016-06-14 12:48:19.071 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-06-14 12:48:34.550 [qtp1541857308-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:48:34.551 [qtp1541857308-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:48:34.551 [qtp1541857308-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:48:34.563 [qtp1541857308-17] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-06-14 12:48:34.718 [qtp1541857308-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-06-14 12:48:34.719 [qtp1541857308-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-06-14 12:48:34.719 [qtp1541857308-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-06-14 12:48:34.783 [qtp1541857308-17] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-06-14 12:48:34.786 [qtp1541857308-17] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-06-14 12:48:34.830 [qtp1541857308-17] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-14 12:48:34.933 [qtp1541857308-17] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-06-14 12:48:34.933 [qtp1541857308-17] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-06-14 12:48:34.950 [qtp1541857308-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2016-06-14 12:48:34.966 [qtp1541857308-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-06-14 12:48:34.975 [qtp1541857308-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2016-06-14 12:48:34.975 [qtp1541857308-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-06-14 12:53:55.775 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:53:55.776 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:53:55.776 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:53:55.796 [qtp1541857308-16] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-06-14 12:53:55.833 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-06-14 12:53:55.834 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-06-14 12:53:55.834 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-06-14 12:53:55.930 [qtp1541857308-16] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-06-14 12:53:55.930 [qtp1541857308-16] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-06-14 12:53:55.961 [qtp1541857308-16] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-14 12:53:56.059 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-06-14 12:53:56.059 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-06-14 12:53:56.070 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2016-06-14 12:53:56.071 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-06-14 12:53:56.076 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2016-06-14 12:53:56.076 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-06-14 12:55:17.018 [qtp1541857308-14] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:55:17.020 [qtp1541857308-14] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:55:17.021 [qtp1541857308-14] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 12:55:17.430 [qtp1541857308-14] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-06-14 12:55:17.814 [qtp1541857308-14] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-06-14 12:55:17.818 [qtp1541857308-14] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-06-14 12:55:17.820 [qtp1541857308-14] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-06-14 12:55:18.154 [qtp1541857308-14] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-06-14 12:55:18.240 [qtp1541857308-14] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-06-14 12:55:18.240 [qtp1541857308-14] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-06-14 12:55:18.240 [qtp1541857308-14] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-06-14 12:55:19.466 [qtp1541857308-14] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-06-14 12:55:19.486 [qtp1541857308-14] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-06-14 12:55:20.169 [qtp1541857308-14] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-14 12:55:20.889 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-06-14 12:55:20.889 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-06-14 12:55:20.919 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2016-06-14 12:55:20.919 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-06-14 12:55:20.929 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2016-06-14 12:55:20.929 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-06-14 12:55:20.941 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card_user
+2016-06-14 12:55:20.941 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
+2016-06-14 12:55:20.950 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.location
+2016-06-14 12:55:20.950 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [lng, created, name, id, lat]
+2016-06-14 12:55:20.958 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.timercard
+2016-06-14 12:55:20.958 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [enddate, created, description, id, title]
+2016-06-14 12:55:20.965 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.user
+2016-06-14 12:55:20.965 [qtp1541857308-14] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-06-14 12:55:21.247 [qtp1541857308-14] DEBUG org.hibernate.SQL  - DELETE FROM Location WHERE id = ?
+2016-06-14 12:55:21.272 [qtp1541857308-14] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [0]
+2016-06-14 12:56:05.281 [qtp1541857308-17] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 12:56:42.767 [qtp1541857308-18] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 12:56:45.506 [qtp1541857308-19] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 12:56:47.844 [qtp1541857308-16] DEBUG org.hibernate.SQL  - DELETE FROM Location WHERE id = ?
+2016-06-14 12:56:47.844 [qtp1541857308-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [0]
+2016-06-14 12:56:53.445 [qtp1541857308-17] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 12:56:55.696 [qtp1541857308-19] DEBUG org.hibernate.SQL  - DELETE FROM Location WHERE id = ?
+2016-06-14 12:56:55.697 [qtp1541857308-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [0]
+2016-06-14 12:57:10.930 [qtp1541857308-16] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 12:57:26.921 [qtp1541857308-17] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 12:59:24.854 [qtp1541857308-17] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 12:59:43.037 [qtp1541857308-18] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:07:19.776 [qtp1541857308-19] DEBUG org.hibernate.SQL  - DELETE FROM Location WHERE id = ?
+2016-06-14 13:07:19.779 [qtp1541857308-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [0]
+2016-06-14 13:12:46.487 [qtp1541857308-17] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:13:45.724 [qtp1541857308-18] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:13:48.030 [qtp1541857308-14] DEBUG org.hibernate.SQL  - DELETE FROM Location WHERE id = ?
+2016-06-14 13:13:48.030 [qtp1541857308-14] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [0]
+2016-06-14 13:13:49.989 [qtp1541857308-16] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:14:36.956 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 13:14:36.957 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 13:14:36.957 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 13:14:37.361 [qtp1541857308-16] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-06-14 13:14:37.767 [qtp1541857308-16] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-06-14 13:14:37.770 [qtp1541857308-16] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-06-14 13:14:37.772 [qtp1541857308-16] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-06-14 13:14:38.531 [qtp1541857308-16] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-06-14 13:14:38.643 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-06-14 13:14:38.644 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-06-14 13:14:38.644 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-06-14 13:14:39.611 [qtp1541857308-16] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-06-14 13:14:39.624 [qtp1541857308-16] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-06-14 13:14:39.894 [qtp1541857308-16] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-14 13:14:40.526 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-06-14 13:14:40.526 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-06-14 13:14:40.555 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2016-06-14 13:14:40.556 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-06-14 13:14:40.567 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2016-06-14 13:14:40.567 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-06-14 13:14:40.577 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card_user
+2016-06-14 13:14:40.577 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
+2016-06-14 13:14:40.582 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.location
+2016-06-14 13:14:40.583 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [lng, created, name, id, lat]
+2016-06-14 13:14:40.591 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.timercard
+2016-06-14 13:14:40.591 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [enddate, created, description, id, title]
+2016-06-14 13:14:40.598 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.user
+2016-06-14 13:14:40.599 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-06-14 13:14:40.932 [qtp1541857308-16] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:17:34.999 [qtp1541857308-19] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:17:54.639 [qtp1541857308-18] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:19:10.325 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 13:19:10.326 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 13:19:10.327 [qtp1541857308-16] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 13:19:10.623 [qtp1541857308-16] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-06-14 13:19:10.906 [qtp1541857308-16] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-06-14 13:19:10.909 [qtp1541857308-16] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-06-14 13:19:10.911 [qtp1541857308-16] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-06-14 13:19:11.321 [qtp1541857308-16] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-06-14 13:19:11.440 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-06-14 13:19:11.440 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-06-14 13:19:11.440 [qtp1541857308-16] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-06-14 13:19:12.678 [qtp1541857308-16] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-06-14 13:19:12.688 [qtp1541857308-16] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-06-14 13:19:12.934 [qtp1541857308-16] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-14 13:19:13.577 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-06-14 13:19:13.577 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-06-14 13:19:13.599 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2016-06-14 13:19:13.599 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-06-14 13:19:13.605 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2016-06-14 13:19:13.605 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-06-14 13:19:13.610 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card_user
+2016-06-14 13:19:13.611 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
+2016-06-14 13:19:13.617 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.location
+2016-06-14 13:19:13.617 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [lng, created, name, id, lat]
+2016-06-14 13:19:13.624 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.timercard
+2016-06-14 13:19:13.624 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [enddate, created, description, id, title]
+2016-06-14 13:19:13.630 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.user
+2016-06-14 13:19:13.630 [qtp1541857308-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-06-14 13:19:13.971 [qtp1541857308-16] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:20:09.175 [qtp1541857308-15] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 13:20:09.177 [qtp1541857308-15] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 13:20:09.177 [qtp1541857308-15] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-06-14 13:20:09.543 [qtp1541857308-15] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-06-14 13:20:09.840 [qtp1541857308-15] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-06-14 13:20:09.842 [qtp1541857308-15] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-06-14 13:20:09.850 [qtp1541857308-15] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-06-14 13:20:10.381 [qtp1541857308-15] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-06-14 13:20:10.576 [qtp1541857308-15] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-06-14 13:20:10.577 [qtp1541857308-15] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-06-14 13:20:10.577 [qtp1541857308-15] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-06-14 13:20:11.748 [qtp1541857308-15] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-06-14 13:20:11.760 [qtp1541857308-15] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-06-14 13:20:12.048 [qtp1541857308-15] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-14 13:20:12.428 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-06-14 13:20:12.428 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-06-14 13:20:12.464 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2016-06-14 13:20:12.464 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-06-14 13:20:12.627 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2016-06-14 13:20:12.631 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [created, description, id, title]
+2016-06-14 13:20:12.643 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card_user
+2016-06-14 13:20:12.644 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
+2016-06-14 13:20:12.657 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.location
+2016-06-14 13:20:12.657 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [lng, created, name, id, lat]
+2016-06-14 13:20:12.664 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.timercard
+2016-06-14 13:20:12.664 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [enddate, created, description, id, title]
+2016-06-14 13:20:12.671 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.user
+2016-06-14 13:20:12.671 [qtp1541857308-15] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-06-14 13:20:13.233 [qtp1541857308-16] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:20:13.244 [qtp1541857308-15] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:20:26.804 [qtp1541857308-19] DEBUG org.hibernate.SQL  - DELETE FROM Location WHERE id = ?
+2016-06-14 13:20:26.808 [qtp1541857308-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-06-14 13:20:30.539 [qtp1541857308-20] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:20:39.159 [qtp1541857308-16] DEBUG org.hibernate.SQL  - DELETE FROM Location WHERE id = ?
+2016-06-14 13:20:39.159 [qtp1541857308-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-06-14 13:20:46.417 [qtp1541857308-15] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:20:56.939 [qtp1541857308-20] DEBUG org.hibernate.SQL  - DELETE FROM Location WHERE id = ?
+2016-06-14 13:20:56.940 [qtp1541857308-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [9]
+2016-06-14 13:20:59.887 [qtp1541857308-16] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:22:31.631 [qtp1541857308-18] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:22:34.635 [qtp1541857308-20] DEBUG org.hibernate.SQL  - DELETE FROM Location WHERE id = ?
+2016-06-14 13:22:34.635 [qtp1541857308-20] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [8]
+2016-06-14 13:22:36.739 [qtp1541857308-16] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:22:54.287 [qtp1541857308-15] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:24:05.036 [qtp1541857308-18] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:24:59.472 [qtp1541857308-18] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:25:16.936 [qtp1541857308-16] DEBUG org.hibernate.SQL  - insert into Location (created, lat, lng, name) values (?, ?, ?, ?)
+2016-06-14 13:25:16.943 [qtp1541857308-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-06-14 13:25:16.921]
+2016-06-14 13:25:16.945 [qtp1541857308-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [59.425391]
+2016-06-14 13:25:16.945 [qtp1541857308-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [24.745331]
+2016-06-14 13:25:16.945 [qtp1541857308-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [Joni Pun]
+2016-06-14 13:25:18.840 [qtp1541857308-15] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 13:25:22.241 [qtp1541857308-19] DEBUG org.hibernate.SQL  - DELETE FROM Location WHERE id = ?
+2016-06-14 13:25:22.241 [qtp1541857308-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [10]
+2016-06-14 13:25:35.842 [qtp1541857308-16] DEBUG org.hibernate.SQL  - insert into Location (created, lat, lng, name) values (?, ?, ?, ?)
+2016-06-14 13:25:35.843 [qtp1541857308-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-06-14 13:25:35.842]
+2016-06-14 13:25:35.844 [qtp1541857308-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [59.425347]
+2016-06-14 13:25:35.844 [qtp1541857308-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [24.745159]
+2016-06-14 13:25:35.844 [qtp1541857308-16] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [Joni Pun]
+2016-06-14 13:25:37.361 [qtp1541857308-15] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_
+2016-06-14 15:09:05.156 [qtp1541857308-20] DEBUG org.hibernate.SQL  - select location0_.id as id1_3_, location0_.created as created2_3_, location0_.lat as lat3_3_, location0_.lng as lng4_3_, location0_.name as name5_3_ from Location location0_

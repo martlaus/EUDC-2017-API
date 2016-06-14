@@ -1,6 +1,7 @@
 package eudcApi.dao;
 
 import eudcApi.model.Location;
+import eudcApi.model.User;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -38,5 +39,11 @@ public class LocationDAO {
 
     public void delete(Location location) {
         entityManager.remove(location);
+    }
+
+    public void deleteLocation(long locationId) {
+        entityManager
+                .createNativeQuery("DELETE FROM Location WHERE id = :locationId")
+                .setParameter("locationId", locationId).executeUpdate();
     }
 }
