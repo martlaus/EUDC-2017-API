@@ -1,10 +1,13 @@
 package eudcApi.dao;
 
+import eudcApi.model.Card;
 import eudcApi.model.TimerCard;
+import eudcApi.model.User;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceException;
+import javax.persistence.TypedQuery;
 
 import java.util.List;
 
@@ -36,5 +39,28 @@ public class TimerCardDAO {
 
     public void delete(TimerCard timercard) {
         entityManager.remove(timercard);
+    }
+    
+    public List<TimerCard> findUsersTimerCards(User user) {
+        TypedQuery<TimerCard> findByUser = entityManager
+                .createQuery("SELECT c FROM TimerCard c LEFT JOIN FETCH c.users as u WHERE u = :user",
+                        TimerCard.class);
+
+        List<TimerCard> timercards = null;
+
+        try {
+            timercards = findByUser.setParameter("user", user).getResultList();
+        } catch (Exception e) {
+            //ignore
+        }
+
+        return timercards;
+    }
+    
+    public void deleteUsersTimerCard(User user, long timercardId) {
+        entityManager
+        		.createNativeQuery("DELETE FROM TimerCard_User WHERE user = :user AND timercard = :timercardId")
+                .setParameter("user", user.getId())
+                .setParameter("timercardId", timercardId).executeUpdate();
     }
 }

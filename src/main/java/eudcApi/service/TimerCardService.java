@@ -1,7 +1,9 @@
 package eudcApi.service;
 
 import eudcApi.dao.TimerCardDAO;
+import eudcApi.model.Card;
 import eudcApi.model.TimerCard;
+import eudcApi.model.User;
 
 import org.joda.time.DateTime;
 
@@ -26,5 +28,13 @@ public class TimerCardService {
 
     public List<TimerCard> getAllTimerCards() {
         return timerCardDAO.findAll();
+    }
+    
+    public List<TimerCard> getUsersTimerCards(User user) {
+        return timerCardDAO.findUsersTimerCards(user);
+    }
+    
+    public void deleteUsersTimerCard(User user, long timercardId) {
+        timerCardDAO.deleteUsersTimerCard(user, timercardId);
     }
 }

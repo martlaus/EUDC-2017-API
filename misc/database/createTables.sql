@@ -77,4 +77,18 @@ CREATE TABLE Card_User (
     ON DELETE RESTRICT
 );
 
+CREATE TABLE TimerCard_User (
+  timercard             BIGINT NOT NULL,
+  user BIGINT NOT NULL,
+
+  PRIMARY KEY (timercard, user),
+
+  FOREIGN KEY (timercard)
+  REFERENCES TimerCard (id)
+    ON DELETE RESTRICT,
+
+  FOREIGN KEY (user)
+  REFERENCES User (id)
+    ON DELETE RESTRICT
+);
 

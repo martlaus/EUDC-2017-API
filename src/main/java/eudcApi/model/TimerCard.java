@@ -1,10 +1,20 @@
 package eudcApi.model;
 
+import static javax.persistence.CascadeType.MERGE;
+import static javax.persistence.CascadeType.PERSIST;
+import static javax.persistence.FetchType.EAGER;
+
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
@@ -34,6 +44,15 @@ public class TimerCard {
 	@Column
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime created;
+	
+	@ManyToMany(fetch = EAGER, cascade = {PERSIST, MERGE})
+//  @Fetch(FetchMode.SELECT)
+  @JoinTable(
+          name = "TimerCard_User",
+          joinColumns = {@JoinColumn(name = "timercard")},
+          inverseJoinColumns = {@JoinColumn(name = "user")},
+          uniqueConstraints = @UniqueConstraint(columnNames = {"timercard", "user"}))
+  private List<User> users;
 	
 	@Column(nullable = true, unique = false)
     private String title;

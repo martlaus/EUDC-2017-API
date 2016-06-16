@@ -12,6 +12,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.SecurityContext;
+
 import java.util.List;
 
 /**
@@ -59,6 +60,7 @@ public class CardResource {
     }
 
     @DELETE
+    @Path("{cardId}")
     @Produces(MediaType.APPLICATION_JSON)
     public void deleteUsersCard(@PathParam("cardId") long cardId) {
         EudcApiPrincipal EudcApiPrincipal = (EudcApiPrincipal) securityContext.getUserPrincipal();

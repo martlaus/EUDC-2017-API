@@ -59,7 +59,7 @@ public class CardDAO {
 
     public void deleteUsersCard(User user, long cardId) {
         entityManager
-                .createNativeQuery("DELETE FROM Card_User cu WHERE cu.user = :user AND cu.card = :cardId")
+        		.createNativeQuery("DELETE FROM Card_User WHERE user = :user AND card = :cardId")
                 .setParameter("user", user.getId())
                 .setParameter("cardId", cardId).executeUpdate();
     }

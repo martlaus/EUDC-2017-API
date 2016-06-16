@@ -43,7 +43,7 @@ VALUES (9, 'Kultuurikatel', '59.444416', '24.750546', NOW());
 
 -- Add TimerCards
 INSERT INTO TimerCard ( title, description, created, enddate)
-VALUES ('Round start notice', 'Your round will start at ICT-634 in: ', NOW(), '2016-05-23 23:59:00');
+VALUES ('Round start notice', 'Your round will start at ICT-634 in: ', NOW(), '2016-06-18 13:55:00');
 
 -- Add Cards to Users (All users basically have a list of cards that they have)
 
@@ -55,5 +55,9 @@ INSERT INTO Card_User(card, user) VALUES (1,3);
 INSERT INTO Card_User(card, user) VALUES (2,2);
 INSERT INTO Card_User(card, user) VALUES (3,2);
 INSERT INTO Card_User(card, user) VALUES (3,3);
+
+-- Add TimerCards to Users 
+INSERT INTO TimerCard_User(timercard, user) VALUES (1,3);
+INSERT INTO TimerCard_User(timercard, user) VALUES (1,1);
 
 
