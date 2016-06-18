@@ -2,8 +2,9 @@
 /.settings/
 /.project
 /.classpath
-/.idea/
-/logs/
+/.idea
+/logs
 custom.properties
 .idea/dataSources.xml
 .idea/workspace.xml
+eudcapi.iml

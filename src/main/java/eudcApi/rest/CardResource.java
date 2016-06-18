@@ -47,10 +47,13 @@ public class CardResource {
     public List<Card> getAllCards() {
         EudcApiPrincipal EudcApiPrincipal = (EudcApiPrincipal) securityContext.getUserPrincipal();
         AuthenticatedUser authenticatedUser = null;
+        try{
         if (EudcApiPrincipal != null) {
             authenticatedUser = EudcApiPrincipal.getAuthenticatedUser();
         }
-
+        }catch(Exception e){
+            System.out.println(e);
+        }
 
         if (EudcApiPrincipal != null && authenticatedUser != null) {
             return cardService.getUsersCards(authenticatedUser.getUser());
