@@ -10,7 +10,7 @@ Check out the project and build the application using **maven** and run the eudc
 
 By default, application will run at port 7070. The rest API is available under context path **rest/**. After starting application you can access it at:
 
-	http://localhost:8080/rest/path/to/resource
+	http://localhost:7070/rest/path/to/resource
 
 ## Default configuration
 
