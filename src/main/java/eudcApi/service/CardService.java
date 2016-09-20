@@ -1,6 +1,7 @@
 package eudcApi.service;
 
 import eudcApi.dao.CardDAO;
+import eudcApi.dao.UserDAO;
 import eudcApi.model.Card;
 import eudcApi.model.User;
 
@@ -18,7 +19,11 @@ public class CardService {
     @Inject
     private CardDAO cardDAO;
 
+    @Inject
+    private UserService userService;
+
     public Card saveCard(Card card) {
+        card.setUsers(userService.getAllUsers());
 
         card.setCreated(DateTime.now());
         return cardDAO.saveCard(card);
