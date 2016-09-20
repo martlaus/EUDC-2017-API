@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mindrot.jbcrypt.BCrypt;
 
+import java.util.ArrayList;
+
 import static org.easymock.EasyMock.*;
 import static org.junit.Assert.*;
 
@@ -20,18 +22,22 @@ public class CardServiceTest {
     @Mock
     private CardDAO cardDAO;
 
+    @Mock
+    private UserService userService;
+
     @Test
     public void saveCard() {
         Card card = new Card();
         card.setTitle("Lorem Ipsum");
         Capture<Card> capturedCard = newCapture();
         expectCreateCard(capturedCard);
+        expect(userService.getAllUsers()).andReturn(new ArrayList<>());
 
-        replay(cardDAO);
+        replay(cardDAO, userService);
 
         Card returnedCard = cardService.saveCard(card);
 
-        verify(cardDAO);
+        verify(cardDAO, userService);
 
         assertNotNull(returnedCard);
         assertNotEquals("title", returnedCard.getTitle());
