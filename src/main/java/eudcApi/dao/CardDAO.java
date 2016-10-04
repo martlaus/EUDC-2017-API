@@ -20,7 +20,9 @@ public class CardDAO {
     private EntityManager entityManager;
 
     public List<Card> findAll() {
-        return entityManager.createQuery("from Card", Card.class).getResultList();
+        return entityManager.createQuery(
+                "SELECT c FROM Card c ORDER BY c.pinned DESC, c.created DESC",
+                Card.class).getResultList();
     }
 
     public Card saveCard(Card card) {

@@ -24,7 +24,6 @@ CREATE TABLE User (
 );
 
 
-
 CREATE TABLE AuthenticatedUser (
   id      BIGINT AUTO_INCREMENT PRIMARY KEY,
   user_id BIGINT              NOT NULL,
@@ -36,34 +35,34 @@ CREATE TABLE AuthenticatedUser (
 );
 
 
-
 CREATE TABLE Card (
-  id       BIGINT AUTO_INCREMENT PRIMARY KEY,
-  title    VARCHAR(255) NOT NULL,
+  id          BIGINT    AUTO_INCREMENT PRIMARY KEY,
+  title       VARCHAR(255)  NOT NULL,
   description VARCHAR(1000) NOT NULL,
-  created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  pinned      BOOLEAN NOT NULL
 );
 
 
 CREATE TABLE TimerCard (
-id       BIGINT AUTO_INCREMENT PRIMARY KEY,
-title    VARCHAR(255) NOT NULL,
-description VARCHAR(1000) NOT NULL,
-created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-enddate TIMESTAMP NOT NULL
+  id          BIGINT    AUTO_INCREMENT PRIMARY KEY,
+  title       VARCHAR(255)  NOT NULL,
+  description VARCHAR(1000) NOT NULL,
+  created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  enddate     TIMESTAMP     NOT NULL
 );
 
 
 CREATE TABLE Location (
-  id       BIGINT AUTO_INCREMENT PRIMARY KEY,
+  id      BIGINT    AUTO_INCREMENT PRIMARY KEY,
   name    VARCHAR(255) NOT NULL,
-  lng    VARCHAR(255) NOT NULL,
-  lat    VARCHAR(255) NOT NULL,
-  created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  lng     VARCHAR(255) NOT NULL,
+  lat     VARCHAR(255) NOT NULL,
+  created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE Card_User (
-  card             BIGINT NOT NULL,
+  card BIGINT NOT NULL,
   user BIGINT NOT NULL,
 
   PRIMARY KEY (card, user),
@@ -78,8 +77,8 @@ CREATE TABLE Card_User (
 );
 
 CREATE TABLE TimerCard_User (
-  timercard             BIGINT NOT NULL,
-  user BIGINT NOT NULL,
+  timercard BIGINT NOT NULL,
+  user      BIGINT NOT NULL,
 
   PRIMARY KEY (timercard, user),
 

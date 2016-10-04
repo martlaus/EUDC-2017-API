@@ -35,6 +35,9 @@ public class Card {
     @Column(nullable = true)
     private String description;
 
+    @Column(nullable = false)
+    private Boolean pinned;
+
     @Column
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime created;
@@ -71,6 +74,10 @@ public class Card {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public Boolean getPinned() { return pinned; }
+
+    public void setPinned(Boolean pinned) { this.pinned = pinned; }
 
     @JsonSerialize(using = DateTimeSerializer.class)
     public DateTime getCreated() {
