@@ -36,7 +36,7 @@ public class Card {
     private String description;
 
     @Column(nullable = false)
-    private Boolean pinned;
+    private Boolean pinned = false;
 
     @Column
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")

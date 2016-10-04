@@ -1,5 +1,4 @@
-/target/
-/.idea
-/logs
-
+target/
+.idea/
+logs/
 eudcApi.iml
