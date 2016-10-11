@@ -15,6 +15,37 @@
       <foreign-key name="AuthenticatedUser_ibfk_1" columns="user_id" ref-table="User" ref-schema="" ref-catalog="eudcApi" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="token" unique="true" columns="token"/>
     </table>
+    <table name="Card" schema="" catalog="eudcApi" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="Card_User_ibfk_1" table="Card_User" schema="" catalog="eudcApi" columns="card"/>
+    </table>
+    <table name="Card_User" schema="" catalog="eudcApi" type="TABLE">
+      <column name="card" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="user" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="card,user"/>
+      <foreign-key name="Card_User_ibfk_1" columns="card" ref-table="Card" ref-schema="" ref-catalog="eudcApi" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="Card_User_ibfk_2" columns="user" ref-table="User" ref-schema="" ref-catalog="eudcApi" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="Location" schema="" catalog="eudcApi" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lng" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lat" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="TimerCard" schema="" catalog="eudcApi" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="enddate" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
     <table name="User" schema="" catalog="eudcApi" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
@@ -23,6 +54,7 @@
       <column name="created" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="AuthenticatedUser_ibfk_1" table="AuthenticatedUser" schema="" catalog="eudcApi" columns="user_id"/>
+      <exported-key name="Card_User_ibfk_2" table="Card_User" schema="" catalog="eudcApi" columns="user"/>
       <index name="email" unique="true" columns="email"/>
     </table>
   </data-source>
