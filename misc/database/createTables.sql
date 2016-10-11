@@ -45,11 +45,11 @@ CREATE TABLE Card (
 
 
 CREATE TABLE TimerCard (
-  id          BIGINT    AUTO_INCREMENT PRIMARY KEY,
-  title       VARCHAR(255)                            NOT NULL,
-  description VARCHAR(1000)                           NOT NULL,
-  created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  enddate     TIMESTAMP DEFAULT CURRENT_TIMESTAMP     NOT NULL
+  id          BIGINT AUTO_INCREMENT PRIMARY KEY,
+  title       VARCHAR(255)                        NOT NULL,
+  description VARCHAR(1000)                       NOT NULL,
+  created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  enddate     TIMESTAMP DEFAULT now()             NOT NULL
 );
 
 
