@@ -96,7 +96,7 @@ CREATE TABLE Event (
   title       VARCHAR(255)                        NOT NULL,
   description VARCHAR(1000),
   startTime   TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-  endTime     TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+  endTime     TIMESTAMP DEFAULT now() NOT NULL
 
 );
 
