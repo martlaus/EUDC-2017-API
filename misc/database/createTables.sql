@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS AuthenticatedUser;
 DROP TABLE IF EXISTS Card;
 DROP TABLE IF EXISTS TimerCard;
 DROP TABLE IF EXISTS Location;
-
+DROP TABLE IF EXISTS Event;
 
 SET foreign_key_checks = 1;
 
@@ -40,16 +40,16 @@ CREATE TABLE Card (
   title       VARCHAR(255)  NOT NULL,
   description VARCHAR(1000) NOT NULL,
   created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  pinned      BOOLEAN NOT NULL
+  pinned      BOOLEAN       NOT NULL
 );
 
 
 CREATE TABLE TimerCard (
   id          BIGINT    AUTO_INCREMENT PRIMARY KEY,
-  title       VARCHAR(255)  NOT NULL,
-  description VARCHAR(1000) NOT NULL,
+  title       VARCHAR(255)                            NOT NULL,
+  description VARCHAR(1000)                           NOT NULL,
   created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  enddate     TIMESTAMP     NOT NULL
+  enddate     TIMESTAMP DEFAULT CURRENT_TIMESTAMP     NOT NULL
 );
 
 
@@ -89,5 +89,14 @@ CREATE TABLE TimerCard_User (
   FOREIGN KEY (user)
   REFERENCES User (id)
     ON DELETE RESTRICT
+);
+
+CREATE TABLE Event (
+  id          BIGINT AUTO_INCREMENT PRIMARY KEY,
+  title       VARCHAR(255)                        NOT NULL,
+  description VARCHAR(1000),
+  startTime   TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  endTime     TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+
 );
 

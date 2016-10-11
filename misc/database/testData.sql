@@ -59,3 +59,8 @@ INSERT INTO Card_User(card, user) VALUES (3,3);
 -- Add TimerCards to Users 
 INSERT INTO TimerCard_User(timercard, user) VALUES (1,3);
 INSERT INTO TimerCard_User(timercard, user) VALUES (1,1);
+
+-- Add Test events
+INSERT INTO Event (id, title, description) VALUES (1, 'Opening ceremony of EUDC', 'Cheers!');
+INSERT INTO Event (id, title, description, startTime, endTime)VALUES (2, 'Break night social', 'Open vodka bar?', DATE_ADD(NOW(), INTERVAL 24 HOUR), DATE_ADD(NOW(), INTERVAL 2 HOUR));
+INSERT INTO Event (id, title, description, startTime, endTime)VALUES (3, 'Open finals', 'Love wil win in the end.', DATE_ADD(NOW(), INTERVAL 48 HOUR), DATE_ADD(NOW(), INTERVAL 2 HOUR));
