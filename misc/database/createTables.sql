@@ -7,16 +7,13 @@ SET foreign_key_checks = 0;
 DROP TABLE IF EXISTS User;
 DROP TABLE IF EXISTS AuthenticatedUser;
 DROP TABLE IF EXISTS Card;
-DROP TABLE IF EXISTS Card_User;
 DROP TABLE IF EXISTS TimerCard;
-DROP TABLE IF EXISTS TimerCard_User;
 DROP TABLE IF EXISTS Location;
 
 
 SET foreign_key_checks = 1;
 
 -- Create tables
-
 
 CREATE TABLE User (
   id       BIGINT    AUTO_INCREMENT PRIMARY KEY,
@@ -49,11 +46,11 @@ CREATE TABLE Card (
 
 
 CREATE TABLE TimerCard (
-  id       BIGINT AUTO_INCREMENT PRIMARY KEY,
-  title    VARCHAR(255) NOT NULL,
-  description VARCHAR(1000) NOT NULL,
-  created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  enddate TIMESTAMP NULL DEFAULT NULL
+id       BIGINT AUTO_INCREMENT PRIMARY KEY,
+title    VARCHAR(255) NOT NULL,
+description VARCHAR(1000) NOT NULL,
+created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+enddate TIMESTAMP NOT NULL
 );
 
 
@@ -66,7 +63,7 @@ CREATE TABLE Location (
 );
 
 CREATE TABLE Card_User (
-  card BIGINT NOT NULL,
+  card             BIGINT NOT NULL,
   user BIGINT NOT NULL,
 
   PRIMARY KEY (card, user),
@@ -94,3 +91,4 @@ CREATE TABLE TimerCard_User (
   REFERENCES User (id)
     ON DELETE RESTRICT
 );
+

@@ -25,13 +25,19 @@ public class UserService {
 
     private SecureRandom random = new SecureRandom();
 
+    private String existingPw;
 
     public User saveUser(User user) {
         //check if data is according to business rules
         user.setRole("USER");
         //secure pw
-        String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
-        user.setPassword(hashed);
+        if (user.getPassword() != null && !user.getPassword().isEmpty()) {
+            String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+            user.setPassword(hashed);
+        } else {
+            existingPw = getUserByEmail(user.getEmail()).getPassword();
+            user.setPassword(existingPw);
+        }
 
         user.setCreated(DateTime.now());
         return userDAO.saveUser(user);
