@@ -40,7 +40,7 @@ public class Card {
     private DateTime created;
 
     @ManyToMany(fetch = EAGER, cascade = {PERSIST, MERGE})
-//    @Fetch(FetchMode.SELECT)
+    //@Fetch(FetchMode.SELECT)
     @JoinTable(
             name = "Card_User",
             joinColumns = {@JoinColumn(name = "card")},
@@ -52,7 +52,8 @@ public class Card {
         return id;
     }
 
-    public void setId(Long id) {
+
+    private void setId(Long id) {
         this.id = id;
     }
 

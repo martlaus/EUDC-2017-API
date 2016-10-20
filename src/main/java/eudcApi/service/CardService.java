@@ -1,6 +1,7 @@
 package eudcApi.service;
 
 import eudcApi.dao.CardDAO;
+import eudcApi.dao.UserDAO;
 import eudcApi.model.Card;
 import eudcApi.model.User;
 
@@ -18,7 +19,11 @@ public class CardService {
     @Inject
     private CardDAO cardDAO;
 
+    @Inject
+    private UserService userService;
+
     public Card saveCard(Card card) {
+        card.setUsers(userService.getAllUsers());
 
         card.setCreated(DateTime.now());
         return cardDAO.saveCard(card);
@@ -32,7 +37,10 @@ public class CardService {
         return cardDAO.findUsersCards(user);
     }
 
-    public void deleteUsersCard(User user, long cardId) {
-        cardDAO.deleteUsersCard(user, cardId);
+    public void deleteUserCard(User user, long cardId) {
+        cardDAO.deleteUserCard(user, cardId);
+    }
+    public void deleteCardAsAdmin(long cardId) {
+        cardDAO.deleteUserCardAsAdmin(cardId);
     }
 }

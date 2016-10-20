@@ -32,34 +32,34 @@ import eudcApi.rest.jackson.map.DateTimeSerializer;
 
 @Entity
 public class TimerCard {
-	
-	@Id
+
+    @Id
     @GeneratedValue
     private Long id;
-	
-	@Column
-	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
-	private DateTime endDate;
-	
-	@Column
+
+    @Column
+    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+    private DateTime endDate;
+
+    @Column
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime created;
-	
-	@ManyToMany(fetch = EAGER, cascade = {PERSIST, MERGE})
+
+    @ManyToMany(fetch = EAGER, cascade = {PERSIST, MERGE})
 //  @Fetch(FetchMode.SELECT)
-  @JoinTable(
-          name = "TimerCard_User",
-          joinColumns = {@JoinColumn(name = "timercard")},
-          inverseJoinColumns = {@JoinColumn(name = "user")},
-          uniqueConstraints = @UniqueConstraint(columnNames = {"timercard", "user"}))
-  private List<User> users;
-	
-	@Column(nullable = true, unique = false)
+    @JoinTable(
+            name = "TimerCard_User",
+            joinColumns = {@JoinColumn(name = "timercard")},
+            inverseJoinColumns = {@JoinColumn(name = "user")},
+            uniqueConstraints = @UniqueConstraint(columnNames = {"timercard", "user"}))
+    private List<User> users;
+
+    @Column(nullable = true, unique = false)
     private String title;
 
     @Column(nullable = true)
     private String description;
-    
+
     public String getTitle() {
         return title;
     }
@@ -67,7 +67,7 @@ public class TimerCard {
     public void setTitle(String title) {
         this.title = title;
     }
-    
+
     public String getDescription() {
         return description;
     }
@@ -75,8 +75,8 @@ public class TimerCard {
     public void setDescription(String description) {
         this.description = description;
     }
-	
-	@JsonSerialize(using = DateTimeSerializer.class)
+
+    @JsonSerialize(using = DateTimeSerializer.class)
     public DateTime getCreated() {
         return created;
     }
@@ -85,14 +85,14 @@ public class TimerCard {
     public void setCreated(DateTime created) {
         this.created = created;
     }
-	public Long getId() {
+    public Long getId() {
         return id;
     }
-	public void setId(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
-	
-	@JsonSerialize(using = DateTimeSerializer.class)
+
+    @JsonSerialize(using = DateTimeSerializer.class)
     public DateTime getEndDate() {
         return endDate;
     }
@@ -101,5 +101,4 @@ public class TimerCard {
     public void setEndDate(DateTime endDate) {
         this.endDate = endDate;
     }
-    
 }

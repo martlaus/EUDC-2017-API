@@ -1,16 +1,16 @@
 USE eudcApi;
 
 -- Add Users
-INSERT INTO User (id, email, password, role, created)
-VALUES (1, 'admin@admin.kz', '$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UFpxO', 'USER', NOW());
-INSERT INTO User (id, email, password, role, created)
-VALUES (2, 'user@user.kz', '$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UFpxO', 'USER', NOW());
-INSERT INTO User (id, email, password, role, created)
-VALUES (3, 'asd@asd.kz', '$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UFpxO', 'USER', NOW());
-INSERT INTO User (id, email, password, role, created)
-VALUES (4, 'mart@mart.ml', '$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UFpxO', 'ADMIN', NOW());
+INSERT INTO User (email, password, role, created)
+VALUES ('admin@admin.kz', '$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UFpxO', 'USER', NOW());
+INSERT INTO User (email, password, role, created)
+VALUES ('user@user.kz', '$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UFpxO', 'USER', NOW());
+INSERT INTO User (email, password, role, created)
+VALUES ('asd@asd.kz', '$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UFpxO', 'USER', NOW());
+INSERT INTO User (email, password, role, created)
+VALUES ('mart@mart.ml', '$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UFpxO', 'ADMIN', NOW());
 
-INSERT INTO AuthenticatedUser (id, user_id, token) VALUES (1, 1, 'superUniqueToken');
+INSERT INTO AuthenticatedUser (user_id, token) VALUES (1, 'superUniqueToken');
 
 
 -- Add Cards
@@ -22,24 +22,24 @@ INSERT INTO Card ( title, description, created)
 VALUES ( 'Recent Winners', 'Below we have brief headlines to all the top debating competitions at the Stanford Payton Jordan Invite on Sunday night with links to the results and quick commentary from the live LetsRun.com thread. Also at the bottom are results from all the �A� qualifications on Sunday. Full results here. The biggest news of the night was 41 year old Bernard Lagat securing the win in phenomenal time', NOW());
 
 -- Add Locations
-INSERT INTO Location (id, name, lat, lng, created)
-VALUES (1, 'Tallinn Harbour', '59.443634', '24.767353', NOW());
-INSERT INTO Location (id, name, lat, lng, created)
-VALUES (2, 'Tallinn University of Technology', '59.395916', '24.671871', NOW());
-INSERT INTO Location (id, name, lat, lng, created)
-VALUES (3, 'Tallinn Bus Station', '59.427567', '24.773679', NOW());
-INSERT INTO Location (id, name, lat, lng, created)
-VALUES (4, 'Tallinn Airport', '59.416500', '24.799281', NOW());
-INSERT INTO Location (id, name, lat, lng, created)
-VALUES (5, 'Tallinn Song Festival Grounds', '59.444686', '24.807330', NOW());
-INSERT INTO Location (id, name, lat, lng, created)
-VALUES (6, 'Pirita SPA Hotel', '59.464808', '24.823108', NOW());
-INSERT INTO Location (id, name, lat, lng, created)
-VALUES (7, 'Telliskivi Creative City', '59.440103', '24.729530', NOW());
-INSERT INTO Location (id, name, lat, lng, created)
-VALUES (8, 'Nordea Concert Hall', '59.433227', '24.751926', NOW());
-INSERT INTO Location (id, name, lat, lng, created)
-VALUES (9, 'Kultuurikatel', '59.444416', '24.750546', NOW());
+INSERT INTO Location (name, lat, lng, created)
+VALUES ('Tallinn Harbour', '59.443634', '24.767353', NOW());
+INSERT INTO Location (name, lat, lng, created)
+VALUES ('Tallinn University of Technology', '59.395916', '24.671871', NOW());
+INSERT INTO Location (name, lat, lng, created)
+VALUES ('Tallinn Bus Station', '59.427567', '24.773679', NOW());
+INSERT INTO Location (name, lat, lng, created)
+VALUES ('Tallinn Airport', '59.416500', '24.799281', NOW());
+INSERT INTO Location (name, lat, lng, created)
+VALUES ('Tallinn Song Festival Grounds', '59.444686', '24.807330', NOW());
+INSERT INTO Location (name, lat, lng, created)
+VALUES ('Pirita SPA Hotel', '59.464808', '24.823108', NOW());
+INSERT INTO Location (name, lat, lng, created)
+VALUES ('Telliskivi Creative City', '59.440103', '24.729530', NOW());
+INSERT INTO Location (name, lat, lng, created)
+VALUES ('Nordea Concert Hall', '59.433227', '24.751926', NOW());
+INSERT INTO Location (name, lat, lng, created)
+VALUES ('Kultuurikatel', '59.444416', '24.750546', NOW());
 
 -- Add TimerCards
 INSERT INTO TimerCard ( title, description, created, enddate)

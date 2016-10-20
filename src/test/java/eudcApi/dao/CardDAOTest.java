@@ -3,10 +3,14 @@ package eudcApi.dao;
 import eudcApi.common.test.DatabaseTestBase;
 import eudcApi.model.Card;
 import eudcApi.model.User;
+import javassist.bytecode.stackmap.TypeData;
 import org.junit.Test;
 
 import javax.inject.Inject;
+import javax.persistence.EntityManager;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import static org.junit.Assert.*;
 
@@ -19,23 +23,23 @@ public class CardDAOTest extends DatabaseTestBase {
     @Inject
     private UserDAO userDAO;
 
+    @Inject
+    private EntityManager entityManager;
+
+    @Inject
+    private static final Logger LOGGER = Logger.getLogger(TypeData.ClassName.class.getName());
+
     @Test
     public void findAll() {
-        List<Card> Cards = cardDAO.findAll();
+        List<Card> cards = cardDAO.findAll();
 
-        assertValidCard(Cards.get(0));
-        assertValidCard(Cards.get(1));
+        assertNotNull(cards);
     }
 
     @Test
     public void saveCard() {
-        Card Card = new Card();
-        Card.setTitle("Lorem Ipsum");
-        Card.setDescription("Sed omnium volumus voluptua te.");
-
         int initialSize = cardDAO.findAll().size();
-
-        cardDAO.saveCard(Card);
+        Card card = cardDAO.testMakeCard("Lorem Ipsum", "Bug the fuck out");
 
         assertEquals(initialSize + 1, cardDAO.findAll().size());
     }
@@ -52,13 +56,44 @@ public class CardDAOTest extends DatabaseTestBase {
 
     @Test
     public void deleteUsersCard() {
+
         User user = userDAO.getUserByEmail("admin@admin.kz");
-        List<Card> cards1 = cardDAO.findUsersCards(user);
+        Card cardAboutToGetRekt = cardDAO.testMakeCard("I AM CARD", "I AM GETTING REKT THE FUCK OUT");
+        List<Card> userCards1 = cardDAO.findUsersCards(user);
+        Long cardAboutToGetRektId = userCards1.get(userCards1.size() - 1).getId();
+        System.out.println(userCards1.size());
 
-        cardDAO.deleteUsersCard(user, 1);
-        List<Card> cards2 = cardDAO.findUsersCards(user);
-        assertTrue(cards1.size() > cards2.size());
+        cardDAO.deleteUserCard(user, cardAboutToGetRektId);
+        System.out.println(userCards1.size());
+        List<Card> userCards2 = cardDAO.findUsersCards(user);
+        System.out.println(userCards2.size());
+        assertTrue(userCards1.size() > userCards2.size());
+        assertCardIsDeletedFromCards(userCards2, cardAboutToGetRektId);
 
+    }
+
+    @Test
+    public void deleteUserCardAsAdmin() {
+
+        Card cardToBeDeleted = cardDAO.testMakeCard("AM I DEAD?", "PLEASE DON'T TRASH ME!");
+        List<Card> allCards1 = cardDAO.findAll();
+        Long cardToBeDeletedID = cardToBeDeleted.getId();
+
+        System.out.println(allCards1.get(allCards1.size() - 1).getTitle());
+
+        assertNotNull(cardToBeDeletedID);
+        List<Card> allUserCards1 = cardDAO.findCardsByCardId(cardToBeDeletedID);
+
+        cardDAO.deleteUserCardAsAdmin(cardToBeDeletedID);
+        assertCardAndUserCardDeleteRelation(allCards1,allUserCards1,cardToBeDeletedID);
+
+        List<Card> allCards2 = cardDAO.findAll();
+        List<Card> allUserCards2 = cardDAO.findCardsByCardId(cardToBeDeletedID);
+        assertCardIsDeletedFromCards(allUserCards2, cardToBeDeletedID);
+
+        assertTrue(allCards1.size() > allCards2.size());
+        assertTrue(allUserCards1.size() > allUserCards2.size());
+        assertNotEquals(cardToBeDeletedID, allCards2.get(allCards2.size()-1).getId());
     }
 
     private void assertValidCard(Card Card) {
@@ -71,4 +106,14 @@ public class CardDAOTest extends DatabaseTestBase {
             fail("Card with unexpected id.");
         }
     }
+
+    private void assertCardAndUserCardDeleteRelation(List<Card> allCards,List<Card> allUserCards,long cardId) {
+        assertCardIsDeletedFromCards(allCards, cardId);
+        assertCardIsDeletedFromCards(allUserCards, cardId);
+    }
+
+    private boolean assertCardIsDeletedFromCards(List<Card> cards, long cardId) {
+        return cards.stream().noneMatch(x -> x.getId().equals(cardId));
+    }
+
 }

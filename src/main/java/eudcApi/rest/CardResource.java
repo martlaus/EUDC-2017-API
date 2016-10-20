@@ -47,11 +47,11 @@ public class CardResource {
     public List<Card> getAllCards() {
         EudcApiPrincipal EudcApiPrincipal = (EudcApiPrincipal) securityContext.getUserPrincipal();
         AuthenticatedUser authenticatedUser = null;
-        try{
-        if (EudcApiPrincipal != null) {
-            authenticatedUser = EudcApiPrincipal.getAuthenticatedUser();
-        }
-        }catch(Exception e){
+        try {
+            if (EudcApiPrincipal != null) {
+                authenticatedUser = EudcApiPrincipal.getAuthenticatedUser();
+            }
+        } catch (Exception e) {
             System.out.println(e);
         }
 
@@ -66,18 +66,37 @@ public class CardResource {
     @Path("{cardId}")
     @Produces(MediaType.APPLICATION_JSON)
     public void deleteUsersCard(@PathParam("cardId") long cardId) {
-        EudcApiPrincipal EudcApiPrincipal = (EudcApiPrincipal) securityContext.getUserPrincipal();
-        AuthenticatedUser authenticatedUser = null;
-        if (EudcApiPrincipal != null) {
-            authenticatedUser = EudcApiPrincipal.getAuthenticatedUser();
+        AuthenticatedUser authenticatedUser = getAuthUser();
+        if (isUserRoleUser()) {
+            if (authenticatedUser != null) {
+                cardService.deleteUserCard(authenticatedUser.getUser(), cardId);
+            }
+        } else if (isUserRoleAdmin()) {
+            cardService.deleteCardAsAdmin(cardId);
         }
-
-        if (EudcApiPrincipal != null && authenticatedUser != null) {
-            cardService.deleteUsersCard(authenticatedUser.getUser(), cardId);
-        }
-
     }
 
+    private AuthenticatedUser getAuthUser() {
+        EudcApiPrincipal EudcApiPrincipal = (EudcApiPrincipal) securityContext.getUserPrincipal();
+        if (EudcApiPrincipal != null) {
+            return EudcApiPrincipal.getAuthenticatedUser();
+        }
+        return null;
+    }
+
+    private boolean isUserRoleUser() {
+        AuthenticatedUser authenticatedUser = getAuthUser();
+        return isUserAuthenticated(authenticatedUser) && authenticatedUser.getUser().getRole().equals("USER");
+    }
+
+    private boolean isUserRoleAdmin() {
+        AuthenticatedUser authenticatedUser = getAuthUser();
+        return isUserAuthenticated(authenticatedUser) && authenticatedUser.getUser().getRole().equals("ADMIN");
+    }
+
+    private boolean isUserAuthenticated(AuthenticatedUser authenticatedUser) {
+        return authenticatedUser != null;
+    }
 
 }
 

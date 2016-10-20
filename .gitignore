@@ -8,3 +8,4 @@ custom.properties
 .idea/dataSources.xml
 .idea/workspace.xml
 eudcapi.iml
+/src/main/resources/default.properties

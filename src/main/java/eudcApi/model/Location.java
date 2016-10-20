@@ -20,11 +20,11 @@ import javax.persistence.Id;
 
 @Entity
 public class Location {
-	
+
 	@Id
     @GeneratedValue
     private Long id;
-	
+
 	@Column(nullable = true, unique = false)
     private String name;
 
@@ -33,11 +33,11 @@ public class Location {
 
     @Column(nullable = true, unique = false)
     private String lng;
-    
+
     @Column
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime created;
-    
+
     public Long getId() {
         return id;
     }
@@ -45,7 +45,7 @@ public class Location {
     public void setId(Long id) {
         this.id = id;
     }
-    
+
     @JsonSerialize(using = DateTimeSerializer.class)
     public DateTime getCreated() {
         return created;
@@ -55,7 +55,7 @@ public class Location {
     public void setCreated(DateTime created) {
         this.created = created;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -63,7 +63,7 @@ public class Location {
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public String getLat() {
         return lat;
     }
@@ -71,7 +71,7 @@ public class Location {
     public void setLat(String lat) {
         this.lat = lat;
     }
-    
+
     public String getLng() {
         return lng;
     }
