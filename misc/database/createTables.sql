@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS AuthenticatedUser;
 DROP TABLE IF EXISTS Card;
 DROP TABLE IF EXISTS TimerCard;
 DROP TABLE IF EXISTS Location;
-DROP TABLE IF EXISTS Event;
+
 
 SET foreign_key_checks = 1;
 
@@ -24,6 +24,7 @@ CREATE TABLE User (
 );
 
 
+
 CREATE TABLE AuthenticatedUser (
   id      BIGINT AUTO_INCREMENT PRIMARY KEY,
   user_id BIGINT              NOT NULL,
@@ -35,34 +36,34 @@ CREATE TABLE AuthenticatedUser (
 );
 
 
+
 CREATE TABLE Card (
-  id          BIGINT    AUTO_INCREMENT PRIMARY KEY,
-  title       VARCHAR(255)  NOT NULL,
+  id       BIGINT AUTO_INCREMENT PRIMARY KEY,
+  title    VARCHAR(255) NOT NULL,
   description VARCHAR(1000) NOT NULL,
-  created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  pinned      BOOLEAN       NOT NULL
+  created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 
 CREATE TABLE TimerCard (
-  id          BIGINT AUTO_INCREMENT PRIMARY KEY,
-  title       VARCHAR(255)                        NOT NULL,
-  description VARCHAR(1000)                       NOT NULL,
-  created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-  enddate     TIMESTAMP DEFAULT now()             NOT NULL
+id       BIGINT AUTO_INCREMENT PRIMARY KEY,
+title    VARCHAR(255) NOT NULL,
+description VARCHAR(1000) NOT NULL,
+created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+enddate TIMESTAMP NOT NULL
 );
 
 
 CREATE TABLE Location (
-  id      BIGINT    AUTO_INCREMENT PRIMARY KEY,
+  id       BIGINT AUTO_INCREMENT PRIMARY KEY,
   name    VARCHAR(255) NOT NULL,
-  lng     VARCHAR(255) NOT NULL,
-  lat     VARCHAR(255) NOT NULL,
-  created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  lng    VARCHAR(255) NOT NULL,
+  lat    VARCHAR(255) NOT NULL,
+  created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE Card_User (
-  card BIGINT NOT NULL,
+  card             BIGINT NOT NULL,
   user BIGINT NOT NULL,
 
   PRIMARY KEY (card, user),
@@ -77,8 +78,8 @@ CREATE TABLE Card_User (
 );
 
 CREATE TABLE TimerCard_User (
-  timercard BIGINT NOT NULL,
-  user      BIGINT NOT NULL,
+  timercard             BIGINT NOT NULL,
+  user BIGINT NOT NULL,
 
   PRIMARY KEY (timercard, user),
 
@@ -89,14 +90,5 @@ CREATE TABLE TimerCard_User (
   FOREIGN KEY (user)
   REFERENCES User (id)
     ON DELETE RESTRICT
-);
-
-CREATE TABLE Event (
-  id          BIGINT AUTO_INCREMENT PRIMARY KEY,
-  title       VARCHAR(255)                        NOT NULL,
-  description VARCHAR(1000),
-  startTime   TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-  endTime     TIMESTAMP DEFAULT now() NOT NULL
-
 );
 

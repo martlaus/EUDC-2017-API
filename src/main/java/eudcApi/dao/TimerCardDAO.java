@@ -59,7 +59,7 @@ public class TimerCardDAO {
     
     public void deleteUsersTimerCard(User user, long timercardId) {
         entityManager
-        		.createNativeQuery("DELETE FROM TimerCard_User WHERE user = :user AND timercard = :timercardId")
+        		.createNativeQuery("DELETE FROM TimerCard_User WHERE user = :user AND id = :timercardId")
                 .setParameter("user", user.getId())
                 .setParameter("timercardId", timercardId).executeUpdate();
     }
