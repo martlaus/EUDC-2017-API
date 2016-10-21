@@ -18,7 +18,7 @@ public class UserDAO {
     private EntityManager entityManager;
 
     public List<User> findAll() {
-        return entityManager.createQuery("from User", User.class).getResultList();
+        return entityManager.createQuery("FROM User", User.class).getResultList();
     }
 
     public User saveUser(User user) {

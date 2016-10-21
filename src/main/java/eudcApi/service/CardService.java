@@ -37,7 +37,10 @@ public class CardService {
         return cardDAO.findUsersCards(user);
     }
 
-    public void deleteUsersCard(User user, long cardId) {
-        cardDAO.deleteUsersCard(user, cardId);
+    public void deleteUserCard(User user, long cardId) {
+        cardDAO.deleteUserCard(user, cardId);
+    }
+    public void deleteCardAsAdmin(long cardId) {
+        cardDAO.deleteUserCardAsAdmin(cardId);
     }
 }
