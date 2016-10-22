@@ -4,6 +4,8 @@ import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.TimerCard;
 import eudcApi.rest.filter.EudcApiPrincipal;
 import eudcApi.service.TimerCardService;
+import eudcApi.utils.AuthUtils;
+import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import javax.ws.rs.DELETE;
@@ -17,6 +19,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.SecurityContext;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by karl on 13.03.16.
@@ -24,6 +28,7 @@ import java.util.List;
 @Path("timercard")
 public class TimerCardResource {
 
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(TimerCardResource.class);
     @Inject
     private TimerCardService timerCardService;
     
@@ -33,6 +38,8 @@ public class TimerCardResource {
     public void setSecurityContext(SecurityContext securityContext) {
         this.securityContext = securityContext;
     }
+
+    private static AuthUtils authentication = new AuthUtils();
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
@@ -46,34 +53,24 @@ public class TimerCardResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<TimerCard> getAllTimerCards() {   	
-    	EudcApiPrincipal EudcApiPrincipal = (EudcApiPrincipal) securityContext.getUserPrincipal();
-        AuthenticatedUser authenticatedUser = null;
-        if (EudcApiPrincipal != null) {
-            authenticatedUser = EudcApiPrincipal.getAuthenticatedUser();
-        }
-        
-        if (EudcApiPrincipal != null && authenticatedUser != null) {
-            return timerCardService.getUsersTimerCards(authenticatedUser.getUser());
-        } else {
-        	return timerCardService.getAllTimerCards();
-        }
+    public List<TimerCard> getAllTimerCards() {
+        AuthenticatedUser authenticatedUser = authentication.getAuthUser(securityContext);
+
+        return authentication.isUserAuthenticated(authenticatedUser) ?
+                timerCardService.getUsersTimerCards(authenticatedUser.getUser()) :
+                timerCardService.getAllTimerCards();
     }
-    
+
     @DELETE
     @Path("{timercardId}")
     @Produces(MediaType.APPLICATION_JSON)
-    public void deleteUsersCard(@PathParam("timercardId") long timercardId) {
-        EudcApiPrincipal EudcApiPrincipal = (EudcApiPrincipal) securityContext.getUserPrincipal();
-        AuthenticatedUser authenticatedUser = null;
-        
-        if (EudcApiPrincipal != null) {
-            authenticatedUser = EudcApiPrincipal.getAuthenticatedUser();
-        }
+    public void deleteUsersCard(@PathParam("timercardId") Long timercardId) {
+        AuthenticatedUser authenticatedUser = authentication.getAuthUser(securityContext);
 
-        if (EudcApiPrincipal != null && authenticatedUser != null) {
+        if (authentication.isUserAuthenticated(authenticatedUser)) {
             timerCardService.deleteUsersTimerCard(authenticatedUser.getUser(), timercardId);
         }
+        logger.warn(timercardId.toString());
 
     }
 }
