@@ -100,6 +100,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/eudcApi.iml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/logs/eudcApi.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/logs/hibernate.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/default.properties" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/archive-tmp/eudcApi.jar" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/default.properties" afterPath="" />
@@ -266,8 +267,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            <state relative-caret-position="126">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -276,8 +277,8 @@
       <file leaf-file-name="createTables.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/misc/database/createTables.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1764">
-              <caret line="98" column="37" selection-start-line="98" selection-start-column="37" selection-end-line="98" selection-end-column="37" />
+            <state relative-caret-position="1800">
+              <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -339,15 +340,12 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/eudcApi/service/CardService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <element signature="e#594#595#0" expanded="false" />
                 <element signature="e#634#635#0" expanded="false" />
                 <element signature="e#684#685#0" expanded="false" />
                 <element signature="e#735#736#0" expanded="false" />
-                <element signature="e#794#795#0" expanded="false" />
-                <element signature="e#847#848#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -423,10 +421,10 @@
         <option value="$PROJECT_DIR$/src/test/java/eudcApi/dao/EventDAOTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/eudcApi/rest/EventResourceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/eudcApi/service/EventService.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/misc/database/testData.sql" />
         <option value="$PROJECT_DIR$/misc/database/createTables.sql" />
         <option value="$PROJECT_DIR$/src/main/java/eudcApi/rest/EventResource.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -1555,7 +1553,7 @@
       <workItem from="1476203616558" duration="273000" />
       <workItem from="1476204571897" duration="10229000" />
       <workItem from="1476808227283" duration="5883000" />
-      <workItem from="1477408954278" duration="742000" />
+      <workItem from="1477408954278" duration="856000" />
     </task>
     <task id="LOCAL-00001" summary="added gitignore">
       <created>1455095003223</created>
@@ -1648,7 +1646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476215441256</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Remove ignored files">
+      <created>1477411497091</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1477411497091</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1684,7 +1689,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55324000" />
+    <option name="totallyTimeSpent" value="55438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -1708,7 +1713,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47213623" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.80650157" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21207431" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26136363" sideWeight="0.5109034" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25833333" sideWeight="0.48909658" order="0" side_tool="false" content_ui="combo" />
@@ -1767,7 +1772,8 @@
     <MESSAGE value="#109297174 Add events endpoint" />
     <MESSAGE value="git commit -m &quot;fixed untracked files&quot;&#10;" />
     <MESSAGE value="#109297174 Fix default timestamp" />
-    <option name="LAST_COMMIT_MESSAGE" value="#109297174 Fix default timestamp" />
+    <MESSAGE value="Remove ignored files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove ignored files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2044,7 +2050,7 @@
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="false" />
-            <marker date="1475598397198" expanded="true" signature="1662:1721" ph="..." />
+            <marker date="1477411523793" expanded="true" signature="1662:1721" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2135,15 +2141,12 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/eudcApi/service/CardService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="e#594#595#0" expanded="false" />
             <element signature="e#634#635#0" expanded="false" />
             <element signature="e#684#685#0" expanded="false" />
             <element signature="e#735#736#0" expanded="false" />
-            <element signature="e#794#795#0" expanded="false" />
-            <element signature="e#847#848#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2191,8 +2194,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/misc/database/createTables.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="98" column="37" selection-start-line="98" selection-start-column="37" selection-end-line="98" selection-end-column="37" />
+        <state relative-caret-position="1800">
+          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -2222,8 +2225,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        <state relative-caret-position="126">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding />
         </state>
       </provider>
