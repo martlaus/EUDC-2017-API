@@ -3,6 +3,7 @@ package eudcApi.rest;
 import eudcApi.model.User;
 import eudcApi.service.UserService;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -21,6 +22,7 @@ public class UserResource {
     private UserService userService;
 
     @POST
+    @RolesAllowed({"USER", "ADMIN"})
     @Produces(MediaType.APPLICATION_JSON)
     public void addUser(User user) throws Exception {
         if (user != null) {

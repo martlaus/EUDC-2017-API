@@ -2,12 +2,17 @@ package eudcApi.rest;
 
 import eudcApi.model.Event;
 import eudcApi.service.EventService;
+import eudcApi.utils.AuthUtils;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.SecurityContext;
 import java.util.List;
 
 /**
@@ -18,6 +23,25 @@ public class EventResource {
 
     @Inject
     private EventService eventService;
+
+    private SecurityContext securityContext;
+
+    private static final AuthUtils authentication = new AuthUtils();
+
+    @Context
+    public void setSecurityContext(SecurityContext securityContext) {
+        this.securityContext = securityContext;
+    }
+
+    @POST
+    @RolesAllowed("ADMIN")
+    public Event createEvent(Event event) {
+        if (authentication.isUserRoleAdmin(securityContext)) {
+            return eventService.createEvent(event);
+        }
+        return null;
+    }
+
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

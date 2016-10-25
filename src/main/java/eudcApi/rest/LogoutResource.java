@@ -29,7 +29,7 @@ public class LogoutResource {
     }
 
     @POST
-    @RolesAllowed("USER")
+    @RolesAllowed({"USER", "ADMIN"})
     @Produces(MediaType.APPLICATION_JSON)
     public void logOut() throws Exception {
         EudcApiPrincipal EudcApiPrincipal = (EudcApiPrincipal) securityContext.getUserPrincipal();

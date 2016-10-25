@@ -1,6 +1,8 @@
 package eudcApi.rest;
 
 import eudcApi.common.test.ResourceIntegrationTestBase;
+import eudcApi.model.AuthenticatedUser;
+import eudcApi.model.Event;
 import eudcApi.model.User;
 import org.junit.Test;
 
@@ -20,13 +22,25 @@ public class UserResourceTest extends ResourceIntegrationTestBase {
 
     @Test
     public void addUser() {
+        User newuser = new User();
+        newuser.setEmail("test@test.ee");
+        newuser.setPassword("testpw");
+
         User user = new User();
-        user.setEmail("test@test.ee");
-        user.setPassword("testpw");
+        user.setEmail("mart@mart.kz");
+        user.setPassword("mart");
 
-        Response response = doPost("user", Entity.entity(user, MediaType.APPLICATION_JSON_TYPE));
+        Response response = doPost("signin", Entity.entity(user, MediaType.APPLICATION_JSON_TYPE));
+        AuthenticatedUser authenticatedUser = response.readEntity(new GenericType<AuthenticatedUser>() {
+        });
 
-        assertEquals(Response.Status.NO_CONTENT.getStatusCode(), response.getStatus());
+        assertNotNull(authenticatedUser.getToken());
+        String token = authenticatedUser.getToken();
+
+        Response response2 = getTarget("user", new LogoutResourceTest.LoggedInUserFilter(token)).request().accept(MediaType.APPLICATION_JSON_TYPE)
+                .post(Entity.entity(newuser, MediaType.APPLICATION_JSON_TYPE));
+
+        assertEquals(Response.Status.NO_CONTENT.getStatusCode(), response2.getStatus());
 
     }
 
