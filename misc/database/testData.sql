@@ -61,6 +61,7 @@ INSERT INTO TimerCard_User(timercard, user) VALUES (1,3);
 INSERT INTO TimerCard_User(timercard, user) VALUES (1,1);
 
 -- Add Test events
-INSERT INTO Event (id, title, description, startTime, endTime) VALUES (1, 'Opening ceremony of EUDC', 'Cheers!', NOW(), DATE_ADD(NOW(), INTERVAL 2 HOUR));
-INSERT INTO Event (id, title, description, startTime, endTime) VALUES (2, 'Break night social', 'Open vodka bar?', DATE_ADD(NOW(), INTERVAL 24 HOUR), DATE_ADD(NOW(), INTERVAL 2 HOUR));
-INSERT INTO Event (id, title, description, startTime, endTime) VALUES (3, 'Open finals', 'Love wil win in the end.', DATE_ADD(NOW(), INTERVAL 48 HOUR), DATE_ADD(NOW(), INTERVAL 2 HOUR));
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (1, 'Opening ceremony of EUDC', 'Cheers!', '2017-08-14 16:00:00', '2017-08-14 22:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (2, 'First night social', 'Open vodka bar?', '2017-08-15 20:00:00', '2017-08-15 24:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (3, 'Break night social', 'Open vodka bar?', '2017-08-18 20:00:00', '2017-08-18 22:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (4, 'Open finals', 'Love wil win in the end.', '2017-08-19 20:00:00', '2017-08-19 22:00:00');
