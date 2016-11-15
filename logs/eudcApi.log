@@ -1,18 +1,203 @@
-2016-10-25 18:23:20.930 [main] INFO  eudcApi.guice.GuiceInjector  - Loading modules annotated with @Module...
-2016-10-25 18:23:23.175 [main] INFO  org.reflections.Reflections  - Reflections took 1348 ms to scan 1 urls, producing 23 keys and 54 values 
-2016-10-25 18:23:23.443 [main] INFO  eudcApi.guice.GuiceInjector  - 3 modules loaded.
-2016-10-25 18:23:26.338 [main] INFO  eudcApi.guice.provider.ConfigurationProvider  - No custom configuration file set.
-2016-10-25 18:23:26.624 [main] INFO  eudcApi.guice.provider.ConfigurationProvider  - Default configuration loaded from [file:/home/mart/eudcApi/target/classes/default.properties]
-2016-10-25 18:23:26.666 [main] INFO  eudcApi.ApplicationManager  - Application is not running.
-2016-10-25 18:23:26.668 [main] INFO  eudcApi.ApplicationLauncher  - Starting application server on port [7070]
-2016-10-25 18:23:26.678 [main] INFO  eudcApi.server.EmbeddedJetty  - Starting jetty on port 7070
-2016-10-25 18:23:26.743 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @10973ms
-2016-10-25 18:23:27.037 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.2.10.v20150310
-2016-10-25 18:23:30.512 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@f8f56b9{/,null,AVAILABLE}
-2016-10-25 18:23:30.566 [main] INFO  org.eclipse.jetty.server.ServerConnector  - Started ServerConnector@5bfb65ba{HTTP/1.1}{0.0.0.0:7070}
-2016-10-25 18:23:30.567 [main] INFO  org.eclipse.jetty.server.Server  - Started @14802ms
-2016-10-25 18:23:30.614 [command-listener] INFO  eudcApi.ApplicationManager  - Command listener started on port [9999]
-2016-10-25 18:49:19.877 [qtp1822525972-21] INFO  eudcApi.guice.provider.EntityManagerFactoryProvider  - Initializing EntityManagerFactory properties [{hibernate.connection.driver_class=com.mysql.jdbc.Driver, hibernate.hbm2ddl.auto=validate, hibernate.c3p0.initialpoolsize=5, hibernate.c3p0.max_size=100, hibernate.c3p0.max_statements=50, hibernate.c3p0.idle_test_period=400, hibernate.c3p0.preferredTestQuery=SELECT 1, hibernate.dialect=org.hibernate.dialect.MySQLDialect, hibernate.c3p0.min_size=5, hibernate.connection.password=root, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://127.0.0.1/eudcApi, hibernate.c3p0.timeout=300, hibernate.c3p0.testConnectionOnCheckin=true, hibernate.show_sql=false, hibernate.c3p0.acquire_increment=1}]
-2016-10-25 18:49:21.680 [qtp1822525972-21] INFO  com.mchange.v2.log.MLog  - MLog clients using log4j logging.
-2016-10-25 18:49:22.193 [qtp1822525972-21] INFO  com.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
-2016-10-25 18:49:22.538 [qtp1822525972-21] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@f12a56f5 [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@454a4e82 [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> z8kfsx9j1y2gvtf1oxgnsa|48177f61, idleConnectionTestPeriod -> 400, initialPoolSize -> 5, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 300, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 50, maxStatementsPerConnection -> 0, minPoolSize -> 5, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@541bd5c9 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> z8kfsx9j1y2gvtf1oxgnsa|59aca6a3, jdbcUrl -> jdbc:mysql://127.0.0.1/eudcApi, properties -> {user=******, password=******} ], preferredTestQuery -> SELECT 1, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> z8kfsx9j1y2gvtf1oxgnsa|19d48a77, numHelperThreads -> 3 ]
+2016-11-15 18:10:36.004 [main] INFO  eudcApi.guice.GuiceInjector  - Loading modules annotated with @Module...
+2016-11-15 18:10:36.638 [main] INFO  org.reflections.Reflections  - Reflections took 477 ms to scan 2 urls, producing 34 keys and 111 values 
+2016-11-15 18:10:36.698 [main] INFO  eudcApi.guice.GuiceInjector  - 5 modules loaded.
+2016-11-15 18:10:37.629 [main] INFO  eudcApi.guice.provider.ConfigurationTestProvider  - No custom configuration file set.
+2016-11-15 18:10:37.732 [main] INFO  eudcApi.guice.provider.ConfigurationTestProvider  - Default configuration loaded from [file:/home/mart/eudcApi/target/test-classes/test.properties]
+2016-11-15 18:10:37.995 [main] INFO  eudcApi.guice.provider.EntityManagerFactoryTestProvider  - Initializing EntityManagerFactory properties [{hibernate.connection.driver_class=org.h2.Driver, hibernate.hbm2ddl.auto=create, hibernate.connection.url=jdbc:h2:mem:test;MODE=MySQL, hibernate.dialect=org.hibernate.dialect.H2Dialect, hibernate.show_sql=true}]
+2016-11-15 18:10:49.285 [main] INFO  eudcApi.ApplicationManager  - Application is not running.
+2016-11-15 18:10:49.287 [main] INFO  eudcApi.ApplicationLauncher  - Starting application server on port [1986]
+2016-11-15 18:10:49.300 [main] INFO  eudcApi.server.EmbeddedJetty  - Starting jetty on port 1986
+2016-11-15 18:10:49.398 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @20751ms
+2016-11-15 18:10:49.870 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.2.10.v20150310
+2016-11-15 18:10:54.916 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@29fcfc54{/,null,AVAILABLE}
+2016-11-15 18:10:54.979 [main] INFO  org.eclipse.jetty.server.ServerConnector  - Started ServerConnector@55e91e61{HTTP/1.1}{0.0.0.0:1986}
+2016-11-15 18:10:54.998 [main] INFO  org.eclipse.jetty.server.Server  - Started @26377ms
+2016-11-15 18:10:55.063 [command-listener] INFO  eudcApi.ApplicationManager  - Command listener started on port [1987]
+2016-11-15 18:20:24.379 [qtp1266048658-25] ERROR eudcApi.rest.errorhandling.GenericExceptionMapper  - Handling error
+java.lang.RuntimeException: Unable to log in - wrong user info or the user is not registered
+	at eudcApi.rest.LoginResource.login(LoginResource.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:205)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:309)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:292)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1139)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:460)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:386)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:334)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:221)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:808)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)
+	at com.google.inject.servlet.FilterChainInvocation.doFilter(FilterChainInvocation.java:89)
+	at com.google.inject.servlet.ManagedFilterPipeline.dispatch(ManagedFilterPipeline.java:119)
+	at com.google.inject.servlet.GuiceFilter$1.call(GuiceFilter.java:133)
+	at com.google.inject.servlet.GuiceFilter$1.call(GuiceFilter.java:130)
+	at com.google.inject.servlet.GuiceFilter$Context.call(GuiceFilter.java:203)
+	at com.google.inject.servlet.GuiceFilter.doFilter(GuiceFilter.java:130)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:745)
+2016-11-15 18:20:24.478 [qtp1266048658-24] ERROR eudcApi.rest.errorhandling.GenericExceptionMapper  - Handling error
+java.lang.RuntimeException: Unable to log in - wrong user info or the user is not registered
+	at eudcApi.rest.LoginResource.login(LoginResource.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:205)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:309)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:292)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1139)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:460)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:386)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:334)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:221)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:808)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)
+	at com.google.inject.servlet.FilterChainInvocation.doFilter(FilterChainInvocation.java:89)
+	at com.google.inject.servlet.ManagedFilterPipeline.dispatch(ManagedFilterPipeline.java:119)
+	at com.google.inject.servlet.GuiceFilter$1.call(GuiceFilter.java:133)
+	at com.google.inject.servlet.GuiceFilter$1.call(GuiceFilter.java:130)
+	at com.google.inject.servlet.GuiceFilter$Context.call(GuiceFilter.java:203)
+	at com.google.inject.servlet.GuiceFilter.doFilter(GuiceFilter.java:130)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:745)
+2016-11-15 18:20:32.268 [main] INFO  org.eclipse.jetty.server.ServerConnector  - Stopped ServerConnector@55e91e61{HTTP/1.1}{0.0.0.0:1986}
+2016-11-15 18:20:32.284 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@29fcfc54{/,null,UNAVAILABLE}
+2016-11-15 18:20:32.296 [main] INFO  eudcApi.server.EmbeddedJetty  - Starting jetty on port 0
+2016-11-15 18:20:32.309 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.2.10.v20150310
+2016-11-15 18:20:32.652 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@282c5075{/,null,AVAILABLE}
+2016-11-15 18:20:32.653 [main] INFO  org.eclipse.jetty.server.ServerConnector  - Started ServerConnector@2ed35f24{HTTP/1.1}{0.0.0.0:39106}
+2016-11-15 18:20:32.664 [main] INFO  org.eclipse.jetty.server.Server  - Started @604043ms
+2016-11-15 18:20:32.681 [main] INFO  org.eclipse.jetty.server.ServerConnector  - Stopped ServerConnector@2ed35f24{HTTP/1.1}{0.0.0.0:0}
+2016-11-15 18:20:32.683 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@282c5075{/,null,UNAVAILABLE}
+2016-11-15 18:20:32.694 [main] INFO  eudcApi.server.EmbeddedJetty  - Starting jetty on port 0
+2016-11-15 18:20:32.696 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.2.10.v20150310
+2016-11-15 18:20:32.979 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@423762ae{/,null,AVAILABLE}
+2016-11-15 18:20:32.982 [main] INFO  org.eclipse.jetty.server.ServerConnector  - Started ServerConnector@7b58d678{HTTP/1.1}{0.0.0.0:40056}
+2016-11-15 18:20:32.982 [main] INFO  org.eclipse.jetty.server.Server  - Started @604361ms
+2016-11-15 18:20:32.989 [main] INFO  org.eclipse.jetty.server.ServerConnector  - Stopped ServerConnector@7b58d678{HTTP/1.1}{0.0.0.0:0}
+2016-11-15 18:20:32.992 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@423762ae{/,null,UNAVAILABLE}
+2016-11-15 18:20:32.998 [main] INFO  eudcApi.server.EmbeddedJetty  - Starting jetty on port 1986
+2016-11-15 18:20:33.005 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.2.10.v20150310
+2016-11-15 18:20:33.429 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@49338f3{/,null,AVAILABLE}
+2016-11-15 18:20:33.432 [main] INFO  org.eclipse.jetty.server.ServerConnector  - Started ServerConnector@1309aef5{HTTP/1.1}{0.0.0.0:1986}
+2016-11-15 18:20:33.435 [main] INFO  org.eclipse.jetty.server.Server  - Started @604813ms
+2016-11-15 18:20:33.963 [main] INFO  eudcApi.utils.FileUtils  - Getting file from /tmp/testFileForGetFileAsStrem3970280740577095714.EudcApi
+2016-11-15 18:20:33.964 [main] INFO  eudcApi.utils.FileUtils  - Getting file from wrong.xml
+2016-11-15 18:20:33.964 [main] INFO  eudcApi.utils.FileUtils  - File wrong.xml does not exist. Trying to load from classpath.
+2016-11-15 18:20:33.969 [Thread-12] INFO  eudcApi.ApplicationManager  - Stopping application on port [1987]
+2016-11-15 18:20:33.971 [Thread-12] INFO  eudcApi.ApplicationManager  - Stop command sent to application
+2016-11-15 18:20:33.968 [shutdown-hook] INFO  eudcApi.ApplicationLauncher  - Stopping server...
+2016-11-15 18:20:33.990 [shutdown-hook] INFO  org.eclipse.jetty.server.ServerConnector  - Stopped ServerConnector@1309aef5{HTTP/1.1}{0.0.0.0:1986}
+2016-11-15 18:20:34.033 [shutdown-hook] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@49338f3{/,null,UNAVAILABLE}
+2016-11-15 18:20:43.839 [main] INFO  eudcApi.guice.GuiceInjector  - Loading modules annotated with @Module...
+2016-11-15 18:20:44.486 [main] INFO  org.reflections.Reflections  - Reflections took 488 ms to scan 2 urls, producing 34 keys and 111 values 
+2016-11-15 18:20:44.556 [main] INFO  eudcApi.guice.GuiceInjector  - 5 modules loaded.
+2016-11-15 18:20:45.861 [main] INFO  eudcApi.guice.provider.ConfigurationTestProvider  - No custom configuration file set.
+2016-11-15 18:20:46.017 [main] INFO  eudcApi.guice.provider.ConfigurationTestProvider  - Default configuration loaded from [file:/home/mart/eudcApi/target/test-classes/test.properties]
+2016-11-15 18:20:46.158 [main] INFO  eudcApi.ApplicationManager  - Application is not running.
+2016-11-15 18:20:46.167 [main] INFO  eudcApi.ApplicationLauncher  - Starting application server on port [1986]
+2016-11-15 18:20:46.182 [main] INFO  eudcApi.server.EmbeddedJetty  - Starting jetty on port 1986
+2016-11-15 18:20:46.311 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @4339ms
+2016-11-15 18:20:46.870 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.2.10.v20150310
+2016-11-15 18:20:50.243 [main] INFO  eudcApi.guice.GuiceInjector  - Loading modules annotated with @Module...
+2016-11-15 18:20:50.926 [main] INFO  org.reflections.Reflections  - Reflections took 463 ms to scan 1 urls, producing 23 keys and 54 values 
+2016-11-15 18:20:51.017 [main] INFO  eudcApi.guice.GuiceInjector  - 3 modules loaded.
+2016-11-15 18:20:51.172 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@7cf283e1{/,null,AVAILABLE}
+2016-11-15 18:20:51.222 [main] INFO  org.eclipse.jetty.server.ServerConnector  - Started ServerConnector@4dde9ffd{HTTP/1.1}{0.0.0.0:1986}
+2016-11-15 18:20:51.224 [main] INFO  org.eclipse.jetty.server.Server  - Started @9266ms
+2016-11-15 18:20:51.291 [command-listener] INFO  eudcApi.ApplicationManager  - Command listener started on port [1987]
+2016-11-15 18:20:52.679 [main] INFO  eudcApi.guice.provider.ConfigurationProvider  - No custom configuration file set.
+2016-11-15 18:20:52.914 [main] INFO  eudcApi.guice.provider.ConfigurationProvider  - Default configuration loaded from [file:/home/mart/eudcApi/target/classes/default.properties]
+2016-11-15 18:20:52.970 [main] INFO  eudcApi.ApplicationManager  - Application is not running.
+2016-11-15 18:20:52.971 [main] INFO  eudcApi.ApplicationLauncher  - Starting application server on port [7070]
+2016-11-15 18:20:52.977 [main] INFO  eudcApi.server.EmbeddedJetty  - Starting jetty on port 7070
+2016-11-15 18:20:53.028 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @4463ms
+2016-11-15 18:20:53.405 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.2.10.v20150310
+2016-11-15 18:20:56.157 [qtp2130357594-18] INFO  eudcApi.guice.provider.EntityManagerFactoryTestProvider  - Initializing EntityManagerFactory properties [{hibernate.connection.driver_class=org.h2.Driver, hibernate.hbm2ddl.auto=create, hibernate.connection.url=jdbc:h2:mem:test;MODE=MySQL, hibernate.dialect=org.hibernate.dialect.H2Dialect, hibernate.show_sql=true}]
+2016-11-15 18:20:56.989 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@736f3e9e{/,null,AVAILABLE}
+2016-11-15 18:20:57.033 [main] INFO  org.eclipse.jetty.server.ServerConnector  - Started ServerConnector@7090d3e8{HTTP/1.1}{0.0.0.0:7070}
+2016-11-15 18:20:57.034 [main] INFO  org.eclipse.jetty.server.Server  - Started @8472ms
+2016-11-15 18:20:57.099 [command-listener] INFO  eudcApi.ApplicationManager  - Command listener started on port [9999]
+2016-11-15 18:21:18.482 [shutdown-hook] INFO  eudcApi.ApplicationLauncher  - Stopping server...
+2016-11-15 18:21:18.490 [Thread-11] INFO  eudcApi.ApplicationManager  - Stopping application on port [1987]
+2016-11-15 18:21:18.491 [Thread-11] INFO  eudcApi.ApplicationManager  - Stop command sent to application
+2016-11-15 18:21:18.509 [shutdown-hook] INFO  org.eclipse.jetty.server.ServerConnector  - Stopped ServerConnector@4dde9ffd{HTTP/1.1}{0.0.0.0:1986}
+2016-11-15 18:21:18.559 [shutdown-hook] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@7cf283e1{/,null,UNAVAILABLE}
+2016-11-15 18:21:28.505 [qtp1200470358-18] INFO  eudcApi.guice.provider.EntityManagerFactoryProvider  - Initializing EntityManagerFactory properties [{hibernate.connection.driver_class=com.mysql.jdbc.Driver, hibernate.hbm2ddl.auto=validate, hibernate.c3p0.initialpoolsize=5, hibernate.c3p0.max_size=100, hibernate.c3p0.max_statements=50, hibernate.c3p0.idle_test_period=400, hibernate.c3p0.preferredTestQuery=SELECT 1, hibernate.dialect=org.hibernate.dialect.MySQLDialect, hibernate.c3p0.min_size=5, hibernate.connection.password=root, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://127.0.0.1/eudcApi, hibernate.c3p0.timeout=300, hibernate.c3p0.testConnectionOnCheckin=true, hibernate.show_sql=false, hibernate.c3p0.acquire_increment=1}]
+2016-11-15 18:21:29.961 [qtp1200470358-18] INFO  com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2016-11-15 18:21:30.444 [qtp1200470358-18] INFO  com.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2016-11-15 18:21:30.888 [qtp1200470358-18] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@f67a191b [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@63f56da3 [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> z8kfsx9kt2r1q6bnx73|35522a08, idleConnectionTestPeriod -> 400, initialPoolSize -> 5, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 300, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 50, maxStatementsPerConnection -> 0, minPoolSize -> 5, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@d14daec0 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> z8kfsx9kt2r1q6bnx73|540820e9, jdbcUrl -> jdbc:mysql://127.0.0.1/eudcApi, properties -> {user=******, password=******} ], preferredTestQuery -> SELECT 1, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> z8kfsx9kt2r1q6bnx73|7c5baf, numHelperThreads -> 3 ]
+2016-11-15 18:34:42.119 [shutdown-hook] INFO  eudcApi.ApplicationLauncher  - Stopping server...
+2016-11-15 18:34:42.141 [shutdown-hook] INFO  org.eclipse.jetty.server.ServerConnector  - Stopped ServerConnector@7090d3e8{HTTP/1.1}{0.0.0.0:7070}
+2016-11-15 18:34:42.162 [shutdown-hook] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@736f3e9e{/,null,UNAVAILABLE}
+2016-11-15 18:36:25.393 [main] INFO  eudcApi.guice.GuiceInjector  - Loading modules annotated with @Module...
+2016-11-15 18:36:26.248 [main] INFO  org.reflections.Reflections  - Reflections took 660 ms to scan 1 urls, producing 23 keys and 54 values 
+2016-11-15 18:36:26.332 [main] INFO  eudcApi.guice.GuiceInjector  - 3 modules loaded.
+2016-11-15 18:36:28.196 [main] INFO  eudcApi.guice.provider.ConfigurationProvider  - No custom configuration file set.
+2016-11-15 18:36:28.491 [main] INFO  eudcApi.guice.provider.ConfigurationProvider  - Default configuration loaded from [file:/home/mart/eudcApi/target/classes/default.properties]
+2016-11-15 18:36:28.566 [main] INFO  eudcApi.ApplicationManager  - Application is not running.
+2016-11-15 18:36:28.577 [main] INFO  eudcApi.ApplicationLauncher  - Starting application server on port [7070]
+2016-11-15 18:36:28.628 [main] INFO  eudcApi.server.EmbeddedJetty  - Starting jetty on port 7070
+2016-11-15 18:36:28.846 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @4785ms
+2016-11-15 18:36:29.523 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.2.10.v20150310
+2016-11-15 18:36:34.394 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@736f3e9e{/,null,AVAILABLE}
+2016-11-15 18:36:34.452 [main] INFO  org.eclipse.jetty.server.ServerConnector  - Started ServerConnector@771db12c{HTTP/1.1}{0.0.0.0:7070}
+2016-11-15 18:36:34.457 [main] INFO  org.eclipse.jetty.server.Server  - Started @10400ms
+2016-11-15 18:36:34.507 [command-listener] INFO  eudcApi.ApplicationManager  - Command listener started on port [9999]
+2016-11-15 18:36:37.985 [qtp1200470358-18] INFO  eudcApi.guice.provider.EntityManagerFactoryProvider  - Initializing EntityManagerFactory properties [{hibernate.connection.driver_class=com.mysql.jdbc.Driver, hibernate.hbm2ddl.auto=validate, hibernate.c3p0.initialpoolsize=5, hibernate.c3p0.max_size=100, hibernate.c3p0.max_statements=50, hibernate.c3p0.idle_test_period=400, hibernate.c3p0.preferredTestQuery=SELECT 1, hibernate.dialect=org.hibernate.dialect.MySQLDialect, hibernate.c3p0.min_size=5, hibernate.connection.password=root, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://127.0.0.1/eudcApi, hibernate.c3p0.timeout=300, hibernate.c3p0.testConnectionOnCheckin=true, hibernate.show_sql=false, hibernate.c3p0.acquire_increment=1}]
+2016-11-15 18:36:41.079 [qtp1200470358-18] INFO  com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2016-11-15 18:36:41.644 [qtp1200470358-18] INFO  com.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2016-11-15 18:36:42.312 [qtp1200470358-18] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@7c3d93ec [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@12abae3d [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> z8kfsx9kt3akre25x35s|2f3d8908, idleConnectionTestPeriod -> 400, initialPoolSize -> 5, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 300, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 50, maxStatementsPerConnection -> 0, minPoolSize -> 5, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@4ece749c [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> z8kfsx9kt3akre25x35s|1b499761, jdbcUrl -> jdbc:mysql://127.0.0.1/eudcApi, properties -> {user=******, password=******} ], preferredTestQuery -> SELECT 1, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> z8kfsx9kt3akre25x35s|4e21fb0c, numHelperThreads -> 3 ]

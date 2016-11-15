@@ -1,185 +1,489 @@
-2016-10-25 18:49:19.997 [qtp1822525972-21] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-10-25 18:49:19.999 [qtp1822525972-21] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-10-25 18:49:20.000 [qtp1822525972-21] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2016-10-25 18:49:20.532 [qtp1822525972-21] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+2016-11-15 18:10:38.134 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:10:38.135 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:10:38.136 [main] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:10:38.642 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: EudcApi
 	...]
-2016-10-25 18:49:21.004 [qtp1822525972-21] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
-2016-10-25 18:49:21.011 [qtp1822525972-21] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
-2016-10-25 18:49:21.017 [qtp1822525972-21] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
-2016-10-25 18:49:21.525 [qtp1822525972-21] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2016-10-25 18:49:21.630 [qtp1822525972-21] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
-2016-10-25 18:49:21.631 [qtp1822525972-21] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
-2016-10-25 18:49:21.631 [qtp1822525972-21] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
-2016-10-25 18:49:24.056 [qtp1822525972-21] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2016-10-25 18:49:24.109 [qtp1822525972-21] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-2016-10-25 18:49:24.877 [qtp1822525972-21] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2016-10-25 18:49:26.435 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
-2016-10-25 18:49:26.436 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
-2016-10-25 18:49:26.491 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.AuthenticatedUser
-2016-10-25 18:49:26.491 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
-2016-10-25 18:49:26.503 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card
-2016-10-25 18:49:26.504 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [pinned, created, description, id, title]
-2016-10-25 18:49:26.514 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card_User
-2016-10-25 18:49:26.514 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
-2016-10-25 18:49:26.525 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Event
-2016-10-25 18:49:26.526 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [description, endtime, id, starttime, title]
-2016-10-25 18:49:26.537 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Location
-2016-10-25 18:49:26.538 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [lng, created, name, id, lat]
-2016-10-25 18:49:26.549 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.TimerCard
-2016-10-25 18:49:26.549 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [enddate, created, description, id, title]
-2016-10-25 18:49:26.559 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.TimerCard_User
-2016-10-25 18:49:26.559 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [timercard, user]
-2016-10-25 18:49:26.569 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.User
-2016-10-25 18:49:26.569 [qtp1822525972-21] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
-2016-10-25 18:49:28.242 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:49:28.298 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [1ak4pecbtma0fdtfbsun63ernj]
-2016-10-25 18:49:28.924 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_ where user0_.email=?
-2016-10-25 18:49:28.926 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
-2016-10-25 18:49:29.490 [qtp1822525972-17] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (token, user_id) values (?, ?)
-2016-10-25 18:49:29.492 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:49:29.494 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
-2016-10-25 18:49:30.579 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:49:30.581 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:49:30.585 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:49:30.587 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:49:30.591 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:49:30.593 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:49:30.596 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:49:30.598 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:49:30.642 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:49:30.643 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_0_, user2_.id as id1_7_1_, timercard0_.created as created2_5_0_, timercard0_.description as descript3_5_0_, timercard0_.endDate as endDate4_5_0_, timercard0_.title as title5_5_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.timercard as timercar1_5_0__, users1_.user as user2_6_0__ from TimerCard timercard0_ left outer join TimerCard_User users1_ on timercard0_.id=users1_.timercard left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:49:30.644 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:49:30.645 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:49:32.473 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:49:32.475 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:49:32.477 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:49:32.478 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:49:32.526 [qtp1822525972-15] DEBUG org.hibernate.SQL  - DELETE FROM TimerCard_User WHERE user = ? AND timercard = ?
-2016-10-25 18:49:32.528 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
-2016-10-25 18:49:32.529 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:49:36.353 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:49:36.357 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:49:36.363 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:49:36.363 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:49:36.381 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select event0_.id as id1_3_, event0_.description as descript2_3_, event0_.endTime as endTime3_3_, event0_.startTime as startTim4_3_, event0_.title as title5_3_ from Event event0_ order by event0_.startTime DESC
-2016-10-25 18:51:00.584 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:51:00.585 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:51:00.587 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:51:00.588 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:51:00.604 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_0_, user2_.id as id1_7_1_, timercard0_.created as created2_5_0_, timercard0_.description as descript3_5_0_, timercard0_.endDate as endDate4_5_0_, timercard0_.title as title5_5_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.timercard as timercar1_5_0__, users1_.user as user2_6_0__ from TimerCard timercard0_ left outer join TimerCard_User users1_ on timercard0_.id=users1_.timercard left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:51:00.606 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:51:00.618 [qtp1822525972-19] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:51:00.621 [qtp1822525972-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:51:00.628 [qtp1822525972-19] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:51:00.629 [qtp1822525972-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:51:00.635 [qtp1822525972-19] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:51:00.639 [qtp1822525972-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:52:30.634 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:52:30.636 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:52:30.638 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:52:30.638 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:52:30.639 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:52:30.640 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:52:30.640 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:52:30.640 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:52:30.650 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_0_, user2_.id as id1_7_1_, timercard0_.created as created2_5_0_, timercard0_.description as descript3_5_0_, timercard0_.endDate as endDate4_5_0_, timercard0_.title as title5_5_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.timercard as timercar1_5_0__, users1_.user as user2_6_0__ from TimerCard timercard0_ left outer join TimerCard_User users1_ on timercard0_.id=users1_.timercard left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:52:30.651 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:52:30.653 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:52:30.662 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:54:00.574 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:54:00.578 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:54:00.585 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:54:00.586 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:54:00.592 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_0_, user2_.id as id1_7_1_, timercard0_.created as created2_5_0_, timercard0_.description as descript3_5_0_, timercard0_.endDate as endDate4_5_0_, timercard0_.title as title5_5_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.timercard as timercar1_5_0__, users1_.user as user2_6_0__ from TimerCard timercard0_ left outer join TimerCard_User users1_ on timercard0_.id=users1_.timercard left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:54:00.593 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:54:00.601 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:54:00.602 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:54:00.604 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:54:00.605 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:54:00.609 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:54:00.610 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:55:30.570 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:55:30.573 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:55:30.574 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:55:30.574 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:55:30.577 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:55:30.577 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:55:30.578 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:55:30.578 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:55:30.582 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:55:30.583 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_0_, user2_.id as id1_7_1_, timercard0_.created as created2_5_0_, timercard0_.description as descript3_5_0_, timercard0_.endDate as endDate4_5_0_, timercard0_.title as title5_5_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.timercard as timercar1_5_0__, users1_.user as user2_6_0__ from TimerCard timercard0_ left outer join TimerCard_User users1_ on timercard0_.id=users1_.timercard left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:55:30.583 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:55:30.583 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:57:00.607 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:57:00.609 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:57:00.611 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:57:00.612 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:57:00.623 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_0_, user2_.id as id1_7_1_, timercard0_.created as created2_5_0_, timercard0_.description as descript3_5_0_, timercard0_.endDate as endDate4_5_0_, timercard0_.title as title5_5_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.timercard as timercar1_5_0__, users1_.user as user2_6_0__ from TimerCard timercard0_ left outer join TimerCard_User users1_ on timercard0_.id=users1_.timercard left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:57:00.624 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:57:00.654 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:57:00.655 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:57:00.657 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:57:00.657 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:57:00.662 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:57:00.662 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:58:30.652 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:58:30.653 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:58:30.660 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:58:30.665 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:58:30.683 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:58:30.684 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:58:30.690 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 18:58:30.693 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 18:58:30.697 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 18:58:30.697 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 18:58:30.707 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_0_, user2_.id as id1_7_1_, timercard0_.created as created2_5_0_, timercard0_.description as descript3_5_0_, timercard0_.endDate as endDate4_5_0_, timercard0_.title as title5_5_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.timercard as timercar1_5_0__, users1_.user as user2_6_0__ from TimerCard timercard0_ left outer join TimerCard_User users1_ on timercard0_.id=users1_.timercard left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 18:58:30.712 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:00:00.627 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 19:00:00.629 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 19:00:00.630 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 19:00:00.631 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 19:00:00.631 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 19:00:00.631 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:00:00.633 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 19:00:00.634 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:00:00.636 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 19:00:00.637 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:00:00.639 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_0_, user2_.id as id1_7_1_, timercard0_.created as created2_5_0_, timercard0_.description as descript3_5_0_, timercard0_.endDate as endDate4_5_0_, timercard0_.title as title5_5_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.timercard as timercar1_5_0__, users1_.user as user2_6_0__ from TimerCard timercard0_ left outer join TimerCard_User users1_ on timercard0_.id=users1_.timercard left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 19:00:00.640 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:01:30.656 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 19:01:30.657 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 19:01:30.659 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 19:01:30.675 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 19:01:30.659 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 19:01:30.678 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:01:30.679 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 19:01:30.679 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:01:30.685 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 19:01:30.686 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:01:30.689 [qtp1822525972-21] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_0_, user2_.id as id1_7_1_, timercard0_.created as created2_5_0_, timercard0_.description as descript3_5_0_, timercard0_.endDate as endDate4_5_0_, timercard0_.title as title5_5_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.timercard as timercar1_5_0__, users1_.user as user2_6_0__ from TimerCard timercard0_ left outer join TimerCard_User users1_ on timercard0_.id=users1_.timercard left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 19:01:30.693 [qtp1822525972-21] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:03:00.613 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 19:03:00.619 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 19:03:00.621 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 19:03:00.621 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 19:03:00.623 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 19:03:00.624 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:03:00.625 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 19:03:00.627 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:03:00.635 [qtp1822525972-15] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 19:03:00.636 [qtp1822525972-15] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:03:00.638 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_0_, user2_.id as id1_7_1_, timercard0_.created as created2_5_0_, timercard0_.description as descript3_5_0_, timercard0_.endDate as endDate4_5_0_, timercard0_.title as title5_5_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.timercard as timercar1_5_0__, users1_.user as user2_6_0__ from TimerCard timercard0_ left outer join TimerCard_User users1_ on timercard0_.id=users1_.timercard left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 19:03:00.642 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:04:30.586 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 19:04:30.589 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 19:04:30.592 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 19:04:30.593 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:04:30.599 [qtp1822525972-17] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 19:04:30.600 [qtp1822525972-17] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:04:30.621 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
-2016-10-25 19:04:30.622 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [15eg3e7vpeur99qbto71qgd0hl]
-2016-10-25 19:04:30.640 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
-2016-10-25 19:04:30.641 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
-2016-10-25 19:04:30.656 [qtp1822525972-22] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_0_, user2_.id as id1_7_1_, timercard0_.created as created2_5_0_, timercard0_.description as descript3_5_0_, timercard0_.endDate as endDate4_5_0_, timercard0_.title as title5_5_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.timercard as timercar1_5_0__, users1_.user as user2_6_0__ from TimerCard timercard0_ left outer join TimerCard_User users1_ on timercard0_.id=users1_.timercard left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
-2016-10-25 19:04:30.657 [qtp1822525972-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:39.260 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-11-15 18:10:39.269 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-11-15 18:10:39.286 [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-11-15 18:10:39.921 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-11-15 18:10:40.079 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-11-15 18:10:40.113 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
+2016-11-15 18:10:40.114 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
+2016-11-15 18:10:40.114 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-11-15 18:10:40.117 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-11-15 18:10:40.771 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-15 18:10:41.546 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-15 18:10:43.211 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000227: Running hbm2ddl schema export
+2016-11-15 18:10:43.252 [main] DEBUG org.hibernate.SQL  - drop table AuthenticatedUser if exists
+2016-11-15 18:10:43.267 [main] DEBUG org.hibernate.SQL  - drop table Card if exists
+2016-11-15 18:10:43.268 [main] DEBUG org.hibernate.SQL  - drop table Card_User if exists
+2016-11-15 18:10:43.268 [main] DEBUG org.hibernate.SQL  - drop table Event if exists
+2016-11-15 18:10:43.268 [main] DEBUG org.hibernate.SQL  - drop table Location if exists
+2016-11-15 18:10:43.268 [main] DEBUG org.hibernate.SQL  - drop table TimerCard if exists
+2016-11-15 18:10:43.269 [main] DEBUG org.hibernate.SQL  - drop table TimerCard_User if exists
+2016-11-15 18:10:43.269 [main] DEBUG org.hibernate.SQL  - drop table User if exists
+2016-11-15 18:10:43.274 [main] DEBUG org.hibernate.SQL  - create table AuthenticatedUser (id bigint generated by default as identity, token varchar(255) not null, user_id bigint not null, primary key (id))
+2016-11-15 18:10:43.330 [main] DEBUG org.hibernate.SQL  - create table Card (id bigint generated by default as identity, created timestamp, description varchar(255), pinned boolean not null, title varchar(255), primary key (id))
+2016-11-15 18:10:43.348 [main] DEBUG org.hibernate.SQL  - create table Card_User (card bigint not null, user bigint not null)
+2016-11-15 18:10:43.367 [main] DEBUG org.hibernate.SQL  - create table Event (id bigint generated by default as identity, description varchar(255), endTime timestamp, startTime timestamp, title varchar(255) not null, primary key (id))
+2016-11-15 18:10:43.374 [main] DEBUG org.hibernate.SQL  - create table Location (id bigint generated by default as identity, created timestamp, lat varchar(255), lng varchar(255), name varchar(255), primary key (id))
+2016-11-15 18:10:43.380 [main] DEBUG org.hibernate.SQL  - create table TimerCard (id bigint generated by default as identity, created timestamp, description varchar(255), endDate timestamp, title varchar(255), primary key (id))
+2016-11-15 18:10:43.403 [main] DEBUG org.hibernate.SQL  - create table TimerCard_User (timercard bigint not null, user bigint not null)
+2016-11-15 18:10:43.406 [main] DEBUG org.hibernate.SQL  - create table User (id bigint generated by default as identity, created timestamp, email varchar(255) not null, password varchar(255) not null, role varchar(255), primary key (id))
+2016-11-15 18:10:43.422 [main] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint UK_6hhrtitdoxlsbd7rtxdkkidb1  unique (token)
+2016-11-15 18:10:43.441 [main] DEBUG org.hibernate.SQL  - alter table Card_User add constraint UK_o3swjecy79x756rxgbmvsbbvt  unique (card, user)
+2016-11-15 18:10:43.447 [main] DEBUG org.hibernate.SQL  - alter table TimerCard_User add constraint UK_kn1vfbsejh4gkes2bw6ffmgtw  unique (timercard, user)
+2016-11-15 18:10:43.454 [main] DEBUG org.hibernate.SQL  - alter table User add constraint UK_e6gkqunxajvyxl5uctpl2vl2p  unique (email)
+2016-11-15 18:10:43.468 [main] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint FK_p8go15iph52lx15qoh2aypu20 foreign key (user_id) references User
+2016-11-15 18:10:43.544 [main] DEBUG org.hibernate.SQL  - alter table Card_User add constraint FK_fomuxjfhh2a5338p6sl74i4n1 foreign key (user) references User
+2016-11-15 18:10:43.558 [main] DEBUG org.hibernate.SQL  - alter table Card_User add constraint FK_6yi2u89mwoibpipqrg95uqa1q foreign key (card) references Card
+2016-11-15 18:10:43.562 [main] DEBUG org.hibernate.SQL  - alter table TimerCard_User add constraint FK_o314qphihi4bqrrm3gvoq3dle foreign key (user) references User
+2016-11-15 18:10:43.574 [main] DEBUG org.hibernate.SQL  - alter table TimerCard_User add constraint FK_5ofylw5inpgms63y4d57ybfyh foreign key (timercard) references TimerCard
+2016-11-15 18:10:43.715 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000230: Schema export complete
+2016-11-15 18:10:44.394 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:44.497 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-11-15 18:10:44.501 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-11-15 18:10:44.502 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-11-15 18:10:44.503 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-11-15 18:10:44.634 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:10:44.662 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token1]
+2016-11-15 18:10:44.667 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [4]
+2016-11-15 18:10:44.681 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:10:44.695 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token2]
+2016-11-15 18:10:44.706 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [4]
+2016-11-15 18:10:46.166 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-11-15 18:10:46.177 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token1]
+2016-11-15 18:10:46.236 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-11-15 18:10:46.240 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [token2]
+2016-11-15 18:10:46.339 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-11-15 18:10:46.346 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
+2016-11-15 18:10:46.358 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-11-15 18:10:46.359 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:10:46.360 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-11-15 18:10:46.361 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-11-15 18:10:46.385 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:46.385 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-11-15 18:10:46.386 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-11-15 18:10:46.386 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-11-15 18:10:46.386 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-11-15 18:10:46.392 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:10:46.394 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-11-15 18:10:46.394 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [5]
+2016-11-15 18:10:46.402 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-11-15 18:10:46.402 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-11-15 18:10:46.403 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-11-15 18:10:46.403 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
+2016-11-15 18:10:46.410 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:46.411 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-11-15 18:10:46.411 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-11-15 18:10:46.411 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-11-15 18:10:46.411 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-11-15 18:10:46.419 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:10:46.420 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-11-15 18:10:46.420 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [6]
+2016-11-15 18:10:46.424 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-11-15 18:10:46.425 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
+2016-11-15 18:10:46.430 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-11-15 18:10:46.431 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-11-15 18:10:46.433 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-11-15 18:10:46.433 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
+2016-11-15 18:10:46.436 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:46.437 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-11-15 18:10:46.437 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-11-15 18:10:46.437 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-11-15 18:10:46.437 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-11-15 18:10:46.439 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:10:46.450 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-11-15 18:10:46.450 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [7]
+2016-11-15 18:10:46.453 [main] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-11-15 18:10:46.453 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-11-15 18:10:46.462 [main] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-11-15 18:10:46.462 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
+2016-11-15 18:10:46.466 [main] DEBUG org.hibernate.SQL  - delete from User where id=?
+2016-11-15 18:10:46.466 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [7]
+2016-11-15 18:10:46.478 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:46.481 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-11-15 18:10:46.481 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [someuser@site.ru]
+2016-11-15 18:10:46.491 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [superHashedPassword]
+2016-11-15 18:10:46.491 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-11-15 18:10:46.494 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:10:46.494 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-11-15 18:10:46.494 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [8]
+2016-11-15 18:10:46.497 [main] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:10:46.500 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [123123]
+2016-11-15 18:10:46.505 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [8]
+2016-11-15 18:10:46.514 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 23505, SQLState: 23505
+2016-11-15 18:10:46.515 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unique index or primary key violation: "UK_6HHRTITDOXLSBD7RTXDKKIDB1_INDEX_8 ON PUBLIC.AUTHENTICATEDUSER(TOKEN) VALUES ('123123', 7)"; SQL statement:
+insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?) [23505-187]
+2016-11-15 18:10:46.623 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:46.815 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:46.830 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:10:46.935 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:46.936 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
+2016-11-15 18:10:46.960 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:46.960 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:47.040 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_
+2016-11-15 18:10:47.066 [main] DEBUG org.hibernate.SQL  - insert into Card (id, created, description, pinned, title) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:47.067 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-11-15 18:10:47.065]
+2016-11-15 18:10:47.068 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [Bug the fuck out]
+2016-11-15 18:10:47.069 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [BOOLEAN] - [false]
+2016-11-15 18:10:47.069 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [Lorem Ipsum]
+2016-11-15 18:10:47.120 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:47.125 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:47.133 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:47.147 [main] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:10:47.148 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-11-15 18:10:47.148 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-11-15 18:10:47.149 [main] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:10:47.152 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-11-15 18:10:47.155 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [2]
+2016-11-15 18:10:47.156 [main] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:10:47.156 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-11-15 18:10:47.156 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
+2016-11-15 18:10:47.172 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:47.178 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.179 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:10:47.182 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.183 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
+2016-11-15 18:10:47.184 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.185 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:47.194 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.200 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-11-15 18:10:47.238 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_ where user0_.email=?
+2016-11-15 18:10:47.238 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-11-15 18:10:47.305 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
+2016-11-15 18:10:47.308 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:47.315 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_ where user0_.email=?
+2016-11-15 18:10:47.316 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-11-15 18:10:47.318 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_
+2016-11-15 18:10:47.321 [main] DEBUG org.hibernate.SQL  - insert into Card (id, created, description, pinned, title) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:47.322 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-11-15 18:10:47.32]
+2016-11-15 18:10:47.322 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [I AM GETTING REKT THE FUCK OUT]
+2016-11-15 18:10:47.322 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [BOOLEAN] - [false]
+2016-11-15 18:10:47.322 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [I AM CARD]
+2016-11-15 18:10:47.325 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:47.328 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.329 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:10:47.330 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.330 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
+2016-11-15 18:10:47.332 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.332 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:47.334 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.334 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-11-15 18:10:47.337 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:47.340 [main] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:10:47.340 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
+2016-11-15 18:10:47.341 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-11-15 18:10:47.341 [main] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:10:47.342 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
+2016-11-15 18:10:47.342 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [2]
+2016-11-15 18:10:47.343 [main] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:10:47.344 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
+2016-11-15 18:10:47.344 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
+2016-11-15 18:10:47.346 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
+2016-11-15 18:10:47.347 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:47.423 [main] DEBUG org.hibernate.SQL  - DELETE FROM Card_User WHERE user = ? AND card = ?
+2016-11-15 18:10:47.433 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:47.434 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [5]
+2016-11-15 18:10:47.446 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_0_, user2_.id as id1_7_1_, card0_.created as created2_1_0_, card0_.description as descript3_1_0_, card0_.pinned as pinned4_1_0_, card0_.title as title5_1_0_, user2_.created as created2_7_1_, user2_.email as email3_7_1_, user2_.password as password4_7_1_, user2_.role as role5_7_1_, users1_.card as card1_1_0__, users1_.user as user2_2_0__ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where user2_.id=?
+2016-11-15 18:10:47.449 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:47.687 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_
+2016-11-15 18:10:47.730 [main] DEBUG org.hibernate.SQL  - insert into Card (id, created, description, pinned, title) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:47.733 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-11-15 18:10:47.729]
+2016-11-15 18:10:47.733 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [PLEASE DON'T TRASH ME!]
+2016-11-15 18:10:47.734 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [BOOLEAN] - [false]
+2016-11-15 18:10:47.734 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [AM I DEAD?]
+2016-11-15 18:10:47.743 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:47.772 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.773 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:10:47.786 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.786 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
+2016-11-15 18:10:47.791 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.791 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:47.810 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.811 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-11-15 18:10:47.829 [main] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:47.829 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
+2016-11-15 18:10:47.841 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:47.877 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:47.897 [main] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:10:47.898 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
+2016-11-15 18:10:47.898 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-11-15 18:10:47.898 [main] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:10:47.899 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
+2016-11-15 18:10:47.899 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [2]
+2016-11-15 18:10:47.899 [main] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:10:47.900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
+2016-11-15 18:10:47.900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
+2016-11-15 18:10:47.901 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where card0_.id=?
+2016-11-15 18:10:47.902 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:10:47.905 [main] DEBUG org.hibernate.SQL  - DELETE FROM Card_User WHERE card = ?
+2016-11-15 18:10:47.905 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:10:47.913 [main] DEBUG org.hibernate.SQL  - DELETE FROM Card WHERE id = ?
+2016-11-15 18:10:47.914 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:10:47.921 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:47.937 [main] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ left outer join Card_User users1_ on card0_.id=users1_.card left outer join User user2_ on users1_.user=user2_.id where card0_.id=?
+2016-11-15 18:10:47.938 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:10:47.953 [main] DEBUG org.hibernate.SQL  - select event0_.id as id1_3_, event0_.description as descript2_3_, event0_.endTime as endTime3_3_, event0_.startTime as startTim4_3_, event0_.title as title5_3_ from Event event0_ order by event0_.startTime DESC
+2016-11-15 18:10:47.969 [main] DEBUG org.hibernate.SQL  - insert into Event (id, description, endTime, startTime, title) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:47.970 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [null]
+2016-11-15 18:10:47.970 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [TIMESTAMP] - [null]
+2016-11-15 18:10:47.970 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [TIMESTAMP] - [null]
+2016-11-15 18:10:47.970 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [asd]
+2016-11-15 18:10:47.972 [main] DEBUG org.hibernate.SQL  - select event0_.id as id1_3_, event0_.description as descript2_3_, event0_.endTime as endTime3_3_, event0_.startTime as startTim4_3_, event0_.title as title5_3_ from Event event0_ order by event0_.startTime DESC
+2016-11-15 18:10:48.000 [main] DEBUG org.hibernate.SQL  - select location0_.id as id1_4_, location0_.created as created2_4_, location0_.lat as lat3_4_, location0_.lng as lng4_4_, location0_.name as name5_4_ from Location location0_
+2016-11-15 18:10:48.006 [main] DEBUG org.hibernate.SQL  - select location0_.id as id1_4_, location0_.created as created2_4_, location0_.lat as lat3_4_, location0_.lng as lng4_4_, location0_.name as name5_4_ from Location location0_
+2016-11-15 18:10:48.017 [main] DEBUG org.hibernate.SQL  - insert into Location (id, created, lat, lng, name) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:48.018 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-11-15 18:10:48.018 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [59.443634]
+2016-11-15 18:10:48.019 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [24.767353]
+2016-11-15 18:10:48.019 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [Tallinn Harbour]
+2016-11-15 18:10:48.020 [main] DEBUG org.hibernate.SQL  - select location0_.id as id1_4_, location0_.created as created2_4_, location0_.lat as lat3_4_, location0_.lng as lng4_4_, location0_.name as name5_4_ from Location location0_
+2016-11-15 18:10:48.054 [main] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_, timercard0_.created as created2_5_, timercard0_.description as descript3_5_, timercard0_.endDate as endDate4_5_, timercard0_.title as title5_5_ from TimerCard timercard0_
+2016-11-15 18:10:48.067 [main] DEBUG org.hibernate.SQL  - select users0_.timercard as timercar1_5_0_, users0_.user as user2_6_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from TimerCard_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.timercard=?
+2016-11-15 18:10:48.071 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:48.082 [main] DEBUG org.hibernate.SQL  - insert into TimerCard (id, created, description, endDate, title) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:48.083 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-11-15 18:10:48.083 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [Your round will start in: ]
+2016-11-15 18:10:48.084 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [TIMESTAMP] - [null]
+2016-11-15 18:10:48.084 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [Round start notice]
+2016-11-15 18:10:48.109 [main] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_, timercard0_.created as created2_5_, timercard0_.description as descript3_5_, timercard0_.endDate as endDate4_5_, timercard0_.title as title5_5_ from TimerCard timercard0_
+2016-11-15 18:10:48.135 [main] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_, timercard0_.created as created2_5_, timercard0_.description as descript3_5_, timercard0_.endDate as endDate4_5_, timercard0_.title as title5_5_ from TimerCard timercard0_
+2016-11-15 18:10:48.148 [main] DEBUG org.hibernate.SQL  - select users0_.timercard as timercar1_5_0_, users0_.user as user2_6_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from TimerCard_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.timercard=?
+2016-11-15 18:10:48.151 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
+2016-11-15 18:10:48.157 [main] DEBUG org.hibernate.SQL  - select users0_.timercard as timercar1_5_0_, users0_.user as user2_6_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from TimerCard_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.timercard=?
+2016-11-15 18:10:48.158 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:48.190 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_
+2016-11-15 18:10:48.219 [main] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-11-15 18:10:48.219 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [null]
+2016-11-15 18:10:48.220 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [kazaa@lankara.ru]
+2016-11-15 18:10:48.220 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [parool]
+2016-11-15 18:10:48.233 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [null]
+2016-11-15 18:10:48.246 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_
+2016-11-15 18:10:48.259 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_
+2016-11-15 18:10:48.282 [main] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_ where user0_.email=?
+2016-11-15 18:10:48.286 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [admin@admin.kz]
+2016-11-15 18:10:59.656 [qtp1266048658-22] DEBUG org.hibernate.SQL  - select card0_.id as id1_1_, card0_.created as created2_1_, card0_.description as descript3_1_, card0_.pinned as pinned4_1_, card0_.title as title5_1_ from Card card0_ order by card0_.pinned DESC, card0_.created DESC
+2016-11-15 18:10:59.684 [qtp1266048658-22] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:59.685 [qtp1266048658-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
+2016-11-15 18:10:59.703 [qtp1266048658-22] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:59.704 [qtp1266048658-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:10:59.706 [qtp1266048658-22] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:59.707 [qtp1266048658-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [4]
+2016-11-15 18:10:59.721 [qtp1266048658-22] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:59.721 [qtp1266048658-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [5]
+2016-11-15 18:10:59.723 [qtp1266048658-22] DEBUG org.hibernate.SQL  - select users0_.card as card1_1_0_, users0_.user as user2_2_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from Card_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.card=?
+2016-11-15 18:10:59.724 [qtp1266048658-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [6]
+2016-11-15 18:11:01.828 [qtp1266048658-23] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_
+2016-11-15 18:11:01.835 [qtp1266048658-23] DEBUG org.hibernate.SQL  - insert into Card (id, created, description, pinned, title) values (null, ?, ?, ?, ?)
+2016-11-15 18:11:01.847 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-11-15 18:11:01.835]
+2016-11-15 18:11:01.854 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [Sed omnium volumus voluptua te.]
+2016-11-15 18:11:01.854 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [BOOLEAN] - [false]
+2016-11-15 18:11:01.854 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [Lorem Ipsum]
+2016-11-15 18:11:01.863 [qtp1266048658-23] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:11:01.864 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [7]
+2016-11-15 18:11:01.864 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [1]
+2016-11-15 18:11:01.875 [qtp1266048658-23] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:11:01.876 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [7]
+2016-11-15 18:11:01.876 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [2]
+2016-11-15 18:11:01.878 [qtp1266048658-23] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:11:01.879 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [7]
+2016-11-15 18:11:01.881 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
+2016-11-15 18:11:01.884 [qtp1266048658-23] DEBUG org.hibernate.SQL  - insert into Card_User (card, user) values (?, ?)
+2016-11-15 18:11:01.885 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [7]
+2016-11-15 18:11:01.885 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [9]
+2016-11-15 18:11:02.065 [qtp1266048658-24] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_ where user0_.email=?
+2016-11-15 18:11:02.066 [qtp1266048658-24] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
+2016-11-15 18:11:02.460 [qtp1266048658-24] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:11:02.461 [qtp1266048658-24] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [vrcl8f6evo7gs7duan2dndjabf]
+2016-11-15 18:11:02.461 [qtp1266048658-24] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
+2016-11-15 18:11:02.635 [qtp1266048658-25] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-11-15 18:11:02.645 [qtp1266048658-25] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [vrcl8f6evo7gs7duan2dndjabf]
+2016-11-15 18:11:02.646 [qtp1266048658-25] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
+2016-11-15 18:11:02.646 [qtp1266048658-25] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:20:22.864 [qtp1266048658-25] DEBUG org.hibernate.SQL  - insert into Event (id, description, endTime, startTime, title) values (null, ?, ?, ?, ?)
+2016-11-15 18:20:22.865 [qtp1266048658-25] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [Ditmas]
+2016-11-15 18:20:22.865 [qtp1266048658-25] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [TIMESTAMP] - [null]
+2016-11-15 18:20:22.869 [qtp1266048658-25] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [TIMESTAMP] - [null]
+2016-11-15 18:20:22.869 [qtp1266048658-25] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [It was not your fault but mine]
+2016-11-15 18:20:23.111 [qtp1266048658-24] DEBUG org.hibernate.SQL  - select event0_.id as id1_3_, event0_.description as descript2_3_, event0_.endTime as endTime3_3_, event0_.startTime as startTim4_3_, event0_.title as title5_3_ from Event event0_ order by event0_.startTime DESC
+2016-11-15 18:20:23.377 [qtp1266048658-22] DEBUG org.hibernate.SQL  - select location0_.id as id1_4_, location0_.created as created2_4_, location0_.lat as lat3_4_, location0_.lng as lng4_4_, location0_.name as name5_4_ from Location location0_
+2016-11-15 18:20:23.717 [qtp1266048658-23] DEBUG org.hibernate.SQL  - insert into Location (id, created, lat, lng, name) values (null, ?, ?, ?, ?)
+2016-11-15 18:20:23.718 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-11-15 18:20:23.716]
+2016-11-15 18:20:23.719 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [59.443634]
+2016-11-15 18:20:23.719 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [24.767353]
+2016-11-15 18:20:23.719 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [Tallinn Harbour]
+2016-11-15 18:20:23.849 [qtp1266048658-26] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_ where user0_.email=?
+2016-11-15 18:20:23.855 [qtp1266048658-26] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
+2016-11-15 18:20:24.248 [qtp1266048658-26] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:20:24.283 [qtp1266048658-26] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [3m6k07c6qbepptci89s2pplfq4]
+2016-11-15 18:20:24.284 [qtp1266048658-26] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
+2016-11-15 18:20:24.477 [qtp1266048658-24] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_ where user0_.email=?
+2016-11-15 18:20:24.478 [qtp1266048658-24] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [null]
+2016-11-15 18:20:24.562 [qtp1266048658-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_ where user0_.email=?
+2016-11-15 18:20:24.563 [qtp1266048658-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
+2016-11-15 18:20:24.895 [qtp1266048658-22] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:20:24.895 [qtp1266048658-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [qrtsv8th59vb3vgf9kc266ob89]
+2016-11-15 18:20:24.895 [qtp1266048658-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
+2016-11-15 18:20:25.013 [qtp1266048658-23] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-11-15 18:20:25.014 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [qrtsv8th59vb3vgf9kc266ob89]
+2016-11-15 18:20:25.018 [qtp1266048658-23] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
+2016-11-15 18:20:25.019 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:20:25.033 [qtp1266048658-23] DEBUG org.hibernate.SQL  - delete from AuthenticatedUser where id=?
+2016-11-15 18:20:25.033 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [11]
+2016-11-15 18:20:25.096 [qtp1266048658-26] DEBUG org.hibernate.SQL  - select timercard0_.id as id1_5_, timercard0_.created as created2_5_, timercard0_.description as descript3_5_, timercard0_.endDate as endDate4_5_, timercard0_.title as title5_5_ from TimerCard timercard0_
+2016-11-15 18:20:25.098 [qtp1266048658-26] DEBUG org.hibernate.SQL  - select users0_.timercard as timercar1_5_0_, users0_.user as user2_6_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from TimerCard_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.timercard=?
+2016-11-15 18:20:25.099 [qtp1266048658-26] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [2]
+2016-11-15 18:20:25.100 [qtp1266048658-26] DEBUG org.hibernate.SQL  - select users0_.timercard as timercar1_5_0_, users0_.user as user2_6_0_, user1_.id as id1_7_1_, user1_.created as created2_7_1_, user1_.email as email3_7_1_, user1_.password as password4_7_1_, user1_.role as role5_7_1_ from TimerCard_User users0_ inner join User user1_ on users0_.user=user1_.id where users0_.timercard=?
+2016-11-15 18:20:25.101 [qtp1266048658-26] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [1]
+2016-11-15 18:20:25.200 [qtp1266048658-25] DEBUG org.hibernate.SQL  - insert into TimerCard (id, created, description, endDate, title) values (null, ?, ?, ?, ?)
+2016-11-15 18:20:25.201 [qtp1266048658-25] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-11-15 18:20:25.2]
+2016-11-15 18:20:25.201 [qtp1266048658-25] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [Your round will start in: ]
+2016-11-15 18:20:25.202 [qtp1266048658-25] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [TIMESTAMP] - [2017-03-05 00:00:00.0]
+2016-11-15 18:20:25.202 [qtp1266048658-25] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [Round start notice]
+2016-11-15 18:20:30.651 [qtp1266048658-24] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_
+2016-11-15 18:20:30.850 [qtp1266048658-22] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_ where user0_.email=?
+2016-11-15 18:20:30.851 [qtp1266048658-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
+2016-11-15 18:20:31.112 [qtp1266048658-22] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:20:31.113 [qtp1266048658-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [pqmiq4rqbfqic0ln4qvsf560jg]
+2016-11-15 18:20:31.113 [qtp1266048658-22] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
+2016-11-15 18:20:31.231 [qtp1266048658-23] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-11-15 18:20:31.232 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [pqmiq4rqbfqic0ln4qvsf560jg]
+2016-11-15 18:20:31.233 [qtp1266048658-23] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
+2016-11-15 18:20:31.233 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:20:31.397 [qtp1266048658-23] DEBUG org.hibernate.SQL  - insert into User (id, created, email, password, role) values (null, ?, ?, ?, ?)
+2016-11-15 18:20:31.398 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [TIMESTAMP] - [2016-11-15 18:20:31.396]
+2016-11-15 18:20:31.398 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [VARCHAR] - [test@test.ee]
+2016-11-15 18:20:31.398 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [VARCHAR] - [$2a$10$cxYuVbBNKdErl3mcYQiQo.c3rDIncLwDlghhpRz.5pklD.2Oo.A1.]
+2016-11-15 18:20:31.398 [qtp1266048658-23] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [USER]
+2016-11-15 18:20:56.261 [qtp2130357594-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:20:56.267 [qtp2130357594-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:20:56.268 [qtp2130357594-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:20:56.910 [qtp2130357594-18] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-11-15 18:20:57.501 [qtp2130357594-18] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-11-15 18:20:57.507 [qtp2130357594-18] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-11-15 18:20:57.511 [qtp2130357594-18] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-11-15 18:20:58.058 [qtp2130357594-18] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-11-15 18:20:58.199 [qtp2130357594-18] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-11-15 18:20:58.218 [qtp2130357594-18] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;MODE=MySQL]
+2016-11-15 18:20:58.218 [qtp2130357594-18] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {}
+2016-11-15 18:20:58.219 [qtp2130357594-18] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-11-15 18:20:58.223 [qtp2130357594-18] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-11-15 18:20:58.836 [qtp2130357594-18] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-15 18:20:59.491 [qtp2130357594-18] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-15 18:21:00.423 [qtp2130357594-18] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000227: Running hbm2ddl schema export
+2016-11-15 18:21:00.431 [qtp2130357594-18] DEBUG org.hibernate.SQL  - drop table AuthenticatedUser if exists
+2016-11-15 18:21:00.432 [qtp2130357594-18] DEBUG org.hibernate.SQL  - drop table Card if exists
+2016-11-15 18:21:00.432 [qtp2130357594-18] DEBUG org.hibernate.SQL  - drop table Card_User if exists
+2016-11-15 18:21:00.432 [qtp2130357594-18] DEBUG org.hibernate.SQL  - drop table Event if exists
+2016-11-15 18:21:00.432 [qtp2130357594-18] DEBUG org.hibernate.SQL  - drop table Location if exists
+2016-11-15 18:21:00.433 [qtp2130357594-18] DEBUG org.hibernate.SQL  - drop table TimerCard if exists
+2016-11-15 18:21:00.433 [qtp2130357594-18] DEBUG org.hibernate.SQL  - drop table TimerCard_User if exists
+2016-11-15 18:21:00.433 [qtp2130357594-18] DEBUG org.hibernate.SQL  - drop table User if exists
+2016-11-15 18:21:00.433 [qtp2130357594-18] DEBUG org.hibernate.SQL  - create table AuthenticatedUser (id bigint generated by default as identity, token varchar(255) not null, user_id bigint not null, primary key (id))
+2016-11-15 18:21:00.451 [qtp2130357594-18] DEBUG org.hibernate.SQL  - create table Card (id bigint generated by default as identity, created timestamp, description varchar(255), pinned boolean not null, title varchar(255), primary key (id))
+2016-11-15 18:21:00.456 [qtp2130357594-18] DEBUG org.hibernate.SQL  - create table Card_User (card bigint not null, user bigint not null)
+2016-11-15 18:21:00.458 [qtp2130357594-18] DEBUG org.hibernate.SQL  - create table Event (id bigint generated by default as identity, description varchar(255), endTime timestamp, startTime timestamp, title varchar(255) not null, primary key (id))
+2016-11-15 18:21:00.462 [qtp2130357594-18] DEBUG org.hibernate.SQL  - create table Location (id bigint generated by default as identity, created timestamp, lat varchar(255), lng varchar(255), name varchar(255), primary key (id))
+2016-11-15 18:21:00.464 [qtp2130357594-18] DEBUG org.hibernate.SQL  - create table TimerCard (id bigint generated by default as identity, created timestamp, description varchar(255), endDate timestamp, title varchar(255), primary key (id))
+2016-11-15 18:21:00.466 [qtp2130357594-18] DEBUG org.hibernate.SQL  - create table TimerCard_User (timercard bigint not null, user bigint not null)
+2016-11-15 18:21:00.467 [qtp2130357594-18] DEBUG org.hibernate.SQL  - create table User (id bigint generated by default as identity, created timestamp, email varchar(255) not null, password varchar(255) not null, role varchar(255), primary key (id))
+2016-11-15 18:21:00.469 [qtp2130357594-18] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint UK_6hhrtitdoxlsbd7rtxdkkidb1  unique (token)
+2016-11-15 18:21:00.475 [qtp2130357594-18] DEBUG org.hibernate.SQL  - alter table Card_User add constraint UK_o3swjecy79x756rxgbmvsbbvt  unique (card, user)
+2016-11-15 18:21:00.478 [qtp2130357594-18] DEBUG org.hibernate.SQL  - alter table TimerCard_User add constraint UK_kn1vfbsejh4gkes2bw6ffmgtw  unique (timercard, user)
+2016-11-15 18:21:00.480 [qtp2130357594-18] DEBUG org.hibernate.SQL  - alter table User add constraint UK_e6gkqunxajvyxl5uctpl2vl2p  unique (email)
+2016-11-15 18:21:00.481 [qtp2130357594-18] DEBUG org.hibernate.SQL  - alter table AuthenticatedUser add constraint FK_p8go15iph52lx15qoh2aypu20 foreign key (user_id) references User
+2016-11-15 18:21:00.497 [qtp2130357594-18] DEBUG org.hibernate.SQL  - alter table Card_User add constraint FK_fomuxjfhh2a5338p6sl74i4n1 foreign key (user) references User
+2016-11-15 18:21:00.499 [qtp2130357594-18] DEBUG org.hibernate.SQL  - alter table Card_User add constraint FK_6yi2u89mwoibpipqrg95uqa1q foreign key (card) references Card
+2016-11-15 18:21:00.502 [qtp2130357594-18] DEBUG org.hibernate.SQL  - alter table TimerCard_User add constraint FK_o314qphihi4bqrrm3gvoq3dle foreign key (user) references User
+2016-11-15 18:21:00.504 [qtp2130357594-18] DEBUG org.hibernate.SQL  - alter table TimerCard_User add constraint FK_5ofylw5inpgms63y4d57ybfyh foreign key (timercard) references TimerCard
+2016-11-15 18:21:00.526 [qtp2130357594-18] INFO  org.hibernate.tool.hbm2ddl.SchemaExport  - HHH000230: Schema export complete
+2016-11-15 18:21:01.170 [qtp2130357594-18] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_, user0_.created as created2_7_, user0_.email as email3_7_, user0_.password as password4_7_, user0_.role as role5_7_ from User user0_ where user0_.email=?
+2016-11-15 18:21:01.175 [qtp2130357594-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [mart@mart.kz]
+2016-11-15 18:21:01.642 [qtp2130357594-18] DEBUG org.hibernate.SQL  - insert into AuthenticatedUser (id, token, user_id) values (null, ?, ?)
+2016-11-15 18:21:01.644 [qtp2130357594-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [qdpk98a2edvuij8jbdn4dg4ib9]
+2016-11-15 18:21:01.645 [qtp2130357594-18] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [BIGINT] - [3]
+2016-11-15 18:21:01.895 [qtp2130357594-19] DEBUG org.hibernate.SQL  - select authentica0_.id as id1_0_, authentica0_.token as token2_0_, authentica0_.user_id as user_id3_0_ from AuthenticatedUser authentica0_ where authentica0_.token=?
+2016-11-15 18:21:01.899 [qtp2130357594-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [qdpk98a2edvuij8jbdn4dg4ib9]
+2016-11-15 18:21:01.902 [qtp2130357594-19] DEBUG org.hibernate.SQL  - select user0_.id as id1_7_0_, user0_.created as created2_7_0_, user0_.email as email3_7_0_, user0_.password as password4_7_0_, user0_.role as role5_7_0_ from User user0_ where user0_.id=?
+2016-11-15 18:21:01.903 [qtp2130357594-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [BIGINT] - [3]
+2016-11-15 18:21:18.428 [qtp2130357594-19] DEBUG org.hibernate.SQL  - insert into Event (id, description, endTime, startTime, title) values (null, ?, ?, ?, ?)
+2016-11-15 18:21:18.429 [qtp2130357594-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [1] as [VARCHAR] - [Ditmas]
+2016-11-15 18:21:18.434 [qtp2130357594-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [2] as [TIMESTAMP] - [null]
+2016-11-15 18:21:18.434 [qtp2130357594-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [3] as [TIMESTAMP] - [null]
+2016-11-15 18:21:18.436 [qtp2130357594-19] TRACE org.hibernate.type.descriptor.sql.BasicBinder  - binding parameter [4] as [VARCHAR] - [It was not your fault but mine]
+2016-11-15 18:21:28.629 [qtp1200470358-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:21:28.630 [qtp1200470358-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:21:28.630 [qtp1200470358-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:21:28.919 [qtp1200470358-18] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-11-15 18:21:29.235 [qtp1200470358-18] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-11-15 18:21:29.242 [qtp1200470358-18] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-11-15 18:21:29.246 [qtp1200470358-18] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-11-15 18:21:29.769 [qtp1200470358-18] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-11-15 18:21:29.897 [qtp1200470358-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-11-15 18:21:29.898 [qtp1200470358-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-11-15 18:21:29.898 [qtp1200470358-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-11-15 18:21:32.206 [qtp1200470358-18] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-11-15 18:21:32.260 [qtp1200470358-18] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-11-15 18:21:33.016 [qtp1200470358-18] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-15 18:21:33.923 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-11-15 18:21:33.924 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-11-15 18:21:33.962 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.AuthenticatedUser
+2016-11-15 18:21:33.962 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-11-15 18:21:33.971 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card
+2016-11-15 18:21:33.971 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [pinned, created, description, id, title]
+2016-11-15 18:21:33.987 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card_User
+2016-11-15 18:21:33.988 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
+2016-11-15 18:21:34.003 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Event
+2016-11-15 18:21:34.003 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [description, endtime, id, starttime, title]
+2016-11-15 18:21:34.016 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Location
+2016-11-15 18:21:34.016 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [lng, created, name, id, lat]
+2016-11-15 18:21:34.038 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.TimerCard
+2016-11-15 18:21:34.038 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [enddate, created, description, id, title]
+2016-11-15 18:21:34.054 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.TimerCard_User
+2016-11-15 18:21:34.054 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [timercard, user]
+2016-11-15 18:21:34.061 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.User
+2016-11-15 18:21:34.061 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-11-15 18:21:34.746 [qtp1200470358-18] DEBUG org.hibernate.SQL  - select event0_.id as id1_3_, event0_.description as descript2_3_, event0_.endTime as endTime3_3_, event0_.startTime as startTim4_3_, event0_.title as title5_3_ from Event event0_ order by event0_.startTime DESC
+2016-11-15 18:36:38.299 [qtp1200470358-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:36:38.301 [qtp1200470358-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:36:38.301 [qtp1200470358-18] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-11-15 18:36:39.103 [qtp1200470358-18] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2016-11-15 18:36:39.681 [qtp1200470358-18] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2016-11-15 18:36:39.693 [qtp1200470358-18] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-11-15 18:36:39.704 [qtp1200470358-18] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-11-15 18:36:40.725 [qtp1200470358-18] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-11-15 18:36:40.976 [qtp1200470358-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2016-11-15 18:36:40.977 [qtp1200470358-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2016-11-15 18:36:40.977 [qtp1200470358-18] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2016-11-15 18:36:44.311 [qtp1200470358-18] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-11-15 18:36:44.365 [qtp1200470358-18] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-11-15 18:36:45.422 [qtp1200470358-18] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-15 18:36:47.022 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2016-11-15 18:36:47.023 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2016-11-15 18:36:47.106 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.AuthenticatedUser
+2016-11-15 18:36:47.107 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2016-11-15 18:36:47.128 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card
+2016-11-15 18:36:47.128 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [pinned, created, description, id, title]
+2016-11-15 18:36:47.147 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Card_User
+2016-11-15 18:36:47.148 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
+2016-11-15 18:36:47.168 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Event
+2016-11-15 18:36:47.169 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [description, endtime, id, starttime, title]
+2016-11-15 18:36:47.192 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.Location
+2016-11-15 18:36:47.192 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [lng, created, name, id, lat]
+2016-11-15 18:36:47.203 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.TimerCard
+2016-11-15 18:36:47.204 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [enddate, created, description, id, title]
+2016-11-15 18:36:47.219 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.TimerCard_User
+2016-11-15 18:36:47.219 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [timercard, user]
+2016-11-15 18:36:47.238 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.User
+2016-11-15 18:36:47.238 [qtp1200470358-18] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [password, role, created, id, email]
+2016-11-15 18:36:48.694 [qtp1200470358-18] DEBUG org.hibernate.SQL  - select event0_.id as id1_3_, event0_.description as descript2_3_, event0_.endTime as endTime3_3_, event0_.startTime as startTim4_3_, event0_.title as title5_3_ from Event event0_ order by event0_.startTime DESC
+2016-11-15 18:36:48.704 [qtp1200470358-20] DEBUG org.hibernate.SQL  - select event0_.id as id1_3_, event0_.description as descript2_3_, event0_.endTime as endTime3_3_, event0_.startTime as startTim4_3_, event0_.title as title5_3_ from Event event0_ order by event0_.startTime DESC
