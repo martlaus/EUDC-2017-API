@@ -65,3 +65,9 @@ INSERT INTO Event (id, title, description, startTime, endTime) VALUES (1, 'Openi
 INSERT INTO Event (id, title, description, startTime, endTime) VALUES (2, 'First night social', 'Open vodka bar?', '2017-08-15 20:00:00', '2017-08-15 23:00:00');
 INSERT INTO Event (id, title, description, startTime, endTime) VALUES (3, 'Break night social', 'Open vodka bar?', '2017-08-18 20:00:00', '2017-08-18 22:00:00');
 INSERT INTO Event (id, title, description, startTime, endTime) VALUES (4, 'Open finals', 'Love wil win in the end.', '2017-08-19 20:00:00', '2017-08-19 22:00:00');
+
+-- Add Test feedback
+
+INSERT INTO Feedback (id, content, user) VALUES (1, 'Ei, sitaks hea äpp on', 1);
+INSERT INTO Feedback (id, content, user) VALUES (2, 'Ma ei tea noh, see tabbie liidestus on ikka kehvake', 1);
+INSERT INTO Feedback (id, content, user) VALUES (3, 'Lilla on ikka täitsa vale valik traditsioonilist peremudelit toetavale rakendusele', 2);

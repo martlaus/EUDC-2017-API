@@ -93,11 +93,22 @@ CREATE TABLE TimerCard_User (
   REFERENCES User (id)
     ON DELETE RESTRICT
 );
+
 CREATE TABLE Event (
   id          BIGINT AUTO_INCREMENT PRIMARY KEY,
   title       VARCHAR(255)                        NOT NULL,
   description VARCHAR(1000),
   startTime   TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-  endTime     TIMESTAMP DEFAULT now() NOT NULL
-
+  endTime     TIMESTAMP DEFAULT now()             NOT NULL
 );
+
+CREATE TABLE Feedback (
+  id      BIGINT    AUTO_INCREMENT PRIMARY KEY,
+  content VARCHAR(255)   NOT NULL,
+  user    BIGINT NOT NULL,
+  created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+  FOREIGN KEY (user)
+  REFERENCES User (id)
+    ON DELETE RESTRICT
+)

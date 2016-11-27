@@ -31,3 +31,10 @@ INSERT INTO Card_User(card, user) VALUES (3,3);
 INSERT INTO Event (id, title, description) VALUES (1, 'Opening ceremony of EUDC', 'Cheers!');
 INSERT INTO Event (id, title, description) VALUES (2, 'Break night social', 'Open vodka bar?');
 INSERT INTO Event (id, title, description) VALUES (3, 'Open finals', 'Love wil win in the end.');
+
+
+-- Add Test feedback
+
+INSERT INTO Feedback (id, content, user) VALUES (1, 'Ei, sitaks hea äpp on', 1);
+INSERT INTO Feedback (id, content, user) VALUES (2, 'Ma ei tea noh, see tabbie liidestus on ikka kehvake', 1);
+INSERT INTO Feedback (id, content, user) VALUES (3, 'Lilla on ikka täitsa vale valik traditsioonilist peremudelit toetavale rakendusele', 2);
