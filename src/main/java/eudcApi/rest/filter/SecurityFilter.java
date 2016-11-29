@@ -2,8 +2,6 @@ package eudcApi.rest.filter;
 
 import eudcApi.model.AuthenticatedUser;
 import eudcApi.service.AuthenticatedUserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.annotation.Priority;
 import javax.servlet.http.HttpServletRequest;
@@ -24,8 +22,6 @@ import static eudcApi.guice.GuiceInjector.getInjector;
 public class SecurityFilter implements ContainerRequestFilter {
 
     private static final int HTTP_AUTHENTICATION_TIMEOUT = 419;
-    private Logger logger = LoggerFactory.getLogger(getClass());
-
 
     private UriInfo uriInfo;
     private HttpServletRequest request;
@@ -47,13 +43,9 @@ public class SecurityFilter implements ContainerRequestFilter {
                 EudcApiSecurityContext securityContext = new EudcApiSecurityContext(principal, uriInfo);
                 requestContext.setSecurityContext(securityContext);
             } else {
-                logger.info("Access denied:" + requestContext.toString());
                 Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Denied")
                         .type(MediaType.APPLICATION_JSON).build();
             }
-        } else {
-            logger.info("Access denied, no token:" + requestContext.toString());
-
         }
 
     }
