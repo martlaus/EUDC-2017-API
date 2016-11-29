@@ -10,6 +10,8 @@ import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 
+import java.util.Arrays;
+
 import static java.lang.String.format;
 
 @Singleton
@@ -79,7 +81,7 @@ public class ApplicationLauncher {
         } else if ("stop".equalsIgnoreCase(args[0])) {
             stopApplication();
         } else {
-            logger.warn("Command does not exist. Use: start, stop or no command (default is start).");
+            logger.warn("Command does not exist. Use: start, stop or no command (default is start).", Arrays.toString(args));
         }
     }
 }
