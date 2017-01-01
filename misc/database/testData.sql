@@ -61,10 +61,63 @@ INSERT INTO TimerCard_User(timercard, user) VALUES (1,3);
 INSERT INTO TimerCard_User(timercard, user) VALUES (1,1);
 
 -- Add Test events
-INSERT INTO Event (id, title, description, startTime, endTime) VALUES (1, 'Opening ceremony of EUDC', 'Cheers!', '2017-08-14 16:00:00', '2017-08-14 22:00:00');
-INSERT INTO Event (id, title, description, startTime, endTime) VALUES (2, 'First night social', 'Open vodka bar?', '2017-08-15 20:00:00', '2017-08-15 23:00:00');
-INSERT INTO Event (id, title, description, startTime, endTime) VALUES (3, 'Break night social', 'Open vodka bar?', '2017-08-18 20:00:00', '2017-08-18 22:00:00');
-INSERT INTO Event (id, title, description, startTime, endTime) VALUES (4, 'Open finals', 'Love wil win in the end.', '2017-08-19 20:00:00', '2017-08-19 22:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (1, 'Registration', 'All participants are expected to arrive and register on this day.', '2017-08-14 10:00:00', '2017-08-14 16:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (2, 'EUDC pre-council meeting', 'EUDC pre-council meeting, registration continues.', '2017-08-14 16:00:00', '2017-08-14 18:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (3, 'Speaker, judge and equity briefings', 'Speaker, judge and equity briefings, registration continues.', '2017-08-14 18:00:00', '2017-08-14 19:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (4, 'Opening Ceremony and Socials', 'Opening Ceremony, registration continues.', '2017-08-14 19:00:00', '2017-08-15 00:00:00');
+
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (5, 'Late arrivals', 'In case needed please contact organisers.', '2017-08-15 00:00:00', '2017-08-15 06:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (6, 'Breakfast', 'Breakfast provided in accommodation.', '2017-08-15 07:00:00', '2017-08-15 08:45:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (7, 'Transfer to TTU', 'Transfer to TTU.', '2017-08-15 09:00:00', '2017-08-15 09:30:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (8, 'Sign in at TTU', 'Sign in at TTU.', '2017-08-15 09:30:00', '2017-08-15 10:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (9, 'Round 1', 'The first debate of the tournament.', '2017-08-15 10:00:00', '2017-08-15 12:45:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (10, 'Lunch', 'Lunch will be served at TTU.', '2017-08-15 12:45:00', '2017-08-15 14:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (11, 'Round 2', 'Round 2.', '2017-08-15 14:00:00', '2017-08-15 16:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (12, 'Round 3', 'Round 3.', '2017-08-15 16:00:00', '2017-08-15 18:15:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (13, 'Dinner', 'Dinner.', '2017-08-15 18:15:00', '2017-08-15 19:30:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (14, 'Transfer to Hotel', 'Transfer to Hotel.', '2017-08-15 19:30:00', '2017-08-15 20:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (15, 'Socials', 'Socials.', '2017-08-15 21:00:00', '2017-08-16 00:00:00');
+
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (16, 'Breakfast', 'Breakfast provided in accommodation.', '2017-08-16 07:00:00', '2017-08-16 08:45:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (17, 'Transfer to TTU', 'Transfer to TTU.', '2017-08-16 09:00:00', '2017-08-16 09:30:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (18, 'Sign in at TTU', 'Sign in at TTU.', '2017-08-16 09:30:00', '2017-08-16 10:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (19, 'Round 4', 'Round 4.', '2017-08-16 10:00:00', '2017-08-16 12:45:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (20, 'Lunch', 'Lunch at TTU.', '2017-08-16 12:45:00', '2017-08-16 14:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (21, 'Round 5', 'Round 5.', '2017-08-16 14:00:00', '2017-08-16 16:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (22, 'Round 6', 'Round 6.', '2017-08-16 16:00:00', '2017-08-16 18:15:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (23, 'Dinner', 'Dinner.', '2017-08-16 18:15:00', '2017-08-16 19:30:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (24, 'Transfer to Hotel', 'Transfer to Hotel.', '2017-08-16 19:30:00', '2017-08-16 20:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (25, 'Socials', 'Socials.', '2017-08-16 21:00:00', '2017-08-17 00:00:00');
+
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (26, 'Breakfast', 'Breakfast provided in accommodation.', '2017-08-17 07:00:00', '2017-08-17 08:45:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (27, 'Transfer to TTU', 'Transfer to TTU.', '2017-08-17 09:00:00', '2017-08-17 09:30:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (28, 'Sign in at TTU', 'Sign in at TTU.', '2017-08-17 09:30:00', '2017-08-17 10:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (29, 'Round 7', 'Round 7.', '2017-08-17 10:00:00', '2017-08-17 12:45:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (30, 'Lunch at TTU', 'Lunch at TTU.', '2017-08-17 12:45:00', '2017-08-17 14:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (31, 'Round 8', 'Round 8.', '2017-08-17 14:00:00', '2017-08-17 16:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (32, 'Round 9', 'Round 9.', '2017-08-17 16:00:00', '2017-08-17 18:15:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (33, 'Dinner', 'Dinner.', '2017-08-17 18:15:00', '2017-08-17 19:30:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (34, 'Transfer to Hotel', 'Transfer to Hotel.', '2017-08-17 19:30:00', '2017-08-17 20:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (35, 'Break night socials', 'Break night socials.', '2017-08-17 21:00:00', '2017-08-18 00:00:00');
+
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (36, 'Breakfast', 'Breakfast provided in accommodation.', '2017-08-18 07:30:00', '2017-08-18 09:30:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (37, 'Transfer', 'Transfer.', '2017-08-18 09:30:00', '2017-08-18 10:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (38, 'Open Quarter', 'Open Quarter.', '2017-08-18 10:30:00', '2017-08-18 12:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (39, 'ESL Quarter', 'ESL Quarter.', '2017-08-18 12:00:00', '2017-08-18 13:30:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (40, 'Lunch', 'Lunch.', '2017-08-18 13:30:00', '2017-08-18 15:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (41, 'ESL Semi', 'ESL Semi.', '2017-08-18 15:00:00', '2017-08-18 16:30:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (42, 'Open Semi', 'Open Semi.', '2017-08-18 16:30:00', '2017-08-18 18:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (43, 'Dinner', 'Dinner.', '2017-08-18 18:00:00', '2017-08-18 19:30:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (44, 'Transfer to Hotel', 'Transfer to Hotel.', '2017-08-18 19:30:00', '2017-08-18 20:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (45, 'Socials', 'Socials.', '2017-08-18 21:00:00', '2017-08-19 00:00:00');
+
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (46, 'Breakfast', 'Breakfast provided in accommodation.', '2017-08-19 07:00:00', '2017-08-19 11:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (47, 'EUDC Council meeting', 'EUDC Council meeting.', '2017-08-19 10:00:00', '2017-08-19 13:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (49, 'ESL Final', 'ESL Final.', '2017-08-19 17:00:00', '2017-08-19 19:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (50, 'Open Final', 'Open Final.', '2017-08-19 19:00:00', '2017-08-19 21:00:00');
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (51, 'Dinner + Awards Ceremony + Farewell party', 'Dinner + Awards Ceremony + Farewell party.', '2017-08-19 21:00:00', '2017-08-20 00:00:00');
+
+INSERT INTO Event (id, title, description, startTime, endTime) VALUES (52, 'Departures', 'Departures.', '2017-08-20 00:00:00', '2017-08-21 00:00:00');
 
 -- Add Test feedback
 
