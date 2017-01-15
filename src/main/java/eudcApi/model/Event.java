@@ -27,6 +27,15 @@ public class Event {
 
     @Column
     private String description;
+    
+    @Column
+    private String location;
+    
+    @Column
+    private String color;
+    
+    @Column
+    private String eventType;
 
     @Column
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
@@ -58,6 +67,30 @@ public class Event {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+    
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+    
+    public String getColor() {
+        return color;
+    }
+    
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setEventType(String eventType) {
+        this.eventType = eventType;
+    }
+    
+    public String getEventType() {
+        return eventType;
     }
 
     @JsonSerialize(using = DateTimeSerializer.class)

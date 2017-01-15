@@ -12,6 +12,7 @@ DROP TABLE IF EXISTS TimerCard_User;
 DROP TABLE IF EXISTS TimerCard;
 DROP TABLE IF EXISTS Location;
 DROP TABLE IF EXISTS Event;
+DROP TABLE IF EXISTS Feedback;
 
 
 SET foreign_key_checks = 1;
@@ -98,6 +99,9 @@ CREATE TABLE Event (
   id          BIGINT AUTO_INCREMENT PRIMARY KEY,
   title       VARCHAR(255)                        NOT NULL,
   description VARCHAR(1000),
+  location       VARCHAR(255)                        NOT NULL,
+  color			VARCHAR(255)                        NOT NULL,
+  eventType       VARCHAR(255)                        NOT NULL,
   startTime   TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   endTime     TIMESTAMP DEFAULT now()             NOT NULL
 );
