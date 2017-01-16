@@ -24,4 +24,8 @@ public class EventService {
         if(StringUtils.isEmpty(event.getTitle())) return null;
         return eventDAO.saveEvent(event);
     }
+
+    public void deleteEvent(Event event) {
+        eventDAO.deleteEvent(event);
+    }
 }
