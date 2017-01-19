@@ -35,4 +35,11 @@ public class EventDAO {
 
         return merged;
     }
+
+    public void deleteEvent(Event event) {
+            entityManager
+                    .createNativeQuery("DELETE FROM Event WHERE id = :eventId")
+                    .setParameter("eventId", event.getId()).executeUpdate();
+
+    }
 }
