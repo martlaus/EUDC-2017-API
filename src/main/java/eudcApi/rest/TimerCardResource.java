@@ -61,6 +61,7 @@ public class TimerCardResource {
                 timerCardService.getAllTimerCards();
     }
 
+    // This is deletion, tee-hee
     @DELETE
     @Path("{timercardId}")
     @Produces(MediaType.APPLICATION_JSON)
