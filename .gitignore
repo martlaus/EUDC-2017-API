@@ -1,8 +1,7 @@
 /target/
-/.idea
-/logs
+/.idea/
+/logs/
 /eudcApi.iml
 /.classpath
 custom.properties
-/src/main/resources/default.properties
 /settings/
