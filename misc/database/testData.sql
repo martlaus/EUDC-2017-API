@@ -20,6 +20,9 @@ INSERT INTO Card ( title, description, created, pinned)
 VALUES ( 'Important notice', 'Sea in populo eleifend, ex ius stet feugait explicari, id eros nominati mei. Cu eum aeque debitis, pro paulo simul volumus ei, choro possit principes ad vis. At libris labore eum, mei porro consul laudem te, his et propriae omnesque consetetur. Quo ut mentitum accommodare. Graeco voluptaria no sea. Aliquam inimicus constituto sed no, per ei noster diceret. Facer ludus intellegat ius in, eligendi constituto duo cu, vide vulputate disputationi eu qui.', NOW(), false);
 INSERT INTO Card ( title, description, created, pinned)
 VALUES ( 'Recent Winners', 'Below we have brief headlines to all the top debating competitions at the Stanford Payton Jordan Invite on Sunday night with links to the results and quick commentary from the live LetsRun.com thread. Also at the bottom are results from all the �A� qualifications on Sunday. Full results here. The biggest news of the night was 41 year old Bernard Lagat securing the win in phenomenal time', NOW(), true);
+INSERT INTO Card ( title, description, created, pinned)
+VALUES ( 'Video of the day', 'Here is a video from the last social https://www.youtube.com/watch?v=dQw4w9WgXcQ some additional info...', NOW(), false);
+
 
 -- Add Locations
 INSERT INTO Location (name, lat, lng, created)
