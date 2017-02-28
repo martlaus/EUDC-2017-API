@@ -63,9 +63,9 @@ public class TimerCardResource {
 
     // This is deletion, tee-hee
     @DELETE
-    @Path("{timercardId}")
+    @Path("{timerCardId}")
     @Produces(MediaType.APPLICATION_JSON)
-    public void deleteUsersCard(@PathParam("timercardId") Long timercardId) {
+    public void deleteUsersCard(@PathParam("timerCardId") Long timercardId) {
         AuthenticatedUser authenticatedUser = authentication.getAuthUser(securityContext);
 
         if (authentication.isUserAuthenticated(authenticatedUser)) {
