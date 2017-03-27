@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class TabbieService {
 
-    public User getTabbieUser(User loginData) throws IOException {
+    public User getTabbieUser(User loginData) {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
         HttpGet httpGet = new HttpGet("https://api.tabbie.org/users/me");
@@ -23,15 +23,20 @@ public class TabbieService {
                 new UsernamePasswordCredentials(loginData.getEmail(), loginData.getPassword()),
                 "UTF-8", false));
 
-        HttpResponse httpResponse = httpClient.execute(httpGet);
-        HttpEntity responseEntity = httpResponse.getEntity();
+        HttpResponse httpResponse = null;
+        Map<String, Object> jsonMap = null;
+        try {
+            httpResponse = httpClient.execute(httpGet);
+            HttpEntity responseEntity = httpResponse.getEntity();
+            ObjectMapper mapper = new ObjectMapper();
+            jsonMap = mapper.readValue(responseEntity.getContent(), Map.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-
-        ObjectMapper mapper = new ObjectMapper();
-        Map<String, Object> jsonMap = mapper.readValue(responseEntity.getContent(), Map.class);
 
         User user = null;
-        if ((String) jsonMap.get("email") != null) {
+        if ((jsonMap != null ? jsonMap.get("email") : null) != null) {
             user = new User();
             user.setEmail((String) jsonMap.get("email"));
 //        user.setTabbieToken((String) jsonMap.get("token"));
