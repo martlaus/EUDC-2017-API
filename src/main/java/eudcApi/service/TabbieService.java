@@ -30,9 +30,13 @@ public class TabbieService {
         ObjectMapper mapper = new ObjectMapper();
         Map<String, Object> jsonMap = mapper.readValue(responseEntity.getContent(), Map.class);
 
-        User user = new User();
-        user.setEmail((String) jsonMap.get("email"));
+        User user = null;
+        if ((String) jsonMap.get("email") != null) {
+            user = new User();
+            user.setEmail((String) jsonMap.get("email"));
 //        user.setTabbieToken((String) jsonMap.get("token"));
+        }
+
         return user;
     }
 }
