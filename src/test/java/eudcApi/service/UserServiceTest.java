@@ -32,7 +32,7 @@ public class UserServiceTest {
 
         replay(userDAO);
 
-        User returnedUser = userService.saveUser(user);
+        User returnedUser = userService.saveUserWithPassword(user);
 
         verify(userDAO);
 

@@ -27,9 +27,8 @@ public class UserService {
 
     private String existingPw;
 
-    public User saveUser(User user) {
-        //check if data is according to business rules
-        user.setRole("USER");
+    public User saveUserWithPassword(User user) {
+
         //secure pw
         if (user.getPassword() != null && !user.getPassword().isEmpty()) {
             String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
@@ -39,6 +38,21 @@ public class UserService {
             user.setPassword(existingPw);
         }
 
+        return saveUser(user);
+    }
+
+    public AuthenticatedUser loginWithTabbieUser(User user) throws Exception {
+        User returnedUser = getUserByEmail(user.getEmail());
+
+        if (returnedUser == null) {
+            returnedUser = saveUser(user);
+        }
+
+        return loginWithoutPassword(returnedUser);
+    }
+
+    private User saveUser(User user) {
+        user.setRole("USER");
         user.setCreated(DateTime.now());
         return userDAO.saveUser(user);
     }
@@ -56,19 +70,24 @@ public class UserService {
         AuthenticatedUser returnedAuthenticatedUser = null;
 
         if (returnedUser != null && BCrypt.checkpw(user.getPassword(), returnedUser.getPassword())) {
-            AuthenticatedUser authenticatedUser = new AuthenticatedUser();
-            authenticatedUser.setUser(returnedUser);
-            authenticatedUser.setToken(new BigInteger(130, random).toString(32));
-
-            try {
-                returnedAuthenticatedUser = authenticatedUserDAO.createAuthenticatedUser(authenticatedUser);
-            } catch (Exception e) {
-                authenticatedUser.setToken(new BigInteger(130, random).toString(32));
-                returnedAuthenticatedUser = authenticatedUserDAO.createAuthenticatedUser(authenticatedUser);
-            }
-
+            returnedAuthenticatedUser = loginWithoutPassword(returnedUser);
         }
 
+        return returnedAuthenticatedUser;
+    }
+
+    private AuthenticatedUser loginWithoutPassword(User returnedUser) throws Exception {
+        AuthenticatedUser returnedAuthenticatedUser;
+        AuthenticatedUser authenticatedUser = new AuthenticatedUser();
+        authenticatedUser.setUser(returnedUser);
+        authenticatedUser.setToken(new BigInteger(130, random).toString(32));
+
+        try {
+            returnedAuthenticatedUser = authenticatedUserDAO.createAuthenticatedUser(authenticatedUser);
+        } catch (Exception e) {
+            authenticatedUser.setToken(new BigInteger(130, random).toString(32));
+            returnedAuthenticatedUser = authenticatedUserDAO.createAuthenticatedUser(authenticatedUser);
+        }
         return returnedAuthenticatedUser;
     }
 }

@@ -20,11 +20,12 @@ SET foreign_key_checks = 1;
 -- Create tables
 
 CREATE TABLE User (
-  id       BIGINT    AUTO_INCREMENT PRIMARY KEY,
-  email    VARCHAR(255) UNIQUE NOT NULL,
-  password VARCHAR(255)        NOT NULL,
-  role     VARCHAR(255)        NOT NULL,
-  created  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  id          BIGINT    AUTO_INCREMENT PRIMARY KEY,
+  email       VARCHAR(255) UNIQUE NOT NULL,
+  password    VARCHAR(255),
+  role        VARCHAR(255)        NOT NULL,
+  tabbieToken VARCHAR(255),
+  created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 
@@ -99,17 +100,17 @@ CREATE TABLE Event (
   id          BIGINT AUTO_INCREMENT PRIMARY KEY,
   title       VARCHAR(255)                        NOT NULL,
   description VARCHAR(1000),
-  location       VARCHAR(255)                        NOT NULL,
-  color			VARCHAR(255)                        NOT NULL,
-  eventType       VARCHAR(255)                        NOT NULL,
+  location    VARCHAR(255)                        NOT NULL,
+  color       VARCHAR(255)                        NOT NULL,
+  eventType   VARCHAR(255)                        NOT NULL,
   startTime   TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   endTime     TIMESTAMP DEFAULT now()             NOT NULL
 );
 
 CREATE TABLE Feedback (
   id      BIGINT    AUTO_INCREMENT PRIMARY KEY,
-  content VARCHAR(255)   NOT NULL,
-  user    BIGINT NOT NULL,
+  content VARCHAR(255) NOT NULL,
+  user    BIGINT       NOT NULL,
   created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
   FOREIGN KEY (user)

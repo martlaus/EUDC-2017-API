@@ -26,7 +26,7 @@ public class UserResource {
     @Produces(MediaType.APPLICATION_JSON)
     public void addUser(User user) throws Exception {
         if (user != null) {
-            userService.saveUser(user);
+            userService.saveUserWithPassword(user);
         } else {
             throw new Exception("No user");
         }
