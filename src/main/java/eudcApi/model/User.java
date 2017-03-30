@@ -78,6 +78,7 @@ public class User {
         this.id = id;
     }
 
+    @JsonProperty
     public String getRole() {
         return role;
     }
