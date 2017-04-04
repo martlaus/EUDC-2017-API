@@ -35,7 +35,6 @@ public class User {
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime created;
 
-    @JsonIgnore
     @Column
     private String role;
 
@@ -78,7 +77,6 @@ public class User {
         this.id = id;
     }
 
-    @JsonProperty
     public String getRole() {
         return role;
     }

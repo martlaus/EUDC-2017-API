@@ -23,7 +23,7 @@ public class UserServiceTest {
     private UserDAO userDAO;
 
     @Test
-    public void saveUser() {
+    public void addUser() {
         User user = new User();
         user.setPassword("parool");
 
@@ -32,7 +32,7 @@ public class UserServiceTest {
 
         replay(userDAO);
 
-        User returnedUser = userService.saveUserWithPassword(user);
+        User returnedUser = userService.addUser(user);
 
         verify(userDAO);
 

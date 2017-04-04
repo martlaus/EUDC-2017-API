@@ -47,6 +47,23 @@ public class UserDAOTest extends DatabaseTestBase {
         assertEquals(initialSize + 1, userDAO.findAll().size());
     }
 
+    @Test
+    public void updateUser() {
+        User user = userDAO.getUserById(1l);
+        user.setPassword("fapper123");
+        user.setRole("ADMIN");
+
+        int initialSize = userDAO.findAll().size();
+
+        userDAO.saveUser(user);
+
+        User updatedUser = userDAO.getUserById(1l);
+
+        assertEquals(initialSize, userDAO.findAll().size());
+        assertEquals(updatedUser.getPassword(), "fapper123");
+        assertEquals(updatedUser.getRole(), "ADMIN");
+    }
+
     private void assertValidUser(User user) {
         assertNotNull(user.getId());
         assertNotNull(user.getEmail());

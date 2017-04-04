@@ -27,18 +27,36 @@ public class UserService {
 
     private String existingPw;
 
-    public User saveUserWithPassword(User user) {
 
+    public User addUser(User user) {
         //secure pw
         if (user.getPassword() != null && !user.getPassword().isEmpty()) {
-            String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+            String hashed = generatePasswordHash(user);
             user.setPassword(hashed);
-        } else {
-            existingPw = getUserByEmail(user.getEmail()).getPassword();
-            user.setPassword(existingPw);
         }
 
         return saveUser(user);
+    }
+
+    private String generatePasswordHash(User user) {
+        return BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+    }
+
+    public User updateUser(User newUser, User prevUser) {
+        if (newUser.getRole() != null && !newUser.getRole().isEmpty()) {
+            prevUser.setRole(newUser.getRole());
+        }
+
+        if (newUser.getEmail() != null && !newUser.getEmail().isEmpty()) {
+            prevUser.setEmail(newUser.getEmail());
+        }
+
+        if (newUser.getPassword() != null && !newUser.getPassword().isEmpty()) {
+            String hashed = generatePasswordHash(prevUser);
+            prevUser.setPassword(hashed);
+        }
+
+        return saveUser(prevUser);
     }
 
     public AuthenticatedUser loginWithTabbieUser(User user) throws Exception {
@@ -52,7 +70,6 @@ public class UserService {
     }
 
     private User saveUser(User user) {
-        user.setRole("USER");
         user.setCreated(DateTime.now());
         return userDAO.saveUser(user);
     }
@@ -63,6 +80,10 @@ public class UserService {
 
     public User getUserByEmail(String email) {
         return userDAO.getUserByEmail(email);
+    }
+
+    public User getUserById(Long id) {
+        return userDAO.getUserById(id);
     }
 
     public AuthenticatedUser logIn(User user) throws Exception {

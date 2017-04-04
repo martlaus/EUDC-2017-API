@@ -52,4 +52,18 @@ public class UserDAO {
     public void delete(User user) {
         entityManager.remove(user);
     }
+
+    public User getUserById(Long id) {
+        TypedQuery<User> findByCode = entityManager
+                .createQuery("SELECT u FROM User u WHERE u.id = :id", User.class);
+
+        User user = null;
+        try {
+            user = findByCode.setParameter("id", id).getSingleResult();
+        } catch (NoResultException ex) {
+            // ignore
+        }
+
+        return user;
+    }
 }
