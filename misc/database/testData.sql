@@ -21,7 +21,7 @@ VALUES ( 'Important notice', 'Sea in populo eleifend, ex ius stet feugait explic
 INSERT INTO Card ( title, description, created, pinned)
 VALUES ( 'Recent Winners', 'Below we have brief headlines to all the top debating competitions at the Stanford Payton Jordan Invite on Sunday night with links to the results and quick commentary from the live LetsRun.com thread. Also at the bottom are results from all the qualifications on Sunday. Full results here. The biggest news of the night was 41 year old Bernard Lagat securing the win in phenomenal time', NOW(), true);
 INSERT INTO Card ( title, description, created, pinned)
-VALUES ( 'Video of the day', 'Here is a video from the last social https://www.youtube.com/watch?v=dQw4w9WgXcQ some additional info...', NOW(), false);
+VALUES ( 'Video of the day', 'Here is a recap video of the 3rd day https://www.youtube.com/watch?v=dQw4w9WgXcQ EUDC Newcastle 2009', NOW(), false);
 
 
 -- Add Locations
@@ -44,9 +44,16 @@ VALUES ('Nordea Concert Hall', '59.433227', '24.751926', NOW());
 INSERT INTO Location (name, lat, lng, created)
 VALUES ('Kultuurikatel', '59.444416', '24.750546', NOW());
 
+-- Add Round Locations
+INSERT INTO RoundLocation (name, imgurl, created)
+VALUES ('U03', 'http://i.imgur.com/h1YP8oA.jpg', NOW());
+
+INSERT INTO RoundLocation (name, imgurl, created)
+VALUES ('U04', 'http://i.imgur.com/lAslKTf.jpg', NOW());
+
 -- Add TimerCards
 INSERT INTO TimerCard ( title, description, created, enddate)
-VALUES ('Round start notice', 'Your round will start at ICT-634 in: ', NOW(), '2016-06-18 13:55:00');
+VALUES ('Round start notice', 'U03 room 123', NOW(), '2017-04-18 13:37:00');
 
 -- Add Cards to Users (All users basically have a list of cards that they have)
 
@@ -58,6 +65,7 @@ INSERT INTO Card_User(card, user) VALUES (1,3);
 INSERT INTO Card_User(card, user) VALUES (2,2);
 INSERT INTO Card_User(card, user) VALUES (3,2);
 INSERT INTO Card_User(card, user) VALUES (3,3);
+INSERT INTO Card_User(card, user) VALUES (4,3);
 
 -- Add TimerCards to Users 
 INSERT INTO TimerCard_User(timercard, user) VALUES (1,3);
@@ -124,6 +132,6 @@ INSERT INTO Event (id, title, description, startTime, endTime, location, color, 
 
 -- Add Test feedback
 
-INSERT INTO Feedback (id, content, user) VALUES (1, 'Ei, sitaks hea äpp on', 1);
+INSERT INTO Feedback (id, content, user) VALUES (1, 'It is a decent app guys!', 1);
 INSERT INTO Feedback (id, content, user) VALUES (2, 'Ma ei tea noh, see tabbie liidestus on ikka kehvake', 1);
-INSERT INTO Feedback (id, content, user) VALUES (3, 'Lilla on ikka täitsa vale valik traditsioonilist peremudelit toetavale rakendusele', 2);
+INSERT INTO Feedback (id, content, user) VALUES (3, 'Where can I change the color scheme?!', 2);

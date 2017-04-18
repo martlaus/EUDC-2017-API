@@ -17,6 +17,10 @@ INSERT INTO TimerCard (title, description, created, enddate) VALUES ('Round star
 INSERT INTO Location (name, lat, lng, created) VALUES ('Tallinn Harbour', '59.443634', '24.767353', '1999-02-02 06:00:01');
 INSERT INTO Location (name, lat, lng, created) VALUES ('Tallinn University of Technology', '59.395916', '24.671871', '1999-02-02 06:00:01');
 
+-- Round Location data
+INSERT INTO RoundLocation (name, imgurl, created) VALUES ('U03', 'http://i.imgur.com/h1YP8oA.jpg', '1999-02-02 06:00:01');
+INSERT INTO RoundLocation (name, imgurl, created) VALUES ('U04', 'http://i.imgur.com/lAslKTf.jpg', '1999-02-02 06:00:01')
+
 INSERT INTO Card_User(card, user) VALUES (1,1);
 INSERT INTO Card_User(card, user) VALUES (2,1);
 INSERT INTO Card_User(card, user) VALUES (3,1);
