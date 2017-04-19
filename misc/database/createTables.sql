@@ -53,11 +53,17 @@ CREATE TABLE Card (
 CREATE TABLE TimerCard (
   id          BIGINT    AUTO_INCREMENT PRIMARY KEY,
   title       VARCHAR(255)                        NOT NULL,
-  description VARCHAR(1000)                       NOT NULL,
+  locationId VARCHAR(255)                       NOT NULL,
+  fullLocation VARCHAR(255)                       NOT NULL,
+  team VARCHAR(255)                       NOT NULL,
+  topic VARCHAR(255)                       NOT NULL,
+  unixtime VARCHAR(255)                       ,
   created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  enddate     TIMESTAMP DEFAULT now()             NOT NULL
+  enddate     TIMESTAMP             
 );
 
+CREATE TRIGGER updateDate BEFORE INSERT ON TimerCard
+       FOR EACH ROW SET NEW.enddate = from_unixtime(NEW.unixtime);
 
 CREATE TABLE Location (
   id      BIGINT    AUTO_INCREMENT PRIMARY KEY,

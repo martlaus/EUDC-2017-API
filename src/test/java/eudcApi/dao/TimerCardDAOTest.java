@@ -28,7 +28,7 @@ public class TimerCardDAOTest extends DatabaseTestBase {
     public void saveCard() {
         TimerCard TimerCard = new TimerCard();
         TimerCard.setTitle("Round start notice");
-        TimerCard.setDescription("Your round will start in: ");
+        TimerCard.setFullLocation("U03 223");
 
         int initialSize = timerCardDAO.findAll().size();
 

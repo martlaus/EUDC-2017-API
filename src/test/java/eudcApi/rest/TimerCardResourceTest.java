@@ -26,7 +26,7 @@ public class TimerCardResourceTest extends ResourceIntegrationTestBase {
 		
         TimerCard timercard = new TimerCard();
         timercard.setTitle("Round start notice");
-        timercard.setDescription("Your round will start in: ");
+        timercard.setFullLocation("U03 223");
         timercard.setEndDate(endDate);
 
         Response response = doPost("timercard", Entity.entity(timercard, MediaType.APPLICATION_JSON_TYPE));

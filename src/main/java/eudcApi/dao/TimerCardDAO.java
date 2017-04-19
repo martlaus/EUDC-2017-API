@@ -56,6 +56,13 @@ public class TimerCardDAO {
 
         return timercards;
     }
+    /* TODO
+    public void addUsersTimerCard(long userId, long timercardId) {
+    	entityManager
+		.createNativeQuery("INSERT INTO TimerCard_User VALUES(user = :user, timercard = :timercardId)")
+        .setParameter("user", userId)
+        .setParameter("timercardId", timercardId).executeUpdate();
+    } */
     
     public void deleteUsersTimerCard(User user, long timercardId) {
         entityManager

@@ -22,7 +22,7 @@ public class TimerCardService {
     public TimerCard saveTimerCard(TimerCard timercard) {      
 
         timercard.setCreated(DateTime.now());
-        return timerCardDAO.saveTimerCard(timercard); 
+        return timerCardDAO.saveTimerCard(timercard);
         
     }
 
@@ -33,6 +33,10 @@ public class TimerCardService {
     public List<TimerCard> getUsersTimerCards(User user) {
         return timerCardDAO.findUsersTimerCards(user);
     }
+    /* TODO
+    public void addUsersTimerCard(long userId, long timercardId) {
+    	timerCardDAO.addUsersTimerCard(userId, timercardId);
+    }*/
     
     public void deleteUsersTimerCard(User user, long timercardId) {
         timerCardDAO.deleteUsersTimerCard(user, timercardId);

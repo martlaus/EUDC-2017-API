@@ -52,8 +52,11 @@ INSERT INTO RoundLocation (name, imgurl, created)
 VALUES ('U04', 'http://i.imgur.com/lAslKTf.jpg', NOW());
 
 -- Add TimerCards
-INSERT INTO TimerCard ( title, description, created, enddate)
-VALUES ('Round start notice', 'U03 room 123', NOW(), '2017-04-18 13:37:00');
+INSERT INTO TimerCard (title, fullLocation, locationId, team, topic, unixtime, created)
+VALUES ('Round start notice', 'U03 room 123', 1, 'Affirmative', 'Smoking is good for your health.', '1492732200', NOW());
+
+INSERT INTO TimerCard (title, fullLocation, locationId, team, topic, unixtime, created)
+VALUES ('Round start notice', 'U04 room 321', 2, 'Negative', 'Earth is flat.', '1492732200', NOW());
 
 -- Add Cards to Users (All users basically have a list of cards that they have)
 
@@ -70,6 +73,7 @@ INSERT INTO Card_User(card, user) VALUES (4,3);
 -- Add TimerCards to Users 
 INSERT INTO TimerCard_User(timercard, user) VALUES (1,3);
 INSERT INTO TimerCard_User(timercard, user) VALUES (1,1);
+INSERT INTO TimerCard_User(timercard, user) VALUES (2,2);
 
 -- Add Test events
 INSERT INTO Event (id, title, description, startTime, endTime, location, color, eventType) VALUES (1, 'Registration', 'All participants are expected to arrive and register on this day.', '2017-08-14 10:00:00', '2017-08-14 16:00:00', 'Tallinn University of Technology', 'purple', 'ion-mic-c');

@@ -56,9 +56,21 @@ public class TimerCard {
 
     @Column(nullable = true, unique = false)
     private String title;
+    
+    @Column(nullable = true, unique = false)
+    private String unixtime;
 
     @Column(nullable = true)
-    private String description;
+    private String locationId;
+    
+    @Column(nullable = true)
+    private String fullLocation;
+    
+    @Column(nullable = true)
+    private String topic;
+    
+    @Column(nullable = true)
+    private String team;
 
     public String getTitle() {
         return title;
@@ -67,13 +79,45 @@ public class TimerCard {
     public void setTitle(String title) {
         this.title = title;
     }
-
-    public String getDescription() {
-        return description;
+    
+    public String getFullLocation() {
+        return fullLocation;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setFullLocation(String fullLocation) {
+        this.fullLocation = fullLocation;
+    }
+    
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
+    
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
+    }
+
+    public String getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(String locationId) {
+        this.locationId = locationId;
+    }
+    
+    public String getUnixtime() {
+        return unixtime;
+    }
+
+    public void setUnixtime(String unixtime) {
+        this.unixtime = unixtime;
     }
 
     @JsonSerialize(using = DateTimeSerializer.class)

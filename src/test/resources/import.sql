@@ -11,7 +11,7 @@ INSERT INTO Card (id, title, description, created) VALUES (2, 'Ipsum Lorem', 'At
 INSERT INTO Card (id, title, description, created) VALUES (3, 'Delirium Tremens', 'His no sensibus moderatius', '1999-02-02 06:00:01');
 
 -- TimerCard data
-INSERT INTO TimerCard (title, description, created, enddate) VALUES ('Round start notice', 'Your round will start in: ', '1999-02-02 06:00:01', '2016-05-12 19:45:00');
+INSERT INTO TimerCard (id, title, fullLocation, locationId, team, topic, unixtime, created) VALUES (1, 'Round start notice', 'U03 room 123', 2, 'Affirmative', 'Smoking is good for your health.', '1492662000', '1999-02-02 06:00:01');
 
 -- Location data
 INSERT INTO Location (name, lat, lng, created) VALUES ('Tallinn Harbour', '59.443634', '24.767353', '1999-02-02 06:00:01');

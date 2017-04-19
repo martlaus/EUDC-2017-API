@@ -2,8 +2,10 @@ package eudcApi.rest;
 
 import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.TimerCard;
+import eudcApi.model.User;
 import eudcApi.service.TimerCardService;
 import eudcApi.utils.AuthUtils;
+
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
@@ -11,6 +13,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.SecurityContext;
+
 import java.util.List;
 
 /**
@@ -18,7 +21,9 @@ import java.util.List;
  */
 @Path("timercard")
 public class TimerCardResource {
-
+	
+	//int newTimerCardId;
+	
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(TimerCardResource.class);
     @Inject
     private TimerCardService timerCardService;
@@ -37,6 +42,7 @@ public class TimerCardResource {
     public void addTimerCard(TimerCard timercard) throws Exception {
         if (timercard != null) {
             timerCardService.saveTimerCard(timercard);
+            //newTimerCardId  = timerCardService.getAllTimerCards().size();
         } else {
             throw new Exception("No timer card");
         }
@@ -51,7 +57,15 @@ public class TimerCardResource {
                 timerCardService.getUsersTimerCards(authenticatedUser.getUser()) :
                 timerCardService.getAllTimerCards();
     }
-
+    /*
+  	// TODO ADD users card
+    @POST
+    @Path("{userId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public void addUsersCard(@PathParam("userId") long userId, long newTimerCardId) {
+    	timerCardService.addUsersTimerCard(userId, newTimerCardId);	
+    }*/
+	
     // This is deletion, tee-hee
     @DELETE
     @Path("{timerCardId}")
