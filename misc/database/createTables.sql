@@ -59,7 +59,7 @@ CREATE TABLE TimerCard (
   topic VARCHAR(255)                       NOT NULL,
   unixtime VARCHAR(255)                       ,
   created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  enddate     TIMESTAMP NOT NULL
+  enddate     TIMESTAMP NULL DEFAULT NULL
 );
 
 CREATE TRIGGER updateDate BEFORE INSERT ON TimerCard
