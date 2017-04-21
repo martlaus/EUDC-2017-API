@@ -5,6 +5,7 @@ import eudcApi.model.Card;
 import eudcApi.model.User;
 import eudcApi.rest.filter.EudcApiPrincipal;
 import eudcApi.service.CardService;
+import eudcApi.service.OneSignalService;
 import eudcApi.utils.AuthUtils;
 
 import javax.annotation.security.RolesAllowed;
@@ -24,6 +25,9 @@ public class CardResource {
 
     @Inject
     private CardService cardService;
+    
+    @Inject
+    private OneSignalService oneSignalService;
 
     private SecurityContext securityContext;
 
@@ -40,6 +44,10 @@ public class CardResource {
     public void addCard(Card card) throws Exception {
         if (card != null) {
             cardService.saveCard(card);
+            
+            if(card.getSendPushAll() == true){
+            oneSignalService.sendAll(card.getTitle());
+            }
         } else {
             throw new Exception("No card");
         }

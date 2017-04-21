@@ -46,7 +46,8 @@ CREATE TABLE Card (
   title       VARCHAR(255)  NOT NULL,
   description VARCHAR(1000) NOT NULL,
   created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  pinned      BOOLEAN       NOT NULL
+  pinned      BOOLEAN       NOT NULL,
+  sendPushAll      BOOLEAN       NOT NULL
 );
 
 

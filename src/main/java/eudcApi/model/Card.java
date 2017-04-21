@@ -37,6 +37,9 @@ public class Card {
 
     @Column(nullable = false)
     private Boolean pinned = false;
+    
+    @Column(nullable = false)
+    private Boolean sendPushAll = false;
 
     @Column
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
@@ -79,6 +82,10 @@ public class Card {
     public Boolean getPinned() { return pinned; }
 
     public void setPinned(Boolean pinned) { this.pinned = pinned; }
+    
+    public Boolean getSendPushAll() { return sendPushAll; }
+
+    public void setSendPushAll(Boolean sendPushAll) { this.sendPushAll = sendPushAll; }
 
     @JsonSerialize(using = DateTimeSerializer.class)
     public DateTime getCreated() {

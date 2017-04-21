@@ -6,9 +6,9 @@ INSERT INTO User (id, email, password, created, role) VALUES (3, 'mart@mart.kz',
 INSERT INTO AuthenticatedUser (id, user_id, token) VALUES (1, 1, 'superUniqueToken');
 
 -- Card data
-INSERT INTO Card (id, title, description, created) VALUES (1, 'Lorem Ipsum', 'Sed omnium volumus voluptua te', '1999-02-02 06:00:01');
-INSERT INTO Card (id, title, description, created) VALUES (2, 'Ipsum Lorem', 'At vis quis dolor inermis', '1999-02-02 06:00:01');
-INSERT INTO Card (id, title, description, created) VALUES (3, 'Delirium Tremens', 'His no sensibus moderatius', '1999-02-02 06:00:01');
+INSERT INTO Card (id, title, description, created, pinned, sendPushAll) VALUES (1, 'Lorem Ipsum', 'Sed omnium volumus voluptua te', '1999-02-02 06:00:01', false, false);
+INSERT INTO Card (id, title, description, created, pinned, sendPushAll) VALUES (2, 'Ipsum Lorem', 'At vis quis dolor inermis', '1999-02-02 06:00:01', false, false);
+INSERT INTO Card (id, title, description, created, pinned, sendPushAll) VALUES (3, 'Delirium Tremens', 'His no sensibus moderatius', '1999-02-02 06:00:01', false, false);
 
 -- TimerCard data
 INSERT INTO TimerCard (id, title, fullLocation, locationId, team, topic, unixtime, created) VALUES (1, 'Round start notice', 'U03 room 123', 2, 'Affirmative', 'Smoking is good for your health.', '1492662000', '1999-02-02 06:00:01');
