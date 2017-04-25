@@ -4,8 +4,11 @@ import eudcApi.dao.AuthenticatedUserDAO;
 import eudcApi.dao.UserDAO;
 import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.User;
+import eudcApi.rest.TimerCardResource;
 import org.joda.time.DateTime;
 import org.mindrot.jbcrypt.BCrypt;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import java.math.BigInteger;
@@ -16,6 +19,7 @@ import java.util.List;
  * Created by mart on 25.10.15.
  */
 public class UserService {
+    private static final Logger logger = LoggerFactory.getLogger(TimerCardResource.class);
 
     @Inject
     private UserDAO userDAO;
@@ -25,7 +29,6 @@ public class UserService {
 
     private SecureRandom random = new SecureRandom();
 
-    private String existingPw;
 
 
     public User addUser(User user) {
@@ -60,10 +63,13 @@ public class UserService {
     }
 
     public AuthenticatedUser loginWithTabbieUser(User user) throws Exception {
+        logger.info("Logging in with user, with email: " + user.getEmail());
         User returnedUser = getUserByEmail(user.getEmail());
 
         if (returnedUser == null) {
+            user.setRole("USER");
             returnedUser = saveUser(user);
+            logger.info("New user created, with email: " + user.getEmail());
         }
 
         return loginWithoutPassword(returnedUser);

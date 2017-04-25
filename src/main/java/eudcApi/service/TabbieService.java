@@ -23,7 +23,7 @@ public class TabbieService {
                 new UsernamePasswordCredentials(loginData.getEmail(), loginData.getPassword()),
                 "UTF-8", false));
 
-        HttpResponse httpResponse = null;
+        HttpResponse httpResponse;
         Map<String, Object> jsonMap = null;
         try {
             httpResponse = httpClient.execute(httpGet);
