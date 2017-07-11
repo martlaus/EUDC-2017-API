@@ -831,3 +831,95 @@
 2017-07-11 23:04:45.607 [qtp2028017635-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
 2017-07-11 23:04:45.607 [qtp2028017635-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.event
 2017-07-11 23:04:45.607 [qtp2028017635-16] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [color, description, endtime, location, eventtype, id, starttime, title]
+2017-07-11 23:51:59.060 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:51:59.060 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:51:59.060 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:51:59.194 [qtp2028017635-17] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2017-07-11 23:51:59.334 [qtp2028017635-17] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.10.Final}
+2017-07-11 23:51:59.334 [qtp2028017635-17] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-07-11 23:51:59.334 [qtp2028017635-17] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-07-11 23:51:59.537 [qtp2028017635-17] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-07-11 23:51:59.569 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2017-07-11 23:51:59.569 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2017-07-11 23:51:59.569 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2017-07-11 23:52:00.400 [qtp2028017635-17] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-07-11 23:52:00.415 [qtp2028017635-17] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2017-07-11 23:52:00.603 [qtp2028017635-17] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-07-11 23:52:01.047 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2017-07-11 23:52:01.047 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2017-07-11 23:52:01.118 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2017-07-11 23:52:01.118 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2017-07-11 23:52:01.180 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2017-07-11 23:52:01.180 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [pinned, created, sendpushall, description, id, title]
+2017-07-11 23:52:01.180 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card_user
+2017-07-11 23:52:01.180 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
+2017-07-11 23:52:01.196 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.event
+2017-07-11 23:52:01.196 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [color, description, endtime, location, eventtype, id, starttime, title]
+2017-07-11 23:52:01.196 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:52:01.196 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:52:01.196 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:52:01.211 [qtp2028017635-17] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2017-07-11 23:52:01.227 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2017-07-11 23:52:01.227 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2017-07-11 23:52:01.227 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2017-07-11 23:52:01.305 [qtp2028017635-17] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-07-11 23:52:01.305 [qtp2028017635-17] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2017-07-11 23:52:01.336 [qtp2028017635-17] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-07-11 23:52:01.383 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2017-07-11 23:52:01.383 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2017-07-11 23:52:01.383 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2017-07-11 23:52:01.383 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2017-07-11 23:52:01.383 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2017-07-11 23:52:01.383 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [pinned, created, sendpushall, description, id, title]
+2017-07-11 23:52:01.399 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card_user
+2017-07-11 23:52:01.399 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
+2017-07-11 23:52:01.399 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.event
+2017-07-11 23:52:01.399 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [color, description, endtime, location, eventtype, id, starttime, title]
+2017-07-11 23:52:01.399 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:52:01.399 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:52:01.399 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:52:01.414 [qtp2028017635-17] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2017-07-11 23:52:01.446 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2017-07-11 23:52:01.446 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2017-07-11 23:52:01.446 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2017-07-11 23:52:01.508 [qtp2028017635-17] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-07-11 23:52:01.508 [qtp2028017635-17] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2017-07-11 23:52:01.539 [qtp2028017635-17] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-07-11 23:52:01.571 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2017-07-11 23:52:01.571 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2017-07-11 23:52:01.571 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2017-07-11 23:52:01.571 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2017-07-11 23:52:01.571 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2017-07-11 23:52:01.571 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [pinned, created, sendpushall, description, id, title]
+2017-07-11 23:52:01.571 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card_user
+2017-07-11 23:52:01.571 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
+2017-07-11 23:52:01.571 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.event
+2017-07-11 23:52:01.571 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [color, description, endtime, location, eventtype, id, starttime, title]
+2017-07-11 23:52:01.571 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:52:01.586 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:52:01.586 [qtp2028017635-17] WARN  org.hibernate.ejb.HibernatePersistence  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-11 23:52:01.586 [qtp2028017635-17] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: EudcApi
+	...]
+2017-07-11 23:52:01.618 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1/eudcApi
+2017-07-11 23:52:01.618 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000046: Connection properties: {user=root, password=****}
+2017-07-11 23:52:01.618 [qtp2028017635-17] INFO  org.hibernate.c3p0.internal.C3P0ConnectionProvider  - HHH000006: Autocommit mode: false
+2017-07-11 23:52:01.680 [qtp2028017635-17] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-07-11 23:52:01.680 [qtp2028017635-17] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2017-07-11 23:52:01.696 [qtp2028017635-17] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-07-11 23:52:01.743 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000229: Running schema validator
+2017-07-11 23:52:01.743 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.SchemaValidator  - HHH000102: Fetching database metadata
+2017-07-11 23:52:01.743 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.authenticateduser
+2017-07-11 23:52:01.743 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user_id, id, token]
+2017-07-11 23:52:01.743 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card
+2017-07-11 23:52:01.743 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [pinned, created, sendpushall, description, id, title]
+2017-07-11 23:52:01.743 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.card_user
+2017-07-11 23:52:01.743 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [user, card]
+2017-07-11 23:52:01.743 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: eudcApi.event
+2017-07-11 23:52:01.743 [qtp2028017635-17] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [color, description, endtime, location, eventtype, id, starttime, title]

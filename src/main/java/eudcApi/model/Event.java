@@ -7,10 +7,7 @@ import eudcApi.rest.jackson.map.DateTimeSerializer;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by mart on 11.10.16.
@@ -33,9 +30,10 @@ public class Event {
     
     @Column
     private String color;
-    
-    @Column
-    private String eventType;
+
+    @ManyToOne
+    @JoinColumn(nullable = null, name = "eventType")
+    private EventType eventType;
 
     @Column
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
@@ -85,12 +83,12 @@ public class Event {
         this.color = color;
     }
 
-    public void setEventType(String eventType) {
-        this.eventType = eventType;
-    }
-    
-    public String getEventType() {
+    public EventType getEventType() {
         return eventType;
+    }
+
+    public void setEventType(EventType eventType) {
+        this.eventType = eventType;
     }
 
     @JsonSerialize(using = DateTimeSerializer.class)
