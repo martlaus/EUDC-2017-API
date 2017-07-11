@@ -48,6 +48,7 @@ VALUES ('Kultuurikatel', '59.444416', '24.750546', NOW());
 INSERT INTO RoundLocation (name, imgurl, created)
 VALUES ('U03', 'http://i.imgur.com/h1YP8oA.jpg', NOW());
 
+
 INSERT INTO RoundLocation (name, imgurl, created)
 VALUES ('U04', 'http://i.imgur.com/lAslKTf.jpg', NOW());
 
