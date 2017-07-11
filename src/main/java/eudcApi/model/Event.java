@@ -27,12 +27,9 @@ public class Event {
     
     @Column
     private String location;
-    
-    @Column
-    private String color;
 
     @ManyToOne
-    @JoinColumn(nullable = null, name = "eventType")
+    @JoinColumn(name = "eventType")
     private EventType eventType;
 
     @Column
@@ -73,14 +70,6 @@ public class Event {
 
     public void setLocation(String location) {
         this.location = location;
-    }
-    
-    public String getColor() {
-        return color;
-    }
-    
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public EventType getEventType() {
