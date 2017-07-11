@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS Location;
 DROP TABLE IF EXISTS Event;
 DROP TABLE IF EXISTS Feedback;
 DROP TABLE IF EXISTS RoundLocation;
+DROP TABLE IF EXISTS EventType;
 
 
 SET foreign_key_checks = 1;
@@ -47,24 +48,26 @@ CREATE TABLE Card (
   description VARCHAR(1000) NOT NULL,
   created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   pinned      BOOLEAN       NOT NULL,
-  sendPushAll      BOOLEAN       NOT NULL
+  sendPushAll BOOLEAN       NOT NULL
 );
 
 
 CREATE TABLE TimerCard (
-  id          BIGINT    AUTO_INCREMENT PRIMARY KEY,
-  title       VARCHAR(255)                        NOT NULL,
-  locationId VARCHAR(255)                       NOT NULL,
-  fullLocation VARCHAR(255)                       NOT NULL,
-  team VARCHAR(255)                       NOT NULL,
-  topic VARCHAR(255)                       NOT NULL,
-  unixtime VARCHAR(255)                       ,
-  created     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  enddate     TIMESTAMP NULL DEFAULT NULL
+  id           BIGINT            AUTO_INCREMENT PRIMARY KEY,
+  title        VARCHAR(255) NOT NULL,
+  locationId   VARCHAR(255) NOT NULL,
+  fullLocation VARCHAR(255) NOT NULL,
+  team         VARCHAR(255) NOT NULL,
+  topic        VARCHAR(255) NOT NULL,
+  unixtime     VARCHAR(255),
+  created      TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+  enddate      TIMESTAMP    NULL DEFAULT NULL
 );
 
-CREATE TRIGGER updateDate BEFORE INSERT ON TimerCard
-       FOR EACH ROW SET NEW.enddate = from_unixtime(NEW.unixtime);
+CREATE TRIGGER updateDate
+BEFORE INSERT ON TimerCard
+FOR EACH ROW
+  SET NEW.enddate = from_unixtime(NEW.unixtime);
 
 CREATE TABLE Location (
   id      BIGINT    AUTO_INCREMENT PRIMARY KEY,
@@ -77,7 +80,7 @@ CREATE TABLE Location (
 CREATE TABLE RoundLocation (
   id      BIGINT    AUTO_INCREMENT PRIMARY KEY,
   name    VARCHAR(255) NOT NULL,
-  imgurl     VARCHAR(512) NOT NULL,
+  imgurl  VARCHAR(512) NOT NULL,
   created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -111,15 +114,25 @@ CREATE TABLE TimerCard_User (
     ON DELETE RESTRICT
 );
 
+CREATE TABLE EventType (
+  id        BIGINT AUTO_INCREMENT PRIMARY KEY,
+  eventType VARCHAR(255) NOT NULL,
+  color     VARCHAR(255) NOT NULL,
+  eventIcon VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE Event (
   id          BIGINT AUTO_INCREMENT PRIMARY KEY,
   title       VARCHAR(255)                        NOT NULL,
   description VARCHAR(1000),
   location    VARCHAR(255)                        NOT NULL,
-  color       VARCHAR(255)                        NOT NULL,
-  eventType   VARCHAR(255)                        NOT NULL,
+  eventType   BIGINT                              NOT NULL,
   startTime   TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-  endTime     TIMESTAMP DEFAULT now()             NOT NULL
+  endTime     TIMESTAMP DEFAULT now()             NOT NULL,
+
+  FOREIGN KEY (eventType)
+  REFERENCES EventType (id)
+    ON DELETE RESTRICT
 );
 
 CREATE TABLE Feedback (
@@ -131,4 +144,4 @@ CREATE TABLE Feedback (
   FOREIGN KEY (user)
   REFERENCES User (id)
     ON DELETE RESTRICT
-)
+);
