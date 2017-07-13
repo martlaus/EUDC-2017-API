@@ -53,14 +53,14 @@ INSERT INTO Card_User (card, user) VALUES (1, 3);
 
 -- Add Test event types
 
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (1, 'catering', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (2, 'transport', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (3, 'organisational event', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (4, 'debate', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (5, 'semifinal', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (6, 'final', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (7, 'social', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (8, 'miscellaneous', 'purple', 'ion-mic-c');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (1, 'catering', '#276FBF', 'ion-android-restaurant');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (2, 'transport', '#FE5F55', 'ion-android-bus');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (3, 'organisational event', '#883677', 'ion-mic-c');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (4, 'debate', '#3921f3', 'ion-mic-c');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (5, 'semifinal', '#7FB069', 'ion-ribbon-a');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (6, 'final', '#138A36', 'ion-trophy');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (7, 'social', '#00A9A5', 'ion-ios-wineglass');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (8, 'miscellaneous', '#19323C', 'ion-ios-star');
 
 -- Add Test events
 INSERT INTO Event (id, title, description, startTime, endTime, location, eventType) VALUES (1,
