@@ -1,6 +1,8 @@
 package eudcApi.guice.module;
 
 import com.google.inject.AbstractModule;
+import eudcApi.db.DatabaseMigrator;
+import eudcApi.db.FlywayDbMigrator;
 import eudcApi.guice.GuiceInjector.Module;
 import eudcApi.guice.provider.ConfigurationProvider;
 import eudcApi.guice.provider.EntityManagerFactoryProvider;
@@ -21,5 +23,6 @@ public class ProviderModule extends AbstractModule {
         bind(EntityManagerFactory.class).toProvider(EntityManagerFactoryProvider.class);
         bind(EntityManager.class).toProvider(EntityManagerProvider.class);
         bind(Client.class).toProvider(HttpClientProvider.class);
+        bind(DatabaseMigrator.class).to(FlywayDbMigrator.class);
     }
 }

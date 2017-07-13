@@ -3,6 +3,7 @@ package eudcApi.guice.provider;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
+import eudcApi.db.DatabaseMigrator;
 import eudcApi.utils.ConfigurationProperties;
 import org.apache.commons.configuration.Configuration;
 import org.slf4j.Logger;
@@ -13,6 +14,9 @@ import javax.persistence.Persistence;
 import java.util.HashMap;
 import java.util.Map;
 
+import static eudcApi.utils.ConfigurationProperties.DATABASE_PASSWORD;
+import static eudcApi.utils.ConfigurationProperties.DATABASE_URL;
+import static eudcApi.utils.ConfigurationProperties.DATABASE_USERNAME;
 import static java.lang.String.format;
 
 /**
@@ -26,12 +30,20 @@ public class EntityManagerFactoryProvider implements Provider<EntityManagerFacto
     @Inject
     private Configuration configuration;
 
+    @Inject
+    private DatabaseMigrator databaseMigrator;
+
     private EntityManagerFactory emf;
 
     @Override
     public synchronized EntityManagerFactory get() {
 
         if (emf == null) {
+
+            // Must be done before initiating database so schema validation does
+            // not fail
+            databaseMigrator.migrate();
+
             Map<String, String> properties = getDatabaseProperties();
             logger.info(String.format("Initializing EntityManagerFactory properties [%s]", properties));
 
@@ -63,9 +75,9 @@ public class EntityManagerFactoryProvider implements Provider<EntityManagerFacto
         properties.put("hibernate.c3p0.preferredTestQuery", "SELECT 1");
 
         // Configurable options
-        properties.put("hibernate.connection.url", configuration.getString(ConfigurationProperties.DATABASE_URL));
-        properties.put("hibernate.connection.username", configuration.getString(ConfigurationProperties.DATABASE_USERNAME));
-        properties.put("hibernate.connection.password", configuration.getString(ConfigurationProperties.DATABASE_PASSWORD));
+        properties.put("hibernate.connection.url", configuration.getString(DATABASE_URL));
+        properties.put("hibernate.connection.username", configuration.getString(DATABASE_USERNAME));
+        properties.put("hibernate.connection.password", configuration.getString(DATABASE_PASSWORD));
 
         return properties;
     }

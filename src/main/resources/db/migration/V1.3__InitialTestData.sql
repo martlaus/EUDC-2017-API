@@ -1,6 +1,5 @@
 USE eudcApi;
 
-
 -- Add Users
 INSERT INTO User (email, password, role, created)
 VALUES ('admin@admin.kz', '$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UFpxO', 'ADMIN', NOW());
@@ -11,18 +10,12 @@ VALUES ('asd@asd.kz', '$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UF
 INSERT INTO User (email, password, role, created)
 VALUES ('mart@mart.ml', '$2a$10$Z8tPz8Nqygv7HZtqHHyoQuap2Zra3ZerEEyjJ.gahdreoeO7UFpxO', 'ADMIN', NOW());
 
-INSERT INTO AuthenticatedUser (user_id, token) VALUES (1, 'superUniqueToken');
-
-
 -- Add Cards
-INSERT INTO Card ( title, description, created, pinned, sendPushAll)
-VALUES ( 'Cafe closed in main building', 'We are sorry for causing discomfort. Please use the cafes and diners at other facilities around the campus while we are addressing the issue.', NOW(), false, false);
-INSERT INTO Card ( title, description, created, pinned, sendPushAll)
-VALUES ( 'Important notice', 'Sea in populo eleifend, ex ius stet feugait explicari, id eros nominati mei. Cu eum aeque debitis, pro paulo simul volumus ei, choro possit principes ad vis. At libris labore eum, mei porro consul laudem te, his et propriae omnesque consetetur. Quo ut mentitum accommodare. Graeco voluptaria no sea. Aliquam inimicus constituto sed no, per ei noster diceret. Facer ludus intellegat ius in, eligendi constituto duo cu, vide vulputate disputationi eu qui.', NOW(), false, false);
-INSERT INTO Card ( title, description, created, pinned, sendPushAll)
-VALUES ( 'Recent Winners', 'Below we have brief headlines to all the top debating competitions at the Stanford Payton Jordan Invite on Sunday night with links to the results and quick commentary from the live LetsRun.com thread. Also at the bottom are results from all the qualifications on Sunday. Full results here. The biggest news of the night was 41 year old Bernard Lagat securing the win in phenomenal time', NOW(), true, false);
-INSERT INTO Card ( title, description, created, pinned, sendPushAll)
-VALUES ( 'Video of the day', 'Here is a recap video of the 3rd day https://www.youtube.com/watch?v=dQw4w9WgXcQ EUDC Newcastle 2009', NOW(), false, false);
+
+INSERT INTO Card (title, description, created, pinned, sendPushAll)
+VALUES ('Welcome to the Tallinn EUDC 2017 app',
+        'This newsfeed and the app in general will be your go to source for information and news about the tournament and the debates. The app will keep you up to date with relevant info about your upcoming and previous rounds. Also the organizers will be posting news and other fun stuff about the tournament over the course of the week. If you wish to clear some notifications from the news feed just swipe the card to the left in the feed. Good luck and enjoy the tournament!',
+        NOW(), TRUE, FALSE);
 
 
 -- Add Locations
@@ -48,46 +41,26 @@ VALUES ('Kultuurikatel', '59.444416', '24.750546', NOW());
 -- Add Round Locations
 INSERT INTO RoundLocation (name, imgurl, created)
 VALUES ('U03', 'http://i.imgur.com/h1YP8oA.jpg', NOW());
-
-
 INSERT INTO RoundLocation (name, imgurl, created)
 VALUES ('U04', 'http://i.imgur.com/lAslKTf.jpg', NOW());
 
--- Add TimerCards
-INSERT INTO TimerCard (title, fullLocation, locationId, team, topic, unixtime, created)
-VALUES ('Round start notice', 'U03 room 123', 1, 'Affirmative', 'Smoking is good for your health.', '1492732200', NOW());
-
-INSERT INTO TimerCard (title, fullLocation, locationId, team, topic, unixtime, created)
-VALUES ('Round start notice', 'U04 room 321', 2, 'Negative', 'Earth is flat.', '1492732200', NOW());
 
 -- Add Cards to Users (All users basically have a list of cards that they have)
 
-INSERT INTO Card_User(card, user) VALUES (1,1);
-INSERT INTO Card_User(card, user) VALUES (2,1);
-INSERT INTO Card_User(card, user) VALUES (3,1);
-INSERT INTO Card_User(card, user) VALUES (1,2);
-INSERT INTO Card_User(card, user) VALUES (1,3);
-INSERT INTO Card_User(card, user) VALUES (2,2);
-INSERT INTO Card_User(card, user) VALUES (3,2);
-INSERT INTO Card_User(card, user) VALUES (3,3);
-INSERT INTO Card_User(card, user) VALUES (4,3);
-
--- Add TimerCards to Users
-INSERT INTO TimerCard_User(timercard, user) VALUES (1,3);
-INSERT INTO TimerCard_User(timercard, user) VALUES (1,1);
-INSERT INTO TimerCard_User(timercard, user) VALUES (2,2);
-
+INSERT INTO Card_User (card, user) VALUES (1, 1);
+INSERT INTO Card_User (card, user) VALUES (1, 2);
+INSERT INTO Card_User (card, user) VALUES (1, 3);
 
 -- Add Test event types
 
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (1,'catering', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (2,'transport', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (3,'organisational event', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (4,'debate', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (5,'semifinal', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (6,'final', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (7,'social', 'purple', 'ion-mic-c');
-INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (8,'miscellaneous', 'purple', 'ion-mic-c');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (1, 'catering', 'purple', 'ion-mic-c');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (2, 'transport', 'purple', 'ion-mic-c');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (3, 'organisational event', 'purple', 'ion-mic-c');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (4, 'debate', 'purple', 'ion-mic-c');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (5, 'semifinal', 'purple', 'ion-mic-c');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (6, 'final', 'purple', 'ion-mic-c');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (7, 'social', 'purple', 'ion-mic-c');
+INSERT INTO EventType (id, eventType, color, eventIcon) VALUES (8, 'miscellaneous', 'purple', 'ion-mic-c');
 
 -- Add Test events
 INSERT INTO Event (id, title, description, startTime, endTime, location, eventType) VALUES (1,
@@ -501,9 +474,9 @@ INSERT INTO Event (id, title, description, startTime, endTime, location, eventTy
 
 -- Add Test feedback
 
-INSERT INTO Feedback (id, content, user) VALUES (1, 'It is a decent app guys!', 1);
-INSERT INTO Feedback (id, content, user) VALUES (2, 'Ma ei tea noh, see tabbie liidestus on ikka kehvake', 1);
-INSERT INTO Feedback (id, content, user) VALUES (3, 'Where can I change the color scheme?!', 2);
+INSERT INTO Feedback (id, content, user) VALUES (1, 'TEST - It is a decent app guys!', 1);
+INSERT INTO Feedback (id, content, user) VALUES (2, 'TEST - Ma ei tea noh, see tabbie liidestus on ikka kehvake', 1);
+INSERT INTO Feedback (id, content, user) VALUES (3, 'TEST - Where can I change the color scheme?!', 2);
 
 
 

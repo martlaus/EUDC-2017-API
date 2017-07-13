@@ -3,9 +3,9 @@ package eudcApi.guice.module;
 import com.google.inject.AbstractModule;
 import eudcApi.ApplicationLauncher;
 import eudcApi.ApplicationManager;
-import eudcApi.guice.GuiceInjector;
+import eudcApi.guice.GuiceInjector.Module;
 
-@GuiceInjector.Module
+@Module
 public class ApplicationModule extends AbstractModule {
 
     @Override

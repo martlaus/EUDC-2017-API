@@ -3,6 +3,7 @@ package eudcApi;
 import com.google.inject.Singleton;
 import eudcApi.guice.GuiceInjector;
 import eudcApi.server.EmbeddedJetty;
+import eudcApi.service.AuthenticatedUserService;
 import eudcApi.utils.ConfigurationProperties;
 import org.apache.commons.configuration.Configuration;
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import javax.inject.Inject;
 
 import java.util.Arrays;
+import java.util.concurrent.Executors;
 
 import static java.lang.String.format;
 
@@ -34,6 +36,9 @@ public class ApplicationLauncher {
             startServer();
             addShutdownHook();
             startCommandListener();
+            Executors.newSingleThreadExecutor().submit(() -> {
+                GuiceInjector.getInjector().getInstance(AuthenticatedUserService.class);
+            });
         }
     }
 
