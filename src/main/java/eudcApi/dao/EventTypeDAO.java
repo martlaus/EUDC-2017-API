@@ -16,9 +16,7 @@ public class EventTypeDAO {
 
 
     public List<EventType> findAll() {
-        return entityManager
-                .createQuery("SELECT c FROM EventType", EventType.class)
-                .getResultList();
+        return entityManager.createQuery("FROM EventType", EventType.class).getResultList();
     }
 
 }
