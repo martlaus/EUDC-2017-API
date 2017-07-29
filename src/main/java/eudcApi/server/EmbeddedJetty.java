@@ -2,20 +2,20 @@ package eudcApi.server;
 
 import com.google.inject.servlet.GuiceFilter;
 import eudcApi.config.EudcApiApplication;
+import org.apache.log4j.Logger;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.component.AbstractLifeCycle;
 import org.glassfish.jersey.servlet.ServletContainer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import javax.servlet.DispatcherType;
 import java.net.URI;
 import java.util.EnumSet;
 
 public class EmbeddedJetty {
-    private static final Logger logger = LoggerFactory.getLogger(EmbeddedJetty.class);
+    private static final Logger logger = Logger.getLogger(EmbeddedJetty.class);
     private static EmbeddedJetty instance;
     private Server server;
 

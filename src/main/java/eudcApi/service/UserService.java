@@ -5,21 +5,22 @@ import eudcApi.dao.UserDAO;
 import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.User;
 import eudcApi.rest.TimerCardResource;
+import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
 import org.mindrot.jbcrypt.BCrypt;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.List;
 
+import static org.apache.log4j.Logger.*;
+
 /**
  * Created by mart on 25.10.15.
  */
 public class UserService {
-    private static final Logger logger = LoggerFactory.getLogger(TimerCardResource.class);
+    private static final Logger logger = getLogger(TimerCardResource.class);
 
     @Inject
     private UserDAO userDAO;

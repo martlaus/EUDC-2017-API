@@ -2,7 +2,7 @@ package eudcApi.rest;
 
 import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.User;
-import eudcApi.service.TabbieService;
+import eudcApi.service.TabbieLoginService;
 import eudcApi.service.UserService;
 
 import javax.inject.Inject;
@@ -22,12 +22,12 @@ public class LoginResource {
     private UserService userService;
 
     @Inject
-    private TabbieService tabbieService;
+    private TabbieLoginService tabbieLoginService;
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     public AuthenticatedUser login(User user) throws Exception {
-        User tabbieUser = tabbieService.getTabbieUser(user);
+        User tabbieUser = tabbieLoginService.getTabbieUser(user);
         if (tabbieUser != null) {
             return userService.loginWithTabbieUser(tabbieUser);
         } else if (user != null) {

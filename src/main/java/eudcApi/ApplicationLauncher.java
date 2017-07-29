@@ -6,8 +6,8 @@ import eudcApi.server.EmbeddedJetty;
 import eudcApi.service.AuthenticatedUserService;
 import eudcApi.utils.ConfigurationProperties;
 import org.apache.commons.configuration.Configuration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
+
 
 import javax.inject.Inject;
 
@@ -19,7 +19,7 @@ import static java.lang.String.format;
 @Singleton
 public class ApplicationLauncher {
 
-    private static final Logger logger = LoggerFactory.getLogger(ApplicationLauncher.class);
+    private static final Logger logger = Logger.getLogger(ApplicationLauncher.class);
 
     private static final int DEFAULT_SERVER_PORT = 7070;
 
@@ -86,7 +86,7 @@ public class ApplicationLauncher {
         } else if ("stop".equalsIgnoreCase(args[0])) {
             stopApplication();
         } else {
-            logger.warn("Command does not exist. Use: start, stop or no command (default is start).", Arrays.toString(args));
+            logger.warn("Command does not exist. Use: start, stop or no command (default is start)." + Arrays.toString(args));
         }
     }
 }

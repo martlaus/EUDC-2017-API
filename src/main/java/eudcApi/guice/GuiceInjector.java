@@ -2,9 +2,9 @@ package eudcApi.guice;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import org.apache.log4j.Logger;
 import org.reflections.Reflections;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -16,7 +16,7 @@ import static com.google.inject.util.Modules.override;
 
 public class GuiceInjector {
 
-    private static final Logger logger = LoggerFactory.getLogger(GuiceInjector.class);
+    private static final Logger logger = Logger.getLogger(GuiceInjector.class);
 
     private static Injector injector;
 

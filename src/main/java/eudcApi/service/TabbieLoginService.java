@@ -13,7 +13,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import java.io.IOException;
 import java.util.Map;
 
-public class TabbieService {
+public class TabbieLoginService {
 
     public User getTabbieUser(User loginData) {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();

@@ -2,19 +2,16 @@ package eudcApi.rest;
 
 import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.Card;
-import eudcApi.model.User;
-import eudcApi.rest.filter.EudcApiPrincipal;
 import eudcApi.service.CardService;
 import eudcApi.service.OneSignalService;
+import eudcApi.service.TabbieDataServices;
 import eudcApi.utils.AuthUtils;
 
-import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.SecurityContext;
-
 import java.util.List;
 
 /**
@@ -25,9 +22,13 @@ public class CardResource {
 
     @Inject
     private CardService cardService;
-    
+
     @Inject
     private OneSignalService oneSignalService;
+
+    @Inject
+    private TabbieDataServices tabbieDataServices;
+
 
     private SecurityContext securityContext;
 
@@ -44,9 +45,9 @@ public class CardResource {
     public void addCard(Card card) throws Exception {
         if (card != null) {
             cardService.saveCard(card);
-            
-            if(card.getSendPushAll() == true){
-            oneSignalService.sendAll(card.getTitle());
+
+            if (card.getSendPushAll()) {
+                oneSignalService.sendAll(card.getTitle());
             }
         } else {
             throw new Exception("No card");
@@ -77,6 +78,16 @@ public class CardResource {
         } else if (authentication.isUserRoleAdmin(securityContext)) {
             cardService.deleteCardAsAdmin(cardId);
         }
+    }
+
+    @GET
+    @Path("rounds")
+
+    @Produces(MediaType.APPLICATION_JSON)
+    public String tabbie() {
+
+        tabbieDataServices.getRounds();
+        return null;
     }
 
 

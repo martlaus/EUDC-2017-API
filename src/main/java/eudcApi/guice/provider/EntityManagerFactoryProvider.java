@@ -4,19 +4,15 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
 import eudcApi.db.DatabaseMigrator;
-import eudcApi.utils.ConfigurationProperties;
 import org.apache.commons.configuration.Configuration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.HashMap;
 import java.util.Map;
 
-import static eudcApi.utils.ConfigurationProperties.DATABASE_PASSWORD;
-import static eudcApi.utils.ConfigurationProperties.DATABASE_URL;
-import static eudcApi.utils.ConfigurationProperties.DATABASE_USERNAME;
+import static eudcApi.utils.ConfigurationProperties.*;
 import static java.lang.String.format;
 
 /**
@@ -25,7 +21,7 @@ import static java.lang.String.format;
 @Singleton
 public class EntityManagerFactoryProvider implements Provider<EntityManagerFactory> {
 
-    private Logger logger = LoggerFactory.getLogger(getClass());
+    private Logger logger = Logger.getLogger(EntityManagerFactoryProvider.class);
 
     @Inject
     private Configuration configuration;

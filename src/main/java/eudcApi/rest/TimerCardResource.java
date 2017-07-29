@@ -5,8 +5,8 @@ import eudcApi.model.TimerCard;
 import eudcApi.model.User;
 import eudcApi.service.TimerCardService;
 import eudcApi.utils.AuthUtils;
+import org.apache.log4j.Logger;
 
-import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -24,7 +24,7 @@ public class TimerCardResource {
 	
 	//int newTimerCardId;
 	
-    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(TimerCardResource.class);
+    private static final Logger logger = Logger.getLogger(TimerCardResource.class);
     @Inject
     private TimerCardService timerCardService;
     

@@ -3,9 +3,8 @@ package eudcApi.db;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import org.apache.commons.configuration.Configuration;
+import org.apache.log4j.Logger;
 import org.flywaydb.core.Flyway;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static eudcApi.utils.ConfigurationProperties.DATABASE_PASSWORD;
 import static eudcApi.utils.ConfigurationProperties.DATABASE_URL;
@@ -15,7 +14,7 @@ import static eudcApi.utils.ConfigurationProperties.DATABASE_USERNAME;
 @Singleton
 public class FlywayDbMigrator implements DatabaseMigrator {
 
-    private static final Logger logger = LoggerFactory.getLogger(FlywayDbMigrator.class);
+    private static final Logger logger = Logger.getLogger(FlywayDbMigrator.class);
 
     @Inject
     private Configuration configuration;

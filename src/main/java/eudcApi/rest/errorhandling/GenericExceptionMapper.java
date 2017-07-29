@@ -1,8 +1,7 @@
 package eudcApi.rest.errorhandling;
 
+import org.apache.log4j.Logger;
 import org.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.persistence.EntityTransaction;
 import javax.ws.rs.core.MediaType;
@@ -15,7 +14,7 @@ import static eudcApi.utils.DbUtils.getTransaction;
 @Provider
 public class GenericExceptionMapper implements ExceptionMapper<Throwable> {
 
-    private static final Logger logger = LoggerFactory.getLogger(GenericExceptionMapper.class);
+    private static final Logger logger = Logger.getLogger(GenericExceptionMapper.class);
 
     @Override
     public Response toResponse(Throwable error) {
