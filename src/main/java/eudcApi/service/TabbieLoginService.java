@@ -10,10 +10,16 @@ import org.apache.http.impl.auth.BasicScheme;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 
+import javax.inject.Inject;
 import java.io.IOException;
 import java.util.Map;
 
+
+
 public class TabbieLoginService {
+
+    @Inject
+    private TabbieRoleService tabbieRoleService;
 
     public User getTabbieUser(User loginData) {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
@@ -38,7 +44,14 @@ public class TabbieLoginService {
         User user = null;
         if ((jsonMap != null ? jsonMap.get("email") : null) != null) {
             user = new User();
+
+            String[] parts = jsonMap.get("_links").toString().split("/",5);
+            String[] parts2 = parts[4].split("}");
+            Long tabbieId = Long.parseLong(parts2[0]);
+
             user.setEmail((String) jsonMap.get("email"));
+            user.setTabbieId(tabbieId);
+            user.setTournamentRole(tabbieRoleService.checkTabbieUsersRole(user));
 //        user.setTabbieToken((String) jsonMap.get("token"));
         }
 

@@ -26,7 +26,6 @@ public class ApplicationLauncher {
     @Inject
     private static Configuration configuration;
 
-
     public static void startApplication() {
         GuiceInjector.init();
 

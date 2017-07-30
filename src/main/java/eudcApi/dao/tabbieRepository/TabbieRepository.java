@@ -1,5 +1,6 @@
 package eudcApi.dao.tabbieRepository;
 
+import eudcApi.model.User;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -21,9 +22,18 @@ public class TabbieRepository {
     public String getRoundsByTournamentId(String id) {
         id = id != null ? id : "10"; //todo: remove when we have configurable tournament id
 
+        String url = "https://api.tabbie.org/rounds/filter?tournament_id="+id;
+        return getJSON(url);
+    }
 
+    public String getTabbieRole(User user) {
+        String url = "https://api.tabbie.org/users/gettournamentrole?user_id=" + user.getTabbieId() + "&tournament_id=357";
+        return getJSON(url);
+    }
+
+    private String getJSON(String url) {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
-        HttpGet httpGet = new HttpGet("https://api.tabbie.org/rounds/filter?tournament_id=" + id);
+        HttpGet httpGet = new HttpGet(url);
         httpGet.addHeader(BasicScheme.authenticate(
                 new UsernamePasswordCredentials("martlaus1@gmail.com", "lindemans"),
                 UTF8, false));

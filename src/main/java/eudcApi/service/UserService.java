@@ -51,6 +51,10 @@ public class UserService {
             prevUser.setRole(newUser.getRole());
         }
 
+        if (newUser.getTournamentRole() != null && !newUser.getTournamentRole().isEmpty()) {
+            prevUser.setTournamentRole(newUser.getTournamentRole());
+        }
+
         if (newUser.getEmail() != null && !newUser.getEmail().isEmpty()) {
             prevUser.setEmail(newUser.getEmail());
         }

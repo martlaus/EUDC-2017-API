@@ -39,6 +39,12 @@ public class User {
     private String role;
 
     @Column
+    private String tournamentRole;
+
+    @Column
+    private Long tabbieId;
+
+    @Column
     private String tabbieToken;
 
     public String getEmail() {
@@ -77,12 +83,28 @@ public class User {
         this.id = id;
     }
 
+    public Long getTabbieId() {
+        return tabbieId;
+    }
+
+    public void setTabbieId(Long tabbieId) {
+        this.tabbieId = tabbieId;
+    }
+
     public String getRole() {
         return role;
     }
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getTournamentRole() {
+        return tournamentRole;
+    }
+
+    public void setTournamentRole(String tournamentRole) {
+        this.tournamentRole = tournamentRole;
     }
 
     @JsonIgnore
