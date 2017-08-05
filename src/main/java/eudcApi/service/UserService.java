@@ -30,14 +30,13 @@ public class UserService {
 
     private SecureRandom random = new SecureRandom();
 
-
-
     public User addUser(User user) {
-        //secure pw
+        //secure PW
         if (user.getPassword() != null && !user.getPassword().isEmpty()) {
             String hashed = generatePasswordHash(user);
             user.setPassword(hashed);
         }
+        user.setId(null);
 
         return saveUser(user);
     }

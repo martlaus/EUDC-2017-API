@@ -29,8 +29,6 @@ public class LoginResourceTest extends ResourceIntegrationTestBase {
         });
         assertNotNull(authenticatedUser.getToken());
         assertNotNull(authenticatedUser.getId());
-
-
     }
 
     @Test

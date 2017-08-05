@@ -19,7 +19,7 @@ public class UserResource {
     private UserService userService;
 
     @POST
-    @RolesAllowed({"USER", "ADMIN"})
+    @RolesAllowed({"ADMIN"})
     @Produces(MediaType.APPLICATION_JSON)
     public void addUser(User user) throws Exception {
         if (user != null) {
@@ -43,6 +43,7 @@ public class UserResource {
     }
 
     @GET
+    @RolesAllowed("ADMIN")
     @Produces(MediaType.APPLICATION_JSON)
     public List<User> getAllUsers() {
         return userService.getAllUsers();

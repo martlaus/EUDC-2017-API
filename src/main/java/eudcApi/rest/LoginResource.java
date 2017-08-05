@@ -2,7 +2,7 @@ package eudcApi.rest;
 
 import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.User;
-import eudcApi.service.TabbieLoginService;
+import eudcApi.service.tabbie.TabbieLoginService;
 import eudcApi.service.UserService;
 
 import javax.inject.Inject;

@@ -4,7 +4,7 @@ import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.Card;
 import eudcApi.service.CardService;
 import eudcApi.service.OneSignalService;
-import eudcApi.service.TabbieDataServices;
+import eudcApi.service.tabbie.TabbieDataServices;
 import eudcApi.utils.AuthUtils;
 
 import javax.inject.Inject;

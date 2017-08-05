@@ -1,4 +1,4 @@
-package eudcApi.service
+package eudcApi.service.tabbie
 
 import eudcApi.dao.tabbieRepository.TabbieRepository
 import eudcApi.model.User
@@ -24,7 +24,6 @@ public class TabbieRoleService {
             def result = slurper.parseText(tabbieUser)
 
             return result.role;
-
     }
 
 }

@@ -4,6 +4,7 @@ import eudcApi.common.test.ResourceIntegrationTestBase;
 import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.Event;
 import eudcApi.model.User;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import javax.ws.rs.client.Entity;
@@ -44,6 +45,7 @@ public class UserResourceTest extends ResourceIntegrationTestBase {
 
     }
 
+    @Ignore
     @Test
     public void getAll() {
         Response response = doGet("user");

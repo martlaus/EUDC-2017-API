@@ -17,12 +17,14 @@ import java.nio.charset.StandardCharsets;
  * Created by mart on 18.07.17.
  */
 public class TabbieRepository {
-    String UTF8 = StandardCharsets.UTF_8.name();
+    public static final String EMAIL = "api@tallinneudc.com";
+    public static final String PW = "tallinn";
+    private String UTF8 = StandardCharsets.UTF_8.name();
 
     public String getRoundsByTournamentId(String id) {
         id = id != null ? id : "10"; //todo: remove when we have configurable tournament id
 
-        String url = "https://api.tabbie.org/rounds/filter?tournament_id="+id;
+        String url = "https://api.tabbie.org/rounds/filter?tournament_id=" + id;
         return getJSON(url);
     }
 
@@ -31,11 +33,23 @@ public class TabbieRepository {
         return getJSON(url);
     }
 
+    public String doTabbieLogin(User user) {
+        String url = "https://api.tabbie.org/users/me";
+        return getJSON(url, user);
+    }
+
     private String getJSON(String url) {
+        return getJSON(url, null);
+    }
+
+    private String getJSON(String url, User user) {
+        String email = user.getEmail() != null ? user.getEmail() : EMAIL;
+        String pw = user.getPassword() != null ? user.getPassword() : PW;
+
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
         HttpGet httpGet = new HttpGet(url);
         httpGet.addHeader(BasicScheme.authenticate(
-                new UsernamePasswordCredentials("martlaus1@gmail.com", "lindemans"),
+                new UsernamePasswordCredentials(email, pw),
                 UTF8, false));
 
         HttpResponse httpResponse;
