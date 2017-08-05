@@ -18,7 +18,7 @@ public class EventDAO {
 
     public List<Event> findAll() {
         return entityManager
-                .createNativeQuery("SELECT * FROM Event c ORDER BY TIMESTAMPDIFF(SECOND, c.startTime, c.endTime) DESC, c.endTime DESC", Event.class)
+                .createNativeQuery("SELECT * FROM Event c ORDER BY TIMESTAMPDIFF(SECOND, c.startTime, c.endTime) DESC, c.startTime DESC", Event.class)
                 .getResultList();
     }
 
