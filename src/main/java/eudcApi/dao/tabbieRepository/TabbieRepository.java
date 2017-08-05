@@ -43,8 +43,8 @@ public class TabbieRepository {
     }
 
     private String getJSON(String url, User user) {
-        String email = user.getEmail() != null ? user.getEmail() : EMAIL;
-        String pw = user.getPassword() != null ? user.getPassword() : PW;
+        String email = user != null && user.getEmail() != null ? user.getEmail() : EMAIL;
+        String pw = user != null && user.getPassword() != null ? user.getPassword() : PW;
 
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
         HttpGet httpGet = new HttpGet(url);

@@ -20,7 +20,7 @@ import static org.apache.log4j.Logger.*;
  * Created by mart on 25.10.15.
  */
 public class UserService {
-    private static final Logger logger = getLogger(TimerCardResource.class);
+    private static final Logger logger = getLogger(UserService.class);
 
     @Inject
     private UserDAO userDAO;
