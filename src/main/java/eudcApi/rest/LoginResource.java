@@ -27,10 +27,14 @@ public class LoginResource {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     public AuthenticatedUser login(User user) throws Exception {
-        User tabbieUser = tabbieLoginService.getTabbieUser(user);
+        User tabbieUser = null;
+        if (user.getEmail() != null && user.getPassword() != null) {
+            tabbieUser = tabbieLoginService.getTabbieUser(user);
+        }
+
         if (tabbieUser != null) {
             return userService.loginWithTabbieUser(tabbieUser);
-        } else if (user != null) {
+        } else {
             AuthenticatedUser authenticatedUser = userService.logIn(user);
             if (authenticatedUser != null) {
                 return authenticatedUser;
