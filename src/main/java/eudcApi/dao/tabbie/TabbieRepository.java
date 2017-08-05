@@ -1,4 +1,4 @@
-package eudcApi.dao.tabbieRepository;
+package eudcApi.dao.tabbie;
 
 import eudcApi.model.User;
 import org.apache.commons.io.IOUtils;
@@ -22,9 +22,12 @@ public class TabbieRepository {
     private String UTF8 = StandardCharsets.UTF_8.name();
 
     public String getRoundsByTournamentId(String id) {
-        id = id != null ? id : "10"; //todo: remove when we have configurable tournament id
-
         String url = "https://api.tabbie.org/rounds/filter?tournament_id=" + id;
+        return getJSON(url);
+    }
+
+    public String getDebatesByRoundId(String id) {
+        String url = "https://api.tabbie.org/debates/filter?round_id=" + id;
         return getJSON(url);
     }
 

@@ -7,6 +7,7 @@ import eudcApi.service.OneSignalService;
 import eudcApi.service.tabbie.TabbieDataServices;
 import eudcApi.utils.AuthUtils;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -82,14 +83,11 @@ public class CardResource {
 
     @GET
     @Path("rounds")
-
+    @RolesAllowed("ADMIN")
     @Produces(MediaType.APPLICATION_JSON)
     public String tabbie() {
-
         tabbieDataServices.getRounds();
         return null;
     }
-
-
 }
 

@@ -1,6 +1,6 @@
 package eudcApi.service.tabbie
 
-import eudcApi.dao.tabbieRepository.TabbieRepository
+import eudcApi.dao.tabbie.TabbieRepository
 import eudcApi.model.User
 import groovy.json.JsonSlurper
 
@@ -9,7 +9,7 @@ import javax.inject.Inject
 class TabbieLoginService {
 
     @Inject
-    private TabbieRoleService tabbieRoleService
+    private TabbieDataServices tabbieDataServices
 
     @Inject
     private TabbieRepository tabbieRepository
@@ -23,7 +23,7 @@ class TabbieLoginService {
 
             user.setEmail(result.email)
             user.setTabbieId(result.id)
-            user.setTournamentRole(tabbieRoleService.checkTabbieUsersRole(user))
+            user.setTournamentRole(tabbieDataServices.checkTabbieUsersRole(user))
 //        user.setTabbieToken((String) jsonMap.get("token"));
             return user
         }

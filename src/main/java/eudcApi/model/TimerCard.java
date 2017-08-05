@@ -1,29 +1,18 @@
 package eudcApi.model;
 
-import static javax.persistence.CascadeType.MERGE;
-import static javax.persistence.CascadeType.PERSIST;
-import static javax.persistence.FetchType.EAGER;
-
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import eudcApi.rest.jackson.map.DateTimeDeserializer;
+import eudcApi.rest.jackson.map.DateTimeSerializer;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import javax.persistence.*;
+import java.util.List;
 
-import eudcApi.rest.jackson.map.DateTimeDeserializer;
-import eudcApi.rest.jackson.map.DateTimeSerializer;
+import static javax.persistence.CascadeType.MERGE;
+import static javax.persistence.CascadeType.PERSIST;
+import static javax.persistence.FetchType.EAGER;
 
 
 /**
@@ -56,21 +45,37 @@ public class TimerCard {
 
     @Column(nullable = true, unique = false)
     private String title;
-    
-    @Column(nullable = true, unique = false)
-    private String unixtime;
 
     @Column(nullable = true)
     private String locationId;
-    
+
     @Column(nullable = true)
     private String fullLocation;
-    
+
     @Column(nullable = true)
     private String topic;
-    
+
     @Column(nullable = true)
     private String team;
+
+    public TimerCard(Builder builder) {
+        setId(builder.id);
+        setEndDate(builder.endDate);
+        setCreated(builder.created);
+        users = builder.users;
+        setTitle(builder.title);
+        setLocationId(builder.locationId);
+        setFullLocation(builder.fullLocation);
+        setTopic(builder.topic);
+        setTeam(builder.team);
+    }
+
+    public TimerCard() {
+    }
+
+    public static Builder newBuilder() {
+        return new Builder();
+    }
 
     public String getTitle() {
         return title;
@@ -79,7 +84,7 @@ public class TimerCard {
     public void setTitle(String title) {
         this.title = title;
     }
-    
+
     public String getFullLocation() {
         return fullLocation;
     }
@@ -87,7 +92,7 @@ public class TimerCard {
     public void setFullLocation(String fullLocation) {
         this.fullLocation = fullLocation;
     }
-    
+
     public String getTopic() {
         return topic;
     }
@@ -95,7 +100,7 @@ public class TimerCard {
     public void setTopic(String topic) {
         this.topic = topic;
     }
-    
+
     public String getTeam() {
         return team;
     }
@@ -111,14 +116,6 @@ public class TimerCard {
     public void setLocationId(String locationId) {
         this.locationId = locationId;
     }
-    
-    public String getUnixtime() {
-        return unixtime;
-    }
-
-    public void setUnixtime(String unixtime) {
-        this.unixtime = unixtime;
-    }
 
     @JsonSerialize(using = DateTimeSerializer.class)
     public DateTime getCreated() {
@@ -129,9 +126,11 @@ public class TimerCard {
     public void setCreated(DateTime created) {
         this.created = created;
     }
+
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -144,5 +143,69 @@ public class TimerCard {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     public void setEndDate(DateTime endDate) {
         this.endDate = endDate;
+    }
+
+    public static final class Builder {
+        private Long id;
+        private DateTime endDate;
+        private DateTime created;
+        private List<User> users;
+        private String title;
+        private String locationId;
+        private String fullLocation;
+        private String topic;
+        private String team;
+
+        private Builder() {
+        }
+
+        public Builder id(Long id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder endDate(DateTime endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+
+        public Builder created(DateTime created) {
+            this.created = created;
+            return this;
+        }
+
+        public Builder users(List<User> users) {
+            this.users = users;
+            return this;
+        }
+
+        public Builder title(String title) {
+            this.title = title;
+            return this;
+        }
+
+        public Builder locationId(String locationId) {
+            this.locationId = locationId;
+            return this;
+        }
+
+        public Builder fullLocation(String fullLocation) {
+            this.fullLocation = fullLocation;
+            return this;
+        }
+
+        public Builder topic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+
+        public Builder team(String team) {
+            this.team = team;
+            return this;
+        }
+
+        public TimerCard build() {
+            return new TimerCard(this);
+        }
     }
 }

@@ -1,10 +1,12 @@
-package eudcApi.dao.tabbieRepository;
+package eudcApi.dao.tabbie;
 
 import eudcApi.model.tabbie.Round;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceException;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 /**
@@ -31,5 +33,19 @@ public class RoundDAO {
         }
 
         return merged;
+    }
+
+    public Round getRoundById(Long id) {
+        TypedQuery<Round> findByCode = entityManager
+                .createQuery("SELECT u FROM Round u WHERE u.id = :id", Round.class);
+
+        Round round = null;
+        try {
+            round = findByCode.setParameter("id", id).getSingleResult();
+        } catch (NoResultException ex) {
+            // ignore
+        }
+
+        return round;
     }
 }

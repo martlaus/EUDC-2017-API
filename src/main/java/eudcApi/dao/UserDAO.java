@@ -63,4 +63,18 @@ public class UserDAO {
 
         return user;
     }
+
+    public User getUserByTabbieId(Long tabbieId) {
+        TypedQuery<User> findByCode = entityManager
+                .createQuery("SELECT u FROM User u WHERE u.tabbieId = :tabbieId", User.class);
+
+        User user = null;
+        try {
+            user = findByCode.setParameter("tabbieId", tabbieId).getSingleResult();
+        } catch (NoResultException ex) {
+            // ignore
+        }
+
+        return user;
+    }
 }
