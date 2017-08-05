@@ -18,7 +18,7 @@ public class EventDAO {
 
     public List<Event> findAll() {
         return entityManager
-                .createQuery("SELECT c FROM Event c ORDER BY c.startTime DESC", Event.class)
+                .createQuery("SELECT c FROM Event c ORDER BY TIMESTAMPDIFF(c.startTime, c.endTime) ASC", Event.class)
                 .getResultList();
     }
 
