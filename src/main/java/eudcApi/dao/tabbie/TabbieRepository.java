@@ -32,12 +32,12 @@ public class TabbieRepository {
     }
 
     public String getTabbieRole(User user) {
-        String url = "https://api.tabbie.org/users/gettournamentrole?user_id=" + user.getTabbieId() + "&tournament_id=357";
+        String url = "https://api.tabbie.org/users/gettournamentrole?user_id=" + user.getTabbieId() + "&tournament_id=357"; // TODO get tournament ID from admin
         return getJSON(url);
     }
 
     public String getBarcode(String tabbieUserId) {
-        String url = "https://api.tabbie.org/users/generatebarcode?user_id=" + tabbieUserId + "&tournament_id=894";
+        String url = "https://api.tabbie.org/users/generatebarcode?user_id=" + tabbieUserId + "&tournament_id=894"; // TODO get tournament ID from admin
         return getJSON(url);
     }
 
