@@ -37,7 +37,7 @@ public class TabbieRepository {
     }
 
     public String getBarcode(String tabbieUserId) {
-        String url = "https://api.tabbie.org/users/generatebarcode?user_id=" + tabbieUserId + "&tournament_id=357";
+        String url = "https://api.tabbie.org/users/generatebarcode?user_id=" + tabbieUserId + "&tournament_id=894";
         return getJSON(url);
     }
 
