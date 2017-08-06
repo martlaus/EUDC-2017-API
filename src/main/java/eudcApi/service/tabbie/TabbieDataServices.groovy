@@ -47,14 +47,6 @@ class TabbieDataServices {
                     .roundLink(round._links.self.api.href)
                     .build()
 
-
-
-
-
-
-
-
-
             if (!roundDAO.getRoundById(build.getId())) {
                 roundDAO.saveRound(build)
                 createTimerCards(build)
