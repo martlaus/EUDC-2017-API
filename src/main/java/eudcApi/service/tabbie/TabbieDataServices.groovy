@@ -47,11 +47,26 @@ class TabbieDataServices {
                     .roundLink(round._links.self.api.href)
                     .build()
 
+
+
+
+
+
+
+
+
             if (!roundDAO.getRoundById(build.getId())) {
                 roundDAO.saveRound(build)
                 createTimerCards(build)
             }
         }
+    }
+
+    public String getUserBarcode(String tabbieUserId) {
+        String barcodeJson = tabbieRepository.getBarcode(tabbieUserId)
+        def result = slurper.parseText(barcodeJson).b64
+
+        return result
     }
 
     private void createTimerCards(Round round) {

@@ -36,10 +36,17 @@ public class TabbieRepository {
         return getJSON(url);
     }
 
+    public String getBarcode(String tabbieUserId) {
+        String url = "https://api.tabbie.org/users/generatebarcode?user_id=" + tabbieUserId + "&tournament_id=357";
+        return getJSON(url);
+    }
+
     public String doTabbieLogin(User user) {
         String url = "https://api.tabbie.org/users/me";
         return getJSON(url, user);
     }
+
+
 
     private String getJSON(String url) {
         return getJSON(url, null);
