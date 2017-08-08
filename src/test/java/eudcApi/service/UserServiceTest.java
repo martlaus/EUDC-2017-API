@@ -20,6 +20,9 @@ public class UserServiceTest {
     private UserService userService = new UserService();
 
     @Mock
+    private CardService cardService;
+
+    @Mock
     private UserDAO userDAO;
 
     @Test

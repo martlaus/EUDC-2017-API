@@ -1,6 +1,5 @@
 package eudcApi.dao;
 
-import eudcApi.model.Card;
 import eudcApi.model.Event;
 
 import javax.inject.Inject;

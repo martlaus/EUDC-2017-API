@@ -9,7 +9,6 @@ import org.junit.Test;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import static org.junit.Assert.*;
@@ -44,6 +43,16 @@ public class CardDAOTest extends DatabaseTestBase {
         assertEquals(initialSize + 1, cardDAO.findAll().size());
     }
 
+    @Test
+    public void createUserCards() {
+        User user = new User(3L);
+
+        List<Card> usersCards = cardDAO.findUsersCards(user);
+        cardDAO.createUserCards(user);
+        List<Card> usersCards2 = cardDAO.findUsersCards(user);
+
+        assertEquals(usersCards.size() + 1, usersCards2.size());
+    }
 
     @Test
     public void getUsersCard() {

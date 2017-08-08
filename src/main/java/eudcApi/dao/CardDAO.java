@@ -1,17 +1,14 @@
 package eudcApi.dao;
 
-import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.Card;
 import eudcApi.model.User;
 import org.joda.time.DateTime;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
 import javax.persistence.PersistenceException;
 import javax.persistence.TypedQuery;
 import java.util.List;
-import java.util.logging.Logger;
 
 /**
  * Created by karl on 15.02.16.
@@ -42,6 +39,7 @@ public class CardDAO {
 
         return merged;
     }
+
     public Card testMakeCard(String title, String description) {
         Card card = new Card();
         card.setTitle(title);
@@ -77,6 +75,7 @@ public class CardDAO {
 
         return cards;
     }
+
     public List<Card> findCardsByCardId(long cardId) {
         TypedQuery<Card> findById = entityManager
                 .createQuery("SELECT c FROM Card c LEFT JOIN c.users as u WHERE c.id = :card",
@@ -98,6 +97,29 @@ public class CardDAO {
                 .createNativeQuery("DELETE FROM Card_User WHERE user = :user AND card = :cardId")
                 .setParameter("user", user.getId())
                 .setParameter("cardId", cardId).executeUpdate();
+    }
+
+    public void createUserCards(User user) {
+        List<Card> all = findAll();
+        if (all.size() == 0) return;
+
+        for (Card card : all) {
+            try {
+                List resultList = entityManager
+                        .createNativeQuery("SELECT * FROM card_user WHERE card = :cardId AND user = :userId")
+                        .setParameter("userId", user.getId())
+                        .setParameter("cardId", card.getId()).getResultList();
+
+                if (resultList.size() == 0) {
+                    entityManager
+                            .createNativeQuery("INSERT INTO card_user (card, user) VALUES (:cardId, :userId)")
+                            .setParameter("userId", user.getId())
+                            .setParameter("cardId", card.getId()).executeUpdate();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void deleteCard(long cardId) {

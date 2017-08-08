@@ -1,14 +1,11 @@
 package eudcApi.service;
 
 import eudcApi.dao.CardDAO;
-import eudcApi.dao.UserDAO;
 import eudcApi.model.Card;
 import eudcApi.model.User;
-
 import org.joda.time.DateTime;
 
 import javax.inject.Inject;
-
 import java.util.List;
 
 /**
@@ -17,10 +14,10 @@ import java.util.List;
 public class CardService {
 
     @Inject
-    private CardDAO cardDAO;
+    private UserService userService;
 
     @Inject
-    private UserService userService;
+    private CardDAO cardDAO;
 
     public Card saveCard(Card card) {
         card.setUsers(userService.getAllUsers());
@@ -31,6 +28,10 @@ public class CardService {
 
     public List<Card> getAllCards() {
         return cardDAO.findAll();
+    }
+
+    public void generateCards() {
+        userService.getAllUsers().forEach(u -> cardDAO.createUserCards(u));
     }
 
     public List<Card> getUsersCards(User user) {

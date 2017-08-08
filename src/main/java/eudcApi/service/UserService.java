@@ -4,7 +4,6 @@ import eudcApi.dao.AuthenticatedUserDAO;
 import eudcApi.dao.UserDAO;
 import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.User;
-import eudcApi.rest.TimerCardResource;
 import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
 import org.mindrot.jbcrypt.BCrypt;
@@ -14,7 +13,7 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.List;
 
-import static org.apache.log4j.Logger.*;
+import static org.apache.log4j.Logger.getLogger;
 
 /**
  * Created by mart on 25.10.15.

@@ -54,6 +54,22 @@ public class Card {
             uniqueConstraints = @UniqueConstraint(columnNames = {"card", "user"}))
     private List<User> users;
 
+    public Card(Long id) {
+        this.id = id;
+    }
+
+    public Card(String title, String description, Boolean pinned, Boolean sendPushAll, DateTime created) {
+        this.title = title;
+        this.description = description;
+        this.pinned = pinned;
+        this.sendPushAll = sendPushAll;
+        this.created = created;
+    }
+
+    public Card() {
+
+    }
+
     public Long getId() {
         return id;
     }

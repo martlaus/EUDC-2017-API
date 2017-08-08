@@ -67,6 +67,13 @@ public class CardResource {
         }
     }
 
+    @GET
+    @Path("generateCards")
+    @Produces(MediaType.APPLICATION_JSON)
+    public void generateCards() {
+        cardService.generateCards();
+    }
+
     @DELETE
     @Path("{cardId}")
     @Produces(MediaType.APPLICATION_JSON)

@@ -47,6 +47,12 @@ public class User {
     @Column
     private String tabbieToken;
 
+    public User(Long id) {
+        this.id = id;
+    }
+    public User() {
+    }
+
     public String getEmail() {
         return email;
     }
