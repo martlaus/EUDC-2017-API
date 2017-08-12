@@ -6,7 +6,9 @@ import eudcApi.dao.tabbie.TabbieRepository
 import eudcApi.model.TimerCard
 import eudcApi.model.User
 import eudcApi.model.tabbie.Round
+import eudcApi.service.OneSignalService
 import eudcApi.service.TimerCardService
+import eudcApi.service.TournamentIdService
 import groovy.json.JsonSlurper
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
@@ -33,8 +35,14 @@ class TabbieDataServices {
     @Inject
     private TimerCardService timerCardService
 
-    public void getRounds() {
-        String tournamentJson = tabbieRepository.getRoundsByTournamentId(null)//todo: get id from admin panel
+    @Inject
+    private TournamentIdService tournamentIdService
+
+    @Inject
+    private OneSignalService oneSignalService;
+
+    public void generateTimerCardsForNewRounds() {
+        String tournamentJson = tabbieRepository.getRoundsByTournamentId(tournamentIdService.getTournamentId())
         def result = slurper.parseText(tournamentJson)
 
         result.each { round ->
@@ -50,8 +58,15 @@ class TabbieDataServices {
             if (!roundDAO.getRoundById(build.getId())) {
                 roundDAO.saveRound(build)
                 createTimerCards(build)
+
+                println "Sending notifcations for round " + build.label
+                //Send a new round notification
+                 oneSignalService.sendAll("Round " + build.label + " has been published." +
+                       " The motion is " + round.motion)
             }
         }
+
+        println "Finished parsing rounds"
     }
 
     public String getUserBarcode(String tabbieUserId) {
@@ -67,23 +82,31 @@ class TabbieDataServices {
 
         for (debate in debates) {
             for (debater in debate.participants.debaters) {
-                User user = userDAO.getUserByTabbieId(debater.userId)
-
-                if (user) {
-                    def now = DateTime.now()
-                    TimerCard timerCard = TimerCard.newBuilder()
-                            .endDate(round.getPrepStarted().plusMinutes(15))
-                            .users([user])
-                            .title("Your round is starting in " + debate.venue)
-                            .locationId("")//todo: map venues to location id-s
-                            .fullLocation(debate.venue)
-                            .topic(round.getMotion())
-                            .team(debater.position)
-                            .build()
-
-                    timerCardService.saveTimerCard(timerCard)
-                }
+                createCardForUser(debater, round, debate)
             }
+
+            for (debater in debate.participants.adjudicators) {
+                createCardForUser(debater, round, debate)
+            }
+        }
+    }
+
+    private void createCardForUser(debater, Round round, debate) {
+        User user = userDAO.getUserByTabbieId(debater.userId)
+
+        if (user) {
+            def now = DateTime.now()
+            TimerCard timerCard = TimerCard.newBuilder()
+                    .endDate(round.getPrepStarted().plusMinutes(15))
+                    .users([user])
+                    .title("Your round is starting in " + debate.venue)
+                    .locationId("")//todo: map venues to location id-s
+                    .fullLocation(debate.venue)
+                    .topic(round.getMotion())
+                    .team(debater.position)
+                    .build()
+
+            timerCardService.saveTimerCard(timerCard)
         }
     }
 
