@@ -19,8 +19,17 @@ public class TournamentIdService {
     }
 
     public TournamentId createTournamentId(TournamentId tournamentId) {
-        if(tournamentId.getTournamentId() == null) return null;
+        if (tournamentId.getTournamentId() == null) return null;
         return tournamentIdDAO.saveTournamentId(tournamentId);
+    }
+
+    public String getTournamentId() {
+        List<TournamentId> allTournamentIds = getAllTournamentIds();
+        if (allTournamentIds != null && allTournamentIds.size() > 0) {
+            return String.valueOf(allTournamentIds.get(allTournamentIds.size() - 1).getTournamentId());
+        }
+
+        return null;
     }
 
     public void deleteTournamentId(TournamentId tournamentId) {

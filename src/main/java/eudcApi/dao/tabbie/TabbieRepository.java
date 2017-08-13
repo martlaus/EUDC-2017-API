@@ -1,6 +1,7 @@
 package eudcApi.dao.tabbie;
 
 import eudcApi.model.User;
+import eudcApi.service.TournamentIdService;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -10,6 +11,7 @@ import org.apache.http.impl.auth.BasicScheme;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 
+import javax.inject.Inject;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
@@ -20,6 +22,9 @@ public class TabbieRepository {
     public static final String EMAIL = "api@tallinneudc.com";
     public static final String PW = "tallinn";
     private String UTF8 = StandardCharsets.UTF_8.name();
+
+    @Inject
+    private TournamentIdService tournamentIdService;
 
     public String getRoundsByTournamentId(String id) {
         String url = "https://api.tabbie.org/rounds/filter?tournament_id=" + id;
@@ -32,12 +37,16 @@ public class TabbieRepository {
     }
 
     public String getTabbieRole(User user) {
-        String url = "https://api.tabbie.org/users/gettournamentrole?user_id=" + user.getTabbieId() + "&tournament_id=357"; // TODO get tournament ID from admin
+        String id = tournamentIdService.getTournamentId();
+        String url = "https://api.tabbie.org/users/gettournamentrole?user_id="
+                + user.getTabbieId() + "&tournament_id=" + id;
         return getJSON(url);
     }
 
     public String getBarcode(String tabbieUserId) {
-        String url = "https://api.tabbie.org/users/generatebarcode?user_id=" + tabbieUserId + "&tournament_id=894"; // TODO get tournament ID from admin
+        String id = tournamentIdService.getTournamentId();
+        String url = "https://api.tabbie.org/users/generatebarcode?user_id="
+                + tabbieUserId + "&tournament_id=" + id;
         return getJSON(url);
     }
 
@@ -45,8 +54,6 @@ public class TabbieRepository {
         String url = "https://api.tabbie.org/users/me";
         return getJSON(url, user);
     }
-
-
 
     private String getJSON(String url) {
         return getJSON(url, null);

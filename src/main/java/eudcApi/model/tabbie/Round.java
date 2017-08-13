@@ -20,7 +20,7 @@ public class Round {
     @Column
     private String motion;
 
-    @Column
+    @Column(columnDefinition = "TEXT")
     private String infoslide;
 
     @Column

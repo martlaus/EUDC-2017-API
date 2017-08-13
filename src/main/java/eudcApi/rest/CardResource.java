@@ -90,11 +90,11 @@ public class CardResource {
 
     @GET
     @Path("rounds")
-    @RolesAllowed("ADMIN")
+    @RolesAllowed("ADMIN")//todo: add button to admin
     @Produces(MediaType.APPLICATION_JSON)
     public String tabbie() {
-        tabbieDataServices.getRounds();
-        return null;
+        tabbieDataServices.generateTimerCardsForNewRounds();
+        return "OK";
     }
 }
 

@@ -35,8 +35,12 @@ public class BarcodeResource {
     public Map<String, String> getBarcode(@PathParam("userId") String userId) {
         String barcode = tabbieDataServices.getUserBarcode(userId);
 
-        Map<String, String> map = new HashMap<>();
-        map.put("b64", barcode);
-        return map;
+        if(barcode != null && !barcode.isEmpty()) {
+            Map<String, String> map = new HashMap<>();
+            map.put("b64", barcode);
+            return map;
+
+        }
+        return null;
     }
 }
