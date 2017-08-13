@@ -69,9 +69,9 @@ public class CardResource {
 
     @GET
     @Path("generateCards")
-    @Produces(MediaType.APPLICATION_JSON)
-    public void generateCards() {
+    public String generateCards() {
         cardService.generateCards();
+        return "OK";
     }
 
     @DELETE
