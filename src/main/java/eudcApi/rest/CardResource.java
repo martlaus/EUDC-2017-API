@@ -57,7 +57,7 @@ public class CardResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Card> getAllCards() {
+    public List<Card> getAllUserCards() {
         AuthenticatedUser authenticatedUser = authentication.getAuthUser(securityContext);
 
         if (authentication.isUserAuthenticated(authenticatedUser)) {
