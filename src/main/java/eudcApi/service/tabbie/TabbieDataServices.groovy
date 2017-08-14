@@ -81,12 +81,16 @@ class TabbieDataServices {
         def debates = slurper.parseText(debatesString)
 
         for (debate in debates) {
-            for (debater in debate.participants.debaters) {
-                createCardForUser(debater, round, debate)
-            }
 
-            for (debater in debate.participants.adjudicators) {
-                createCardForUser(debater, round, debate)
+            if (!debate.participants && debate.participants.debaters) {
+                for (debater in debate.participants.debaters) {
+                    createCardForUser(debater, round, debate)
+                }
+            }
+            if (!debate.participants && debate.participants.adjudicators) {
+                for (debater in debate.participants.adjudicators) {
+                    createCardForUser(debater, round, debate)
+                }
             }
         }
     }
