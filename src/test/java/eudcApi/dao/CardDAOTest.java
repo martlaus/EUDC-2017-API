@@ -45,7 +45,22 @@ public class CardDAOTest extends DatabaseTestBase {
 
     @Test
     public void createUserCards() {
-        User user = new User(3L);
+        User user = new User();
+        user.setEmail("ashbttnrjnyjn5y57n4u6@lkskl.yi");
+        user.setRole("USER");
+        User user1 = userDAO.saveUser(user);
+
+        List<Card> usersCards = cardDAO.findUsersCards(user1);
+        cardDAO.createUserCards(user1);
+        List<Card> usersCards2 = cardDAO.findUsersCards(user1);
+
+        assertTrue(usersCards2.size() >= usersCards.size() + 3);
+
+    }
+
+    @Test
+    public void createUserCardsForExistingUsers() {
+        User user = userDAO.getUserById(3L);
 
         List<Card> usersCards = cardDAO.findUsersCards(user);
         cardDAO.createUserCards(user);

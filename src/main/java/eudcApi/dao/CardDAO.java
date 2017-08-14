@@ -106,15 +106,15 @@ public class CardDAO {
         for (Card card : all) {
             try {
                 List resultList = entityManager
-                        .createNativeQuery("SELECT * FROM card_user WHERE card = :cardId AND user = :userId")
-                        .setParameter("userId", user.getId())
-                        .setParameter("cardId", card.getId()).getResultList();
+                        .createNativeQuery("SELECT * FROM Card_User WHERE card = :cardId AND user = :userId")
+                        .setParameter("cardId", card.getId())
+                        .setParameter("userId", user.getId()).getResultList();
 
                 if (resultList.size() == 0) {
                     entityManager
-                            .createNativeQuery("INSERT INTO card_user (card, user) VALUES (:cardId, :userId)")
-                            .setParameter("userId", user.getId())
-                            .setParameter("cardId", card.getId()).executeUpdate();
+                            .createNativeQuery("INSERT INTO Card_User (card, user) VALUES (:cardId, :userId)")
+                            .setParameter("cardId", card.getId())
+                            .setParameter("userId", user.getId()).executeUpdate();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -138,5 +138,4 @@ public class CardDAO {
         deleteCardRelation(cardId);
         deleteCard(cardId);
     }
-
 }

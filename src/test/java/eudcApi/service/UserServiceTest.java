@@ -1,5 +1,6 @@
 package eudcApi.service;
 
+import eudcApi.dao.CardDAO;
 import eudcApi.dao.UserDAO;
 import eudcApi.model.User;
 import org.easymock.*;
@@ -24,6 +25,9 @@ public class UserServiceTest {
 
     @Mock
     private UserDAO userDAO;
+
+    @Mock
+    private CardDAO cardDAO;
 
     @Test
     public void addUser() {

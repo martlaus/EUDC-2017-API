@@ -26,7 +26,7 @@ public class UserDAOTest extends DatabaseTestBase {
     }
 
     @Test
-    public void getUserByEmail(){
+    public void getUserByEmail() {
         User user = userDAO.getUserByEmail("admin@admin.kz");
 
         assertNotNull(user.getId());

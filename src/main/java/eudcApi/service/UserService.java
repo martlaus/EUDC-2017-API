@@ -1,6 +1,7 @@
 package eudcApi.service;
 
 import eudcApi.dao.AuthenticatedUserDAO;
+import eudcApi.dao.CardDAO;
 import eudcApi.dao.UserDAO;
 import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.User;
@@ -23,6 +24,9 @@ public class UserService {
 
     @Inject
     private UserDAO userDAO;
+
+    @Inject
+    private CardDAO cardDAO;
 
     @Inject
     private AuthenticatedUserDAO authenticatedUserDAO;
@@ -80,7 +84,9 @@ public class UserService {
 
     private User saveUser(User user) {
         user.setCreated(DateTime.now());
-        return userDAO.saveUser(user);
+        User savedUser = userDAO.saveUser(user);
+        cardDAO.createUserCards(savedUser);
+        return savedUser;
     }
 
     public List<User> getAllUsers() {
