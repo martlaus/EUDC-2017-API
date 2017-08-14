@@ -43,6 +43,11 @@ public class DateUtils {
         return formatter.print(date.withZone(DateTimeZone.UTC));
     }
 
+    public static String toJsonEst(DateTime date) {
+        DateTime instant = date.withZone(DateTimeZone.forID("Europe/Tallinn"));
+        return formatter.print(instant);
+    }
+
     /**
      * Converts {@link DateTime} object into String using the format
      * yyyy-MM-dd'T'HH:mm:ss'Z'.

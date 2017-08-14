@@ -1,6 +1,7 @@
 package eudcApi.rest;
 
 import eudcApi.model.Event;
+import eudcApi.model.EventV2;
 import eudcApi.service.EventService;
 import eudcApi.utils.AuthUtils;
 
@@ -51,5 +52,13 @@ public class EventResource {
     @Produces(MediaType.APPLICATION_JSON)
     public List<Event> getAllEvents() {
         return eventService.getAllEvents();
+    }
+
+    @GET
+    @Path("/v2")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<EventV2> getAllEventsv2() {
+        List<EventV2> allEventsV2 = eventService.getAllEventsv2();
+        return allEventsV2;
     }
 }
