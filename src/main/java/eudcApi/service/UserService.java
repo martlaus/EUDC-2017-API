@@ -112,12 +112,15 @@ public class UserService {
         authenticatedUser.setUser(returnedUser);
         authenticatedUser.setToken(new BigInteger(130, random).toString(32));
 
+        logger.info("trying to login without password, user " + returnedUser.getEmail());
         try {
             returnedAuthenticatedUser = authenticatedUserDAO.createAuthenticatedUser(authenticatedUser);
         } catch (Exception e) {
             authenticatedUser.setToken(new BigInteger(130, random).toString(32));
             returnedAuthenticatedUser = authenticatedUserDAO.createAuthenticatedUser(authenticatedUser);
         }
+
+        logger.info("Returning authenticated user with token " + returnedAuthenticatedUser.getToken());
         return returnedAuthenticatedUser;
     }
 }
