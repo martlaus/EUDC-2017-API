@@ -21,7 +21,6 @@ import javax.ws.rs.core.MediaType;
 public class LoginResource {
     private static final Logger logger = Logger.getLogger(LoginResource.class);
 
-
     @Inject
     private UserService userService;
 

@@ -2,11 +2,14 @@ package eudcApi.service.tabbie
 
 import eudcApi.dao.tabbie.TabbieRepository
 import eudcApi.model.User
+import eudcApi.rest.LoginResource
 import groovy.json.JsonSlurper
+import org.apache.log4j.Logger
 
 import javax.inject.Inject
 
 class TabbieLoginService {
+    private static final Logger logger = Logger.getLogger(TabbieLoginService.class);
 
     @Inject
     private TabbieDataServices tabbieDataServices
@@ -16,7 +19,10 @@ class TabbieLoginService {
 
     User getTabbieUser(User loginData) {
         def slurper = new JsonSlurper()
-        def result = slurper.parseText(tabbieRepository.doTabbieLogin(loginData))
+        logger.info("Doing tabbie login");
+        def login = tabbieRepository.doTabbieLogin(loginData)
+        def result = slurper.parseText(login)
+        logger.info("Received data from tabbie: "  + login)
 
         if (result && result.id) {
             User user = new User()
