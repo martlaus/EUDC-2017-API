@@ -51,14 +51,16 @@ public class EventResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Event> getAllEvents() {
-        return eventService.getAllEvents();
+//        return eventService.getAllEvents();
+        return null;
     }
 
     @GET
     @Path("/v2")
     @Produces(MediaType.APPLICATION_JSON)
     public List<EventV2> getAllEventsv2() {
-        List<EventV2> allEventsV2 = eventService.getAllEventsv2();
-        return allEventsV2;
+//        List<EventV2> allEventsV2 = eventService.getAllEventsv2();
+//        return allEventsV2;
+        return null;
     }
 }

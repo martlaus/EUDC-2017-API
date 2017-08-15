@@ -44,6 +44,9 @@ class TabbieDataServices {
     public void generateTimerCardsForNewRounds() {
         String tournamentJson = tabbieRepository.getRoundsByTournamentId(tournamentIdService.getTournamentId())
         def result = slurper.parseText(tournamentJson)
+        if (!result) {
+            return
+        }
 
         result.each { round ->
             Round build = Round.newBuilder()
