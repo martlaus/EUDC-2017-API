@@ -5,6 +5,7 @@ import eudcApi.model.AuthenticatedUser;
 import eudcApi.model.Card;
 import eudcApi.model.Event;
 import eudcApi.model.User;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import javax.ws.rs.client.Entity;
@@ -21,6 +22,7 @@ import static org.junit.Assert.assertNotNull;
  */
 public class EventResourceTest extends ResourceIntegrationTestBase {
 
+    @Ignore
     @Test
     public void getAll() {
         Response response = doGet("event");
